@@ -1,0 +1,28 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:dragon_head"
+    },
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_end:dragon_head_with_sauce"
+  },
+  "stir_fry_count": 6,
+  "time": 650
+}

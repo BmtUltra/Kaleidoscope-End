@@ -1,0 +1,28 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "tag": "forge:cooked_rice"
+  },
+  "ingredients": [
+    {
+      "tag": "forge:shulker_meat"
+    },
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_end:mint_sauce_shulker_meat_rice_bowl"
+  },
+  "stir_fry_count": 5,
+  "time": 300
+}

@@ -1,0 +1,31 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "item": "kaleidoscope_end:dream_berry"
+    },
+    {
+      "item": "kaleidoscope_end:dream_berry"
+    },
+    {
+      "item": "minecraft:chorus_flower"
+    },
+    {
+      "item": "minecraft:chorus_flower"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_end:end_salad"
+  },
+  "stir_fry_count": 3,
+  "time": 300
+}
