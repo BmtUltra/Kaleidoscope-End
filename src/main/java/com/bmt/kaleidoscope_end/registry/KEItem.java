@@ -5,11 +5,15 @@ import com.bmt.kaleidoscope_end.item.DragonEggShellFoodItem;
 import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
 import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.List;
 
 public class KEItem {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, KaleidoscopeEnd.MODID);
@@ -33,7 +37,15 @@ public class KEItem {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ENDER_DRAGON_SMITHING_TEMPLATE = ITEMS.register("ender_dragon_smithing_template", // 锻造模板
-            () -> new Item(new Item.Properties()));
+            () -> new SmithingTemplateItem(
+                    Component.translatable("item.kaleidoscope_end.ender_dragon_smithing_template.upgrade_description"),
+                    Component.translatable("item.kaleidoscope_end.ender_dragon_smithing_template.applies_to_description"),
+                    Component.translatable("item.kaleidoscope_end.ender_dragon_smithing_template.ingredients_description"),
+                    Component.translatable("item.kaleidoscope_end.ender_dragon_smithing_template.base_slot_description"),
+                    Component.translatable("item.kaleidoscope_end.ender_dragon_smithing_template.additions_slot_description"),
+                    List.of(),
+                    List.of()
+            ));
 
     public static final RegistryObject<Item> DRAGON_EGG_SHELL = ITEMS.register("dragon_egg_shell", // 龙蛋壳
             () -> new Item(new Item.Properties()));
