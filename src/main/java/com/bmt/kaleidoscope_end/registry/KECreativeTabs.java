@@ -16,7 +16,7 @@ public class KECreativeTabs {
     public static final RegistryObject<CreativeModeTab> KALEIDOSCOPE_END_FOODS = CREATIVE_MODE_TABS.register("kaleidoscope_end_foods",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.kaleidoscope_end_foods"))
-                    .icon(() -> new ItemStack(KEItem.STUFFED_SHULKER_ITEM.get()))
+                    .icon(() -> new ItemStack(KEItem.ENDER_MINT.get()))
                     .displayItems((parameters, output) -> {
                         output.accept(KEItem.DRAGON_TOOTH_KNIFE.get());
                         output.accept(KEItem.VOID_CONCH.get());

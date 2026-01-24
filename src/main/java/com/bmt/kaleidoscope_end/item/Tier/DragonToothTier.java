@@ -13,7 +13,7 @@ public class DragonToothTier implements Tier {
             0, //攻击速度加成
             15, //附魔等级
             null, //标签
-            () -> Ingredient.of(KEItem.ENDER_MINT.get()) //修复材料
+            () -> Ingredient.of(KEItem.DRAGON_TOOTH.get()) //修复材料
     );
 
     @Override

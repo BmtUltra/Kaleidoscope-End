@@ -59,6 +59,16 @@
         }
       ],
       "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kaleidoscope_end:dragon_tooth"
+        }
+      ],
+      "rolls": 1.0
     }
   ],
   "random_sequence": "kaleidoscope_end:ender_dragon"

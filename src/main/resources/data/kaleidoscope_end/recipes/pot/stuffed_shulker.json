@@ -5,22 +5,25 @@
   },
   "ingredients": [
     {
-      "tag": "forge:fruits/chorus"
+      "item": "minecraft:carrot"
     },
     {
-      "tag": "forge:fruits/chorus"
+      "item": "minecraft:carrot"
     },
     {
-      "tag": "forge:fruits/chorus"
+      "item": "minecraft:potato"
     },
     {
-      "tag": "forge:vegetables/lettuce"
+      "item": "minecraft:potato"
     },
     {
-      "item": "minecraft:chorus_flower"
+      "tag": "forge:shulker_meat"
     },
     {
-      "tag": "forge:vegetables/lettuce"
+      "tag": "forge:vegetables/tomato"
+    },
+    {
+      "tag": "forge:vegetables/tomato"
     }
   ],
   "result": {

@@ -17,7 +17,7 @@ public class KEEffects {
 
     // 虚空侵蚀
     public static final RegistryObject<MobEffect> VOID_EROSION = EFFECTS.register("void_erosion",
-            () -> new MobEffect(MobEffectCategory.HARMFUL, 0x4B0082) {});
+            () -> new MobEffect(MobEffectCategory.BENEFICIAL, 0x4B0082) {});
 
     // 薄荷
     public static final RegistryObject<MobEffect> MINT = EFFECTS.register("mint",
