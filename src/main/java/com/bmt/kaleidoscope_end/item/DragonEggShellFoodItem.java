@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_end.item;
 
 import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.github.ysbbbbbb.kaleidoscopecookery.api.item.IHasContainer;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -11,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-public class DragonEggShellFoodItem extends FoodWithEffectsItem {
+public class DragonEggShellFoodItem extends FoodWithEffectsItem implements IHasContainer {
     public DragonEggShellFoodItem(FoodProperties properties) {
         super(properties);
     }
@@ -34,6 +35,8 @@ public class DragonEggShellFoodItem extends FoodWithEffectsItem {
 
         return itemStack;
     }
+
+    @Override
     public Item getContainerItem() {
         return KEItem.DRAGON_EGG_SHELL.get();
     }

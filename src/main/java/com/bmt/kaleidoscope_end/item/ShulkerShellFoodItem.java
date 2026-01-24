@@ -1,5 +1,6 @@
 package com.bmt.kaleidoscope_end.item;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.api.item.IHasContainer;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -11,7 +12,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-public class ShulkerShellFoodItem extends FoodWithEffectsItem {
+public class ShulkerShellFoodItem extends FoodWithEffectsItem implements IHasContainer {
     public ShulkerShellFoodItem(FoodProperties properties) {
         super(properties);
     }
@@ -34,6 +35,8 @@ public class ShulkerShellFoodItem extends FoodWithEffectsItem {
 
         return itemStack;
     }
+
+    @Override
     public Item getContainerItem() {
         return Items.SHULKER_SHELL;
     }
