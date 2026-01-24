@@ -1,16 +1,19 @@
 package com.bmt.kaleidoscope_end.item;
 
+import com.bmt.kaleidoscope_end.config.Config;
 import com.bmt.kaleidoscope_end.item.Tier.DragonToothTier;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.KitchenKnifeItem;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.EnderMan;
-import net.minecraft.world.entity.monster.Endermite;
-import net.minecraft.world.entity.monster.Shulker;
-import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class DragonToothKnifeItem extends KitchenKnifeItem {
     private static final DragonToothTier DRAGON_TOOTH_TIER = new DragonToothTier();
+    private static final Set<ResourceLocation> END_MOBS_CACHE = new HashSet<>();
 
     public DragonToothKnifeItem() {
         super(DRAGON_TOOTH_TIER, new Properties()
@@ -33,13 +36,34 @@ public class DragonToothKnifeItem extends KitchenKnifeItem {
 
     @Override
     public float getDamage() {
-        return DRAGON_TOOTH_TIER.getAttackDamageBonus() + 1.0f; //8+1
+        return DRAGON_TOOTH_TIER.getAttackDamageBonus() + 1.0f; // 8+1
     }
 
     private boolean isEndMob(LivingEntity entity) {
-        return entity instanceof EnderMan ||
-                entity instanceof Endermite ||
-                entity instanceof Shulker ||
-                entity instanceof EnderDragon;
+        ResourceLocation entityId = ForgeRegistries.ENTITY_TYPES.getKey(entity.getType());
+        if (entityId == null) {
+            return false;
+        }
+
+        if (END_MOBS_CACHE.isEmpty()) {
+            loadEndMobsFromConfig();
+        }
+
+        return END_MOBS_CACHE.contains(entityId);
+    }
+
+    private static void loadEndMobsFromConfig() {
+        END_MOBS_CACHE.clear();
+        for (String mobId : Config.DRAGON_TOOTH_KNIFE_EXTRA_END_MOBS.get()) {
+            try {
+                ResourceLocation location = ResourceLocation.parse(mobId);
+                END_MOBS_CACHE.add(location);
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    public static void clearCache() {
+        END_MOBS_CACHE.clear();
     }
 }
