@@ -1,0 +1,31 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:shulker_shell"
+  },
+  "ingredients": [
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:vegetables/lettuce"
+    },
+    {
+      "item": "minecraft:chorus_flower"
+    },
+    {
+      "tag": "forge:vegetables/lettuce"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_end:stuffed_shulker"
+  },
+  "stir_fry_count": 5,
+  "time": 450
+}

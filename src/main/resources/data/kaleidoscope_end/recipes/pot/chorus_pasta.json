@@ -1,0 +1,28 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "tag": "forge:pasta"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_end:chorus_pasta"
+  },
+  "stir_fry_count": 4,
+  "time": 350
+}

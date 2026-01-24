@@ -1,0 +1,36 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "cooking_bubble_color": 16772291,
+  "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
+  "finished_bubble_color": 16034443,
+  "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
+  "ingredients": [
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "tag": "forge:fruits/chorus"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "minecraft:chorus_flower"
+    },
+    {
+      "item": "minecraft:chorus_flower"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "kaleidoscope_end:dragon_breath_chorus_soup"
+  },
+  "soup_base": "minecraft:water",
+  "time": 300
+}
