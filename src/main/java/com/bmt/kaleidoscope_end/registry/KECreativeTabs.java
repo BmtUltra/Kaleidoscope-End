@@ -53,6 +53,12 @@ public class KECreativeTabs {
                         output.accept(KEItem.ENDER_MINT_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_SOUFFLE_ITEM.get());
                         output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
+                        output.accept(KEItem.DRAGON_EGG_LIQUID.get());
+                        output.accept(KEItem.CHORUS_SEED.get());
+                        output.accept(KEItem.CHORUS_PETAL.get());
+                        output.accept(KEItem.FRIED_DRAGON_EGG_ITEM.get());
+                        output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
+                        output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
                     })
                     .build());
 

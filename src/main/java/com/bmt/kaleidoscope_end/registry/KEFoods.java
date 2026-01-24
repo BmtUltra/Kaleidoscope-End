@@ -208,4 +208,23 @@ public class KEFoods {
             .meat()
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1600, 0), 1.0f)
             .alwaysEat().build();
+
+    // 煎龙蛋
+    public static final FoodProperties FRIED_DRAGON_EGG = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationMod(0.6f)
+            .meat()
+            .alwaysEat().build();
+
+    // 龙蛋羹
+    public static final FoodProperties DRAGON_EGG_CUSTARD = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationMod(0.7f)
+            .alwaysEat().build();
+
+    // 紫颂花茶
+    public static final FoodProperties CHORUS_FLOWER_TEA = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationMod(0.3f)
+            .alwaysEat().build();
 }

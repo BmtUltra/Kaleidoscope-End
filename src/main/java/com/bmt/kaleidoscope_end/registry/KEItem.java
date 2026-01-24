@@ -6,7 +6,9 @@ import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
 import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -130,6 +132,30 @@ public class KEItem {
 
     public static final RegistryObject<Item> DARK_DRAGON_STEAK_ITEM = ITEMS.register("dark_dragon_steak", // 暗黑龙排
             () -> new BowlFoodOnlyItem(KEFoods.DARK_DRAGON_STEAK));
+
+    // 龙蛋液
+    public static final RegistryObject<Item> DRAGON_EGG_LIQUID = ITEMS.register("dragon_egg_liquid",
+            () -> new Item(new Item.Properties()));
+
+    // 紫颂果籽
+    public static final RegistryObject<Item> CHORUS_SEED = ITEMS.register("chorus_seed",
+            () -> new Item(new Item.Properties()));
+
+    // 紫颂花瓣
+    public static final RegistryObject<Item> CHORUS_PETAL = ITEMS.register("chorus_petal",
+            () -> new Item(new Item.Properties()));
+
+    // 煎龙蛋
+    public static final RegistryObject<Item> FRIED_DRAGON_EGG_ITEM = ITEMS.register("fried_dragon_egg",
+            () -> new Item(new Item.Properties().food(KEFoods.FRIED_DRAGON_EGG)));
+
+    // 龙蛋羹
+    public static final RegistryObject<Item> DRAGON_EGG_CUSTARD_ITEM = ITEMS.register("dragon_egg_custard",
+            () -> new DragonEggShellFoodItem(KEFoods.DRAGON_EGG_CUSTARD));
+
+    // 紫颂花茶
+    public static final RegistryObject<Item> CHORUS_FLOWER_TEA_ITEM = ITEMS.register("chorus_flower_tea",
+            () -> new BowlFoodOnlyItem(KEFoods.CHORUS_FLOWER_TEA));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
