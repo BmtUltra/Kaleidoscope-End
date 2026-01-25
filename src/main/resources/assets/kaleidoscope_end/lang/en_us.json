@@ -1,0 +1,13 @@
+{
+  "itemGroup.kaleidoscope_end": "Example Mod Tab",
+  "block.kaleidoscope_end.example_block": "Example Block",
+  "item.kaleidoscope_end.example_item": "Example Item",
+
+  "kaleidoscope_end.configuration.title": "Kaleidoscope End Configs",
+  "kaleidoscope_end.configuration.section.kaleidoscope_end.common.toml": "Kaleidoscope End Configs",
+  "kaleidoscope_end.configuration.section.kaleidoscope_end.common.toml.title": "Kaleidoscope End Configs",
+  "kaleidoscope_end.configuration.items": "Item List",
+  "kaleidoscope_end.configuration.logDirtBlock": "Log Dirt Block",
+  "kaleidoscope_end.configuration.magicNumberIntroduction": "Magic Number Text",
+  "kaleidoscope_end.configuration.magicNumber": "Magic Number"
+}
