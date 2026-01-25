@@ -6,6 +6,7 @@ import net.minecraft.world.food.FoodProperties;
 
 import static com.bmt.kaleidoscope_end.registry.KEEffects.*;
 import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.*;
+import static net.minecraft.world.effect.MobEffects.*;
 
 public class KEFoods {
     //龙息紫颂汤
@@ -143,7 +144,7 @@ public class KEFoods {
             .alwaysEat().build();
 
     //末地猪儿虫
-    public static final FoodProperties END_PIG_WORM = new FoodProperties.Builder()
+    public static final FoodProperties END_CATERPILLAR = new FoodProperties.Builder()
             .nutrition(18)
             .saturationMod(0.2f)
             .meat()

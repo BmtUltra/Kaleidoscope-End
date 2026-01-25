@@ -4,7 +4,9 @@ import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.item.DragonEggShellFoodItem;
 import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
 import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModFoods;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
+import com.github.ysbbbbbb.kaleidoscopecookery.item.WithTooltipsItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
@@ -131,8 +133,8 @@ public class KEItem {
             () -> new Item(new Item.Properties().food(KEFoods.ROASTED_ENDERMITE_MEAT)));
 
     // 末地猪儿虫
-    public static final RegistryObject<Item> END_PIG_WORM_ITEM = ITEMS.register("end_pig_worm",
-            () -> new Item(new Item.Properties().food(KEFoods.END_PIG_WORM)));
+    public static final RegistryObject<Item> END_CATERPILLAR_ITEM = ITEMS.register("end_caterpillar",
+            () -> new Item(new Item.Properties().food(KEFoods.END_CATERPILLAR)));
 
     // 龙息乱烩
     public static final RegistryObject<Item> DRAGON_BREATH_MIXED_STEW_ITEM = ITEMS.register("dragon_breath_mixed_stew",
