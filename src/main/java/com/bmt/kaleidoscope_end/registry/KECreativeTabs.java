@@ -44,7 +44,7 @@ public class KECreativeTabs {
                         output.accept(KEItem.STIR_FRIED_ENDERMITE_MEAT_RICE_BOWL_ITEM.get());
                         output.accept(KEItem.RAW_ENDERMITE_MEAT_ITEM.get());
                         output.accept(KEItem.ROASTED_ENDERMITE_MEAT_ITEM.get());
-                        output.accept(KEItem.END_PIG_WORM_ITEM.get());
+                        output.accept(KEItem.END_CATERPILLAR_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_MIXED_STEW_ITEM.get());
                         output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
                         output.accept(KEItem.MINT_NOODLE_SOUP_ITEM.get());
@@ -53,6 +53,12 @@ public class KECreativeTabs {
                         output.accept(KEItem.ENDER_MINT_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_SOUFFLE_ITEM.get());
                         output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
+                        output.accept(KEItem.DRAGON_EGG_LIQUID.get());
+                        output.accept(KEItem.CHORUS_SEED.get());
+                        output.accept(KEItem.CHORUS_PETAL.get());
+                        output.accept(KEItem.FRIED_DRAGON_EGG_ITEM.get());
+                        output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
+                        output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
                     })
                     .build());
 

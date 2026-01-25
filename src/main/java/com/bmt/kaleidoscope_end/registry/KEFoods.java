@@ -112,7 +112,7 @@ public class KEFoods {
             .saturationModifier(0.6f)
             .alwaysEdible().build();
 
-    public static final FoodProperties END_PIG_WORM = new FoodProperties.Builder()
+    public static final FoodProperties END_CATERPILLAR = new FoodProperties.Builder()
             .nutrition(18)
             .saturationModifier(0.2f)
             .alwaysEdible().build();
@@ -162,5 +162,25 @@ public class KEFoods {
             .nutrition(24)
             .saturationModifier(0.8f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1600, 0), 1.0f)
+            .alwaysEdible().build();
+
+    // 煎龙蛋
+    public static final FoodProperties FRIED_DRAGON_EGG = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.6f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6000, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 1), 1.0f)
+            .alwaysEdible().build();
+
+    // 龙蛋羹
+    public static final FoodProperties DRAGON_EGG_CUSTARD = new FoodProperties.Builder()
+            .nutrition(10)
+            .saturationModifier(0.7f)
+            .alwaysEdible().build();
+
+    // 紫颂花茶
+    public static final FoodProperties CHORUS_FLOWER_TEA = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(0.3f)
             .alwaysEdible().build();
 }
