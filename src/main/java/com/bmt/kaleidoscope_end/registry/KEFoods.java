@@ -214,6 +214,8 @@ public class KEFoods {
     public static final FoodProperties FRIED_DRAGON_EGG = new FoodProperties.Builder()
             .nutrition(8)
             .saturationMod(0.6f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6000, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 1), 1.0f)
             .meat()
             .alwaysEat().build();
 

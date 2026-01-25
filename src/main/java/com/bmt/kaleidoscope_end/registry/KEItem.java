@@ -6,6 +6,7 @@ import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
 import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModFoods;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
+import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.WithTooltipsItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -158,7 +159,7 @@ public class KEItem {
 
     // 末影薄荷糖
     public static final RegistryObject<Item> ENDER_MINT_CANDY_ITEM = ITEMS.register("ender_mint_candy",
-            () -> new Item(new Item.Properties().food(KEFoods.ENDER_MINT_CANDY)));
+            () -> new FoodWithEffectsItem(KEFoods.ENDER_MINT_CANDY));
 
     // 龙舒芙蕾
     public static final RegistryObject<Item> DRAGON_SOUFFLE_ITEM = ITEMS.register("dragon_souffle",
@@ -182,7 +183,7 @@ public class KEItem {
 
     // 煎龙蛋
     public static final RegistryObject<Item> FRIED_DRAGON_EGG_ITEM = ITEMS.register("fried_dragon_egg",
-            () -> new Item(new Item.Properties().food(KEFoods.FRIED_DRAGON_EGG)));
+            () -> new FoodWithEffectsItem(KEFoods.FRIED_DRAGON_EGG));
 
     // 龙蛋羹
     public static final RegistryObject<Item> DRAGON_EGG_CUSTARD_ITEM = ITEMS.register("dragon_egg_custard",
