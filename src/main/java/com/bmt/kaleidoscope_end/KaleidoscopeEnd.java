@@ -58,6 +58,10 @@ public class KaleidoscopeEnd {
         return ResourceLocation.tryBuild(MODID, name);
     }
 
+    public static ResourceLocation fromNamespaceAndPath(String namespace, String id) {
+        return ResourceLocation.tryBuild(namespace, id);
+    }
+
     private void commonSetup(final FMLCommonSetupEvent event) {
         LOGGER.info("Kaleidoscope End");
     }

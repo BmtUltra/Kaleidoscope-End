@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_end.event;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.registry.KEEffects;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraftforge.event.entity.living.EnderManAngerEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -23,6 +24,10 @@ public class EventHandler {
         public static void LivingHurtEvent(LivingHurtEvent event) {
             if (event.getEntity().hasEffect(KEEffects.MINT.get())) {
                 event.setAmount(event.getAmount() * 0.2F);
+            }
+            if (event.getEntity().hasEffect(KEEffects.DREAM.get()) && event.getSource().is(DamageTypes.FALL)) {
+                event.setAmount(0);
+                event.setCanceled(true);
             }
         }
 

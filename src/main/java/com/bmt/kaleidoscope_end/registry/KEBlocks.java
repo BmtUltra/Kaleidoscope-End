@@ -15,6 +15,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Collection;
+
 public class KEBlocks {
     private static final DeferredRegister<Block> BLOCK_DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, KaleidoscopeEnd.MODID);
 
@@ -23,5 +25,9 @@ public class KEBlocks {
 
     public static void register(IEventBus eventBus) {
         BLOCK_DEFERRED_REGISTER.register(eventBus);
+    }
+
+    public static Collection<RegistryObject<Block>> getEntries(){
+       return BLOCK_DEFERRED_REGISTER.getEntries();
     }
 }
