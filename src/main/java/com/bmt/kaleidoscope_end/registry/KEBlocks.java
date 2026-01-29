@@ -27,7 +27,7 @@ public class KEBlocks {
         BLOCK_DEFERRED_REGISTER.register(eventBus);
     }
 
-    public static Collection<RegistryObject<Block>> getEntries(){
-       return BLOCK_DEFERRED_REGISTER.getEntries();
+    public static Collection<RegistryObject<Block>> getEntries() {
+        return BLOCK_DEFERRED_REGISTER.getEntries();
     }
 }

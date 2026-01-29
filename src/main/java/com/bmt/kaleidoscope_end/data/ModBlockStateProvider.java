@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_end.data;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
+import com.bmt.kaleidoscope_end.registry.KEBlocks;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBiteBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import net.minecraft.data.PackOutput;
@@ -8,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CaveVinesBlock;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -31,6 +33,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
             }
         });
 
+        suspiciousBlock(KEBlocks.SUSPICIOUS_END_STONE);
+    }
+
+    protected void suspiciousBlock(RegistryObject<? extends Block> registryObject) {
+        Block block = registryObject.get();
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        builder.forAllStates(blockState -> {
+            int dusted = blockState.getValue(BlockStateProperties.DUSTED);
+            ResourceLocation file = modLoc("block/%s_%d".formatted(registryObject.getId().getPath(), dusted));
+            return ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(file)).build();
+        });
     }
 
 

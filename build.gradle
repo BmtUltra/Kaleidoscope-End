@@ -144,7 +144,7 @@ dependencies {
     implementation fg.deobf("curse.maven:embeddium-908741:5681725")
     implementation fg.deobf("curse.maven:radium-reforged-570017:5706069")
     //这个模组也会导致数据生成失败
-        implementation fg.deobf("curse.maven:modern-ui-352491:6956345")
+//        implementation fg.deobf("curse.maven:modern-ui-352491:6956345")
     implementation fg.deobf("curse.maven:i18nupdatemod-297404:7173159")
     implementation fg.deobf("curse.maven:mmmmmmmmmmmm-225738:6860192")
     implementation fg.deobf("curse.maven:selene-499980:7388296")

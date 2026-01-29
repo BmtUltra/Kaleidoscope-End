@@ -1,10 +1,7 @@
 package com.bmt.kaleidoscope_end;
 
 import com.bmt.kaleidoscope_end.config.Config;
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_end.registry.KECreativeTabs;
-import com.bmt.kaleidoscope_end.registry.KEEffects;
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.registry.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -43,7 +40,7 @@ public class KaleidoscopeEnd {
         CREATIVE_MODE_TABS.register(modEventBus);
         KEEffects.register(modEventBus);
         KEBlocks.register(modEventBus);
-
+//        KEBlockEntityType.register(modEventBus);
         KEItem.register(modEventBus);
         KECreativeTabs.register(modEventBus);
 
