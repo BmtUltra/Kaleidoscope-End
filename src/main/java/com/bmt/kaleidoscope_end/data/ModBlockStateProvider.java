@@ -34,6 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
 
         suspiciousBlock(KEBlocks.SUSPICIOUS_END_STONE);
+        suspiciousBlock(KEBlocks.SUSPICIOUS_DRAGON_EGG);
     }
 
     protected void suspiciousBlock(RegistryObject<? extends Block> registryObject) {
@@ -41,7 +42,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         VariantBlockStateBuilder builder = getVariantBuilder(block);
         builder.forAllStates(blockState -> {
             int dusted = blockState.getValue(BlockStateProperties.DUSTED);
-            ResourceLocation file = modLoc("block/%s_%d".formatted(registryObject.getId().getPath(), dusted));
+            ResourceLocation file;
+            if (registryObject == KEBlocks.SUSPICIOUS_DRAGON_EGG) {
+                file = mcLoc("block/dragon_egg");
+
+            }else {
+                file = modLoc("block/%s_%d".formatted(registryObject.getId().getPath(), dusted));
+            }
             return ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(file)).build();
         });
     }

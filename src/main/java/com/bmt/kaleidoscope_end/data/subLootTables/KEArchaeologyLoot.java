@@ -19,12 +19,17 @@ public class KEArchaeologyLoot implements LootTableSubProvider {
     public void generate(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> builderBiConsumer) {
         this.addArchaeology(builderBiConsumer, KEBlocks.SUSPICIOUS_END_STONE, LootTable.lootTable().withPool(
                 LootPool.lootPool().add(
-                        LootItem.lootTableItem(Items.DRAGON_EGG)
+                        LootItem.lootTableItem(Items.APPLE)
+                )
+        ));
+        this.addArchaeology(builderBiConsumer, KEBlocks.SUSPICIOUS_DRAGON_EGG, LootTable.lootTable().withPool(
+                LootPool.lootPool().add(
+                        LootItem.lootTableItem(Items.APPLE)
                 )
         ));
     }
 
     private void addArchaeology(BiConsumer<ResourceLocation, LootTable.Builder> builderBiConsumer, RegistryObject<Block> registryObject, LootTable.Builder builder) {
-        builderBiConsumer.accept(KaleidoscopeEnd.id("%s_archaeology".formatted(registryObject.getId().getPath())), builder);
+        builderBiConsumer.accept(KaleidoscopeEnd.id("archaeology/%s".formatted(registryObject.getId().getPath())), builder);
     }
 }

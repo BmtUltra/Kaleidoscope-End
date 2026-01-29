@@ -13,8 +13,11 @@ public class BlockEntityTypeMixin {
     @Inject(method = "isValid", at = @At("HEAD"), cancellable = true)
     private void isValid(BlockState blockState, CallbackInfoReturnable<Boolean> cir) {
         BlockEntityType<?> blockEntityType = (BlockEntityType<?>) (Object) this;
-        if (blockEntityType == BlockEntityType.BRUSHABLE_BLOCK && blockState.getBlock() == KEBlocks.SUSPICIOUS_END_STONE.get()) {
-            cir.setReturnValue(true);
+        if (blockEntityType == BlockEntityType.BRUSHABLE_BLOCK) {
+            if (blockState.getBlock() == KEBlocks.SUSPICIOUS_END_STONE.get()
+                    || blockState.getBlock() == KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) {
+                cir.setReturnValue(true);
+            }
         }
     }
 

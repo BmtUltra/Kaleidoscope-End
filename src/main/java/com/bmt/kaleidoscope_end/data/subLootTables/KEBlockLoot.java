@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CaveVines;
 import net.minecraft.world.level.block.PotatoBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -41,6 +42,7 @@ public class KEBlockLoot extends BlockLootSubProvider {
     protected void generate() {
         this.add(KEBlocks.SUSPICIOUS_END_STONE.get(), noDrop());
 
+        dropOther(KEBlocks.SUSPICIOUS_DRAGON_EGG.get(), Blocks.DRAGON_EGG);
         FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
             if (resourceLocation.getNamespace().equals(KaleidoscopeEnd.MODID)) {
                 dropFoodBite(resourceLocation, foodData);
