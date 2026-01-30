@@ -49,6 +49,8 @@ public class KaleidoscopeEnd {
         modEventBus.addListener(this::addCreative);
 
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        KEFoodBiteRegistry.init();
     }
 
     public static ResourceLocation id(String name) {

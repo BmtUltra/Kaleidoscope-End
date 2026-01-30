@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"2": "kaleidoscope_end:block/dragon_egg/dragon_egg"
+		"2": "kaleidoscope_end:block/dark_dragon_egg_stew"
 	},
 	"elements": [
 		{
@@ -33,9 +33,9 @@
 			}
 		},
 		{
-			"from": [3, 7, 3],
-			"to": [13, 8, 13],
-			"rotation": {"angle": 0, "axis": "y", "origin": [1, -1, 1]},
+			"from": [3, 3, 3],
+			"to": [13, 4, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, -5, 1]},
 			"faces": {
 				"north": {"uv": [0, 0, 8, 8], "texture": "#2"},
 				"east": {"uv": [0, 0, 8, 7.5], "texture": "#2"},
@@ -46,22 +46,9 @@
 			}
 		},
 		{
-			"from": [5, 8, 11.5],
-			"to": [9, 9, 15.5],
-			"rotation": {"angle": 45, "axis": "y", "origin": [3, 0, 9]},
-			"faces": {
-				"north": {"uv": [3, 12.5, 5, 12], "texture": "#2"},
-				"east": {"uv": [5.5, 8.5, 7.5, 9], "texture": "#2"},
-				"south": {"uv": [3.5, 11.5, 5.5, 12], "texture": "#2"},
-				"west": {"uv": [2, 11, 4, 11.5], "texture": "#2"},
-				"up": {"uv": [3, 9, 5, 11], "texture": "#2"},
-				"down": {"uv": [2, 2, 14, 3], "texture": "#2"}
-			}
-		},
-		{
-			"from": [5.75, 7, 4.5],
-			"to": [7.75, 19, 6.5],
-			"rotation": {"angle": -22.5, "axis": "z", "origin": [4, -1, 2]},
+			"from": [4.75, 5, 4.5],
+			"to": [6.75, 17, 6.5],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [3, -3, 2]},
 			"faces": {
 				"north": {"uv": [14, 6.5, 15, 0.5], "texture": "#2"},
 				"east": {"uv": [14, 0.5, 15, 6.5], "texture": "#2"},
@@ -69,19 +56,6 @@
 				"west": {"uv": [14, 0.5, 15, 6.5], "texture": "#2"},
 				"up": {"uv": [14, 0, 15, 1], "texture": "#2"},
 				"down": {"uv": [14, 0, 15, 1], "texture": "#2"}
-			}
-		},
-		{
-			"from": [4, 7, 5],
-			"to": [5, 9, 8],
-			"rotation": {"angle": 0, "axis": "x", "origin": [2, 0, 3]},
-			"faces": {
-				"north": {"uv": [3, 12, 3.5, 13], "texture": "#2"},
-				"east": {"uv": [1, 13.5, 2.5, 14.5], "texture": "#2"},
-				"south": {"uv": [2, 14.5, 2.5, 15.5], "texture": "#2"},
-				"west": {"uv": [0.5, 13.5, 2, 14.5], "texture": "#2"},
-				"up": {"uv": [1, 13, 1.5, 14.5], "texture": "#2"},
-				"down": {"uv": [2, 9, 5, 10], "texture": "#2"}
 			}
 		},
 		{

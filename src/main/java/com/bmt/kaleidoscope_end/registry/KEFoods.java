@@ -73,7 +73,7 @@ public class KEFoods {
             .saturationMod(0.667f)
             .effect(() -> new MobEffectInstance(PRESERVATION.get(), 1800, 0), 1.0f)
             .alwaysEat().build();
-
+/*
     //暗黑龙蛋煲
     public static final FoodProperties DARK_DRAGON_EGG_STEW = new FoodProperties.Builder()
             .nutrition(16)
@@ -81,6 +81,17 @@ public class KEFoods {
             .meat()
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 0), 1.0f)
             .alwaysEat().build();
+*/
+    //暗黑龙蛋煲
+    static FoodProperties DARK_DRAGON_EGG_STEW_ITEM = (new FoodProperties.Builder()).nutrition(16).saturationMod(1.8F)
+        .effect(() -> {
+            return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 30 * 20);
+        }, 1.0F).meat().build();
+
+    static FoodProperties DARK_DRAGON_EGG_STEW_BLOCK = (new FoodProperties.Builder()).nutrition(4).saturationMod(1.8F)
+            .effect(() -> {
+                return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 40 * 20);
+            }, 1.0F).meat().build();
 
     //潜影贝质
     public static final FoodProperties SHULKER_SHELL_MEAT = new FoodProperties.Builder()
@@ -109,7 +120,7 @@ public class KEFoods {
     public static final FoodProperties VOID_CONCH_NOODLE_SOUP = new FoodProperties.Builder()
             .nutrition(14)
             .saturationMod(0.643f)
-            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 3600, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 400, 0), 1.0f)
             .alwaysEat().build();
 
     //炒末影螨肉
@@ -200,6 +211,8 @@ public class KEFoods {
     public static final FoodProperties DRAGON_SOUFFLE = new FoodProperties.Builder()
             .nutrition(5)
             .saturationMod(0.7f)
+            .effect(() -> new MobEffectInstance(MINT.get(), 3600, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 400, 0), 1.0f)
             .alwaysEat().build();
 
     //暗黑龙排
@@ -216,6 +229,7 @@ public class KEFoods {
             .saturationMod(0.6f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6000, 1), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION,6000,1),1.0f)
             .meat()
             .alwaysEat().build();
 
@@ -223,11 +237,13 @@ public class KEFoods {
     public static final FoodProperties DRAGON_EGG_CUSTARD = new FoodProperties.Builder()
             .nutrition(10)
             .saturationMod(0.7f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 600, 0), 1.0f)
             .alwaysEat().build();
 
     // 紫颂花茶
     public static final FoodProperties CHORUS_FLOWER_TEA = new FoodProperties.Builder()
             .nutrition(4)
             .saturationMod(0.3f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION,600,1),1)
             .alwaysEat().build();
 }
