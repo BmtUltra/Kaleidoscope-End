@@ -85,12 +85,12 @@ public class KEFoods {
     //暗黑龙蛋煲
     static FoodProperties DARK_DRAGON_EGG_STEW_ITEM = (new FoodProperties.Builder()).nutrition(16).saturationMod(1.8F)
         .effect(() -> {
-            return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 180 * 20);
+            return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 30 * 20);
         }, 1.0F).meat().build();
 
     static FoodProperties DARK_DRAGON_EGG_STEW_BLOCK = (new FoodProperties.Builder()).nutrition(4).saturationMod(1.8F)
             .effect(() -> {
-                return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 240 * 20);
+                return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 40 * 20);
             }, 1.0F).meat().build();
 
     //潜影贝质

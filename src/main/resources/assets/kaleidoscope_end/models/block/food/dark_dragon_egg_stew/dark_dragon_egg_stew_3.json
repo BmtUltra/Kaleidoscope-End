@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"2": "kaleidoscope_end:block/dragon_egg/dragon_egg"
+		"2": "kaleidoscope_end:block/dark_dragon_egg_stew"
 	},
 	"elements": [
 		{
