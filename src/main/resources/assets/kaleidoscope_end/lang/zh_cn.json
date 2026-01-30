@@ -26,6 +26,7 @@
   "item.kaleidoscope_end.end_salad": "末地沙拉",
   "tooltip.kaleidoscope_end.end_salad.maxim": "用末地特有植物制作的沙拉，清爽中带着一丝虚空的神秘",
   "item.kaleidoscope_end.dark_dragon_egg_stew": "暗黑龙蛋煲",
+  "block.kaleidoscope_end.dark_dragon_egg_stew": "暗黑龙蛋煲",
   "tooltip.kaleidoscope_end.dark_dragon_egg_stew.maxim": "龙蛋壳熬制的浓汤，每一口都蕴含着龙的力量",
   "item.kaleidoscope_end.shulker_shell_meat": "潜影贝质",
   "item.kaleidoscope_end.shulker_shell_stew": "潜影贝质炖",
@@ -75,7 +76,8 @@
   "effect.kaleidoscope_end.dream": "梦境",
   "effect.kaleidoscope_end.void_erosion": "虚空侵蚀",
   "effect.kaleidoscope_end.mint": "薄荷",
+
   "block.kaleidoscope_end.suspicious_end_stone": "可疑的末地石",
-  "block.kaleidoscope_end.suspicious_end_stone": "可疑的龙蛋"
+  "block.kaleidoscope_end.suspicious_dragon_egg": "可疑的龙蛋"
 
 }

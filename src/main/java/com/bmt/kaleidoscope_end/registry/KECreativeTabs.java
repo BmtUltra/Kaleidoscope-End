@@ -1,13 +1,18 @@
 package com.bmt.kaleidoscope_end.registry;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Objects;
 
 public class KECreativeTabs {
     private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -35,7 +40,14 @@ public class KECreativeTabs {
                         output.accept(KEItem.MINT_CHORUS_MOUSSE_ITEM.get());
                         output.accept(KEItem.OPTIC_NERVE_ITEM.get());
                         output.accept(KEItem.END_SALAD_ITEM.get());
-                        output.accept(KEItem.DARK_DRAGON_EGG_STEW_ITEM.get());
+
+                        FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
+                            if (resourceLocation.getNamespace().equals(KaleidoscopeEnd.MODID)) {
+                                Item item = ForgeRegistries.ITEMS.getValue(resourceLocation);
+                                output.accept(Objects.requireNonNull(item));
+                            }
+                        });
+
                         output.accept(KEItem.SHULKER_SHELL_MEAT_ITEM.get());
                         output.accept(KEItem.SHULKER_SHELL_STEW_ITEM.get());
                         output.accept(KEItem.SHULKER_ICE_CREAM_ITEM.get());
