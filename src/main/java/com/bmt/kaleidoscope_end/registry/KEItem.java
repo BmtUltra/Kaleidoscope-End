@@ -87,7 +87,7 @@ public class KEItem {
 
     // 薄荷紫颂慕斯
     public static final RegistryObject<Item> MINT_CHORUS_MOUSSE_ITEM = ITEMS.register("mint_chorus_mousse",
-            () -> new Item(new Item.Properties().food(KEFoods.MINT_CHORUS_MOUSSE)));
+            () -> new FoodWithEffectsItem(KEFoods.MINT_CHORUS_MOUSSE));
 
     // 视神经
     public static final RegistryObject<Item> OPTIC_NERVE_ITEM = ITEMS.register("optic_nerve",
