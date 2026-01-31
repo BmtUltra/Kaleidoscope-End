@@ -76,6 +76,9 @@
   "item.kaleidoscope_end.ender_dragon_smithing_template.applies_to_description": "§9龙牙",
   "item.kaleidoscope_end.ender_dragon_smithing_template.ingredients_description": "§7末影龙升级",
 
+  "enchantment.kaleidoscope_end.void_assault": "虚空强袭",
+  "enchantment.kaleidoscope_end.void_assault.desc": "基于魔咒等级，有概率造成多倍伤害",
+
   "effect.kaleidoscope_end.dream": "梦境",
   "effect.kaleidoscope_end.void_erosion": "虚空侵蚀",
   "effect.kaleidoscope_end.mint": "薄荷",
