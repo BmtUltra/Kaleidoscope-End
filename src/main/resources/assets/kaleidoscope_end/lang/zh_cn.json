@@ -67,6 +67,10 @@
   "tooltip.kaleidoscope_end.dragon_egg_custard.maxim": "龙蛋制成的蛋羹，口感细腻滑嫩，营养丰富",
   "item.kaleidoscope_end.chorus_flower_tea": "紫颂花茶",
   "tooltip.kaleidoscope_end.chorus_flower_tea.maxim": "紫颂花泡制的花茶，清香怡人，带着末地的宁静",
+  "item.kaleidoscope_end.chorus_flower_cake": "紫颂花糕",
+  "tooltip.kaleidoscope_end.chorus_flower_cake.maxim": "紫颂花制成的糕点，清香甜美，带着末地的宁静",
+  "item.kaleidoscope_end.chorus_seed_cookie": "紫颂果籽饼干",
+  "tooltip.kaleidoscope_end.chorus_seed_cookie.maxim": "紫颂果籽烤制的小饼干，酥脆可口，带着淡淡的梦境气息",
 
   "item.kaleidoscope_end.ender_dragon_smithing_template.upgrade_description":"§9下界合金菜刀",
   "item.kaleidoscope_end.ender_dragon_smithing_template.applies_to_description": "§9龙牙",

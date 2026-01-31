@@ -253,4 +253,31 @@ public class KEFoods {
             .saturationMod(0.667f)
             .effect(() -> new MobEffectInstance(PRESERVATION.get(), 180 * 20, 0), 1.0f)
             .alwaysEat().build();
+
+    // 紫颂花糕
+    public static final FoodProperties CHORUS_FLOWER_CAKE = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationMod(0.6f)
+            .effect(() -> new MobEffectInstance(PRESERVATION.get(), 120 * 20, 0), 1.0f)
+            .alwaysEat().build();
+
+    // 紫颂果籽饼干
+    public static final FoodProperties CHORUS_SEED_COOKIE = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationMod(0.3f)
+            .effect(() -> new MobEffectInstance(DREAM.get(), 30 * 20, 0), 0.5f)
+            .alwaysEat().build();
+
+    // 龙蛋液
+    public static final FoodProperties DRAGON_EGG_LIQUID_FOOD = new FoodProperties.Builder()
+            .nutrition(3)
+            .saturationMod(0.2f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 10 * 20, 0), 0.3f)
+            .alwaysEat().build();
+
+    // 紫颂果籽
+    public static final FoodProperties CHORUS_SEED_FOOD = new FoodProperties.Builder()
+            .nutrition(1)
+            .saturationMod(0.1f)
+            .alwaysEat().build();
 }

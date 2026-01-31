@@ -70,6 +70,8 @@ public class KECreativeTabs {
                         output.accept(KEItem.FRIED_DRAGON_EGG_ITEM.get());
                         output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
+                        output.accept(KEItem.CHORUS_FLOWER_CAKE_ITEM.get());
+                        output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());
                     })
                     .build());
 

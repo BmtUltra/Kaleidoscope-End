@@ -163,11 +163,11 @@ public class KEItem {
 
     // 龙蛋液
     public static final RegistryObject<Item> DRAGON_EGG_LIQUID = ITEMS.register("dragon_egg_liquid",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(KEFoods.DRAGON_EGG_LIQUID_FOOD)));
 
     // 紫颂果籽
     public static final RegistryObject<Item> CHORUS_SEED = ITEMS.register("chorus_seed",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(KEFoods.CHORUS_SEED_FOOD)));
 
     // 紫颂花瓣
     public static final RegistryObject<Item> CHORUS_PETAL = ITEMS.register("chorus_petal",
@@ -184,6 +184,14 @@ public class KEItem {
     // 紫颂花茶
     public static final RegistryObject<Item> CHORUS_FLOWER_TEA_ITEM = ITEMS.register("chorus_flower_tea",
             () -> new BowlFoodOnlyItem(KEFoods.CHORUS_FLOWER_TEA));
+
+    // 紫颂花糕
+    public static final RegistryObject<Item> CHORUS_FLOWER_CAKE_ITEM = ITEMS.register("chorus_flower_cake",
+            () -> new FoodWithEffectsItem(KEFoods.CHORUS_FLOWER_CAKE));
+
+    // 紫颂果籽饼干
+    public static final RegistryObject<Item> CHORUS_SEED_COOKIE_ITEM = ITEMS.register("chorus_seed_cookie",
+            () -> new FoodWithEffectsItem(KEFoods.CHORUS_SEED_COOKIE));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

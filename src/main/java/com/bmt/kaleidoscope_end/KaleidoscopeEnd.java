@@ -33,7 +33,7 @@ public class KaleidoscopeEnd {
     public KaleidoscopeEnd(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        modEventBus.addListener(this::commonSetup);
+        //modEventBus.addListener(this::commonSetup);
 
 
         ITEMS.register(modEventBus);
@@ -46,7 +46,7 @@ public class KaleidoscopeEnd {
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        modEventBus.addListener(this::addCreative);
+        //modEventBus.addListener(this::addCreative);
 
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
@@ -61,23 +61,5 @@ public class KaleidoscopeEnd {
         return ResourceLocation.tryBuild(namespace, id);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        LOGGER.info("Kaleidoscope End");
-    }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Kaleidoscope End");
-    }
-
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            LOGGER.info("Kaleidoscope End");
-        }
-    }
 }
