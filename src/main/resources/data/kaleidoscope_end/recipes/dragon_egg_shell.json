@@ -12,19 +12,15 @@
     ],
     "C": {
       "item": "kaleidoscope_end:dragon_dust"
-    },
-    "S": {
-      "item": "minecraft:netherite_upgrade_smithing_template"
     }
   },
   "pattern": [
-    "#S#",
     "#C#",
-    "###"
+    " # "
   ],
   "result": {
     "count": 1,
-    "item": "kaleidoscope_end:ender_dragon_smithing_template"
+    "item": "kaleidoscope_end:dragon_egg_shell"
   },
   "show_notification": true
 }

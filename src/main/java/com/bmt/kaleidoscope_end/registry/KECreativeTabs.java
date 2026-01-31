@@ -39,7 +39,6 @@ public class KECreativeTabs {
                         output.accept(KEItem.DREAM_BERRY_ITEM.get());
                         output.accept(KEItem.MINT_CHORUS_MOUSSE_ITEM.get());
                         output.accept(KEItem.OPTIC_NERVE_ITEM.get());
-                        output.accept(KEItem.END_SALAD_ITEM.get());
 
                         FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
                             if (resourceLocation.getNamespace().equals(KaleidoscopeEnd.MODID)) {

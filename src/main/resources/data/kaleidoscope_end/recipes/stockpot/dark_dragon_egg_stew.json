@@ -21,16 +21,10 @@
       "tag": "forge:eggs"
     },
     {
-      "tag": "forge:raw_dragon_meat"
-    },
-    {
       "tag": "forge:eggs"
     },
     {
-      "item": "kaleidoscope_end:optic_nerve"
-    },
-    {
-      "item": "kaleidoscope_end:optic_nerve"
+      "tag": "forge:raw_dragon_meat"
     }
   ],
   "result": {

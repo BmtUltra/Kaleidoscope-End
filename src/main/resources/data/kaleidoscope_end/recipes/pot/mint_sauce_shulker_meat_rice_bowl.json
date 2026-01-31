@@ -13,12 +13,22 @@
     {
       "item": "kaleidoscope_end:ender_mint"
     },
-    {
-      "tag": "forge:fruits/chorus"
-    },
-    {
-      "tag": "forge:fruits/chorus"
-    }
+    [
+      {
+        "tag": "forge:fruits/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_seed"
+      }
+    ],
+    [
+      {
+        "tag": "forge:fruits/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_seed"
+      }
+    ]
   ],
   "result": {
     "item": "kaleidoscope_end:mint_sauce_shulker_meat_rice_bowl"

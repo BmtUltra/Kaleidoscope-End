@@ -8,9 +8,14 @@
     "B": {
       "tag": "forge:milk"
     },
-    "C": {
-      "tag": "forge:fruits/chorus"
-    },
+    "C": [
+      {
+        "tag": "forge:fruits/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_seed"
+      }
+    ],
     "D": {
       "tag": "forge:flour"
     }

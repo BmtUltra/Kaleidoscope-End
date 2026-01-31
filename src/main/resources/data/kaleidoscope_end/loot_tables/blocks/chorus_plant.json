@@ -17,7 +17,7 @@
               "condition": "minecraft:random_chance"
             }
           ],
-          "name": "kaleidoscope_end:end_pig_worm"
+          "name": "kaleidoscope_end:end_caterpillar"
         }
       ],
       "rolls": 1.0

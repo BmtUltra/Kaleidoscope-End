@@ -5,6 +5,9 @@
   },
   "ingredients": [
     {
+      "tag": "forge:flour"
+    },
+    {
       "item": "kaleidoscope_end:dream_berry"
     },
     {
@@ -17,10 +20,7 @@
       "item": "kaleidoscope_end:dragon_dust"
     },
     {
-      "tag": "forge:flour"
-    },
-    {
-      "tag": "forge:flour"
+      "item": "kaleidoscope_end:dragon_dust"
     }
   ],
   "result": {

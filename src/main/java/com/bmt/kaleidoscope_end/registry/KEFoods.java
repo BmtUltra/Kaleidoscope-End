@@ -68,25 +68,21 @@ public class KEFoods {
             .alwaysEat().build();
 
     //末地沙拉
-    public static final FoodProperties END_SALAD = new FoodProperties.Builder()
-            .nutrition(10)
-            .saturationMod(0.667f)
-            .effect(() -> new MobEffectInstance(PRESERVATION.get(), 1800, 0), 1.0f)
-            .alwaysEat().build();
-/*
-    //暗黑龙蛋煲
-    public static final FoodProperties DARK_DRAGON_EGG_STEW = new FoodProperties.Builder()
-            .nutrition(16)
-            .saturationMod(1.8f)
-            .meat()
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 0), 1.0f)
-            .alwaysEat().build();
-*/
+    static FoodProperties END_SALAD_ITEM = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.667F)
+            .effect(() -> {
+                return new MobEffectInstance(DREAM.get(), 90 * 20);
+            }, 1.0F).meat().build();
+
+    static FoodProperties END_SALAD_BLOCK = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.667F)
+            .effect(() -> {
+                return new MobEffectInstance(DREAM.get(), 100 * 20);
+            }, 1.0F).meat().build();
+
     //暗黑龙蛋煲
     static FoodProperties DARK_DRAGON_EGG_STEW_ITEM = (new FoodProperties.Builder()).nutrition(16).saturationMod(1.8F)
-        .effect(() -> {
-            return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 30 * 20);
-        }, 1.0F).meat().build();
+            .effect(() -> {
+                return new MobEffectInstance(KEEffects.VOID_EROSION.get(), 30 * 20);
+            }, 1.0F).meat().build();
 
     static FoodProperties DARK_DRAGON_EGG_STEW_BLOCK = (new FoodProperties.Builder()).nutrition(4).saturationMod(1.8F)
             .effect(() -> {

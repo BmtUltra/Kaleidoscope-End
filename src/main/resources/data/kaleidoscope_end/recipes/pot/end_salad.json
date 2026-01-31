@@ -16,12 +16,22 @@
     {
       "item": "kaleidoscope_end:dream_berry"
     },
-    {
-      "item": "minecraft:chorus_flower"
-    },
-    {
-      "item": "minecraft:chorus_flower"
-    }
+    [
+      {
+        "tag": "forge:crops/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_petal"
+      }
+    ],
+    [
+      {
+        "tag": "forge:crops/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_petal"
+      }
+    ]
   ],
   "result": {
     "item": "kaleidoscope_end:end_salad"

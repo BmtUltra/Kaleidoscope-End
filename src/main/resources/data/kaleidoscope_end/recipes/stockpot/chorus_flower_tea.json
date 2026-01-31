@@ -8,15 +8,30 @@
   "finished_bubble_color": 16034443,
   "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
   "ingredients": [
-    {
-      "item": "minecraft:dragon_breath"
-    },
-    {
-      "item": "minecraft:dragon_breath"
-    },
-    {
-      "item": "minecraft:dragon_breath"
-    },
+    [
+      {
+        "tag": "forge:crops/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_petal"
+      }
+    ],
+    [
+      {
+        "tag": "forge:crops/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_petal"
+      }
+    ],
+    [
+      {
+        "tag": "forge:crops/chorus"
+      },
+      {
+        "item": "kaleidoscope_end:chorus_petal"
+      }
+    ],
     [
       {
         "tag": "forge:fruits/chorus"
@@ -35,24 +50,16 @@
     ],
     [
       {
-        "tag": "forge:crops/chorus"
+        "tag": "forge:fruits/chorus"
       },
       {
-        "item": "kaleidoscope_end:chorus_petal"
-      }
-    ],
-    [
-      {
-        "tag": "forge:crops/chorus"
-      },
-      {
-        "item": "kaleidoscope_end:chorus_petal"
+        "item": "kaleidoscope_end:chorus_seed"
       }
     ]
   ],
   "result": {
     "count": 3,
-    "item": "kaleidoscope_end:dragon_breath_chorus_soup"
+    "item": "kaleidoscope_end:chorus_flower_tea"
   },
   "soup_base": "minecraft:water",
   "time": 300

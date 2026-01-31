@@ -5,18 +5,6 @@
   },
   "ingredients": [
     {
-      "item": "kaleidoscope_end:ender_mint"
-    },
-    {
-      "item": "kaleidoscope_end:ender_mint"
-    },
-    {
-      "item": "kaleidoscope_end:dream_berry"
-    },
-    {
-      "item": "kaleidoscope_end:dream_berry"
-    },
-    {
       "item": "minecraft:dragon_breath"
     },
     {
@@ -24,6 +12,18 @@
     },
     {
       "item": "kaleidoscope_end:optic_nerve"
+    },
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "item": "kaleidoscope_end:ender_mint"
+    },
+    {
+      "item": "kaleidoscope_end:dream_berry"
+    },
+    {
+      "item": "kaleidoscope_end:dream_berry"
     }
   ],
   "result": {

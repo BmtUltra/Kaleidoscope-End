@@ -93,14 +93,6 @@ public class KEItem {
     public static final RegistryObject<Item> OPTIC_NERVE_ITEM = ITEMS.register("optic_nerve",
             () -> new Item(new Item.Properties().food(KEFoods.OPTIC_NERVE)));
 
-    // 末地沙拉
-    public static final RegistryObject<Item> END_SALAD_ITEM = ITEMS.register("end_salad",
-            () -> new BowlFoodOnlyItem(KEFoods.END_SALAD));
-/*
-    // 暗黑龙蛋煲
-    public static final RegistryObject<Item> DARK_DRAGON_EGG_STEW_ITEM = ITEMS.register("dark_dragon_egg_stew",
-            () -> new DragonEggShellFoodItem(KEFoods.DARK_DRAGON_EGG_STEW));
-*/
     // 潜影贝质
     public static final RegistryObject<Item> SHULKER_SHELL_MEAT_ITEM = ITEMS.register("shulker_shell_meat",
             () -> new Item(new Item.Properties().food(KEFoods.SHULKER_SHELL_MEAT)));

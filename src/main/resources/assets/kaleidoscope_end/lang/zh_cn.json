@@ -23,9 +23,8 @@
   "item.kaleidoscope_end.mint_chorus_mousse": "薄荷紫颂慕斯",
   "tooltip.kaleidoscope_end.mint_chorus_mousse.maxim": "薄荷的清凉与紫颂果的香甜交织，口感绵密如云",
   "item.kaleidoscope_end.optic_nerve": "视神经",
-  "item.kaleidoscope_end.end_salad": "末地沙拉",
+  "block.kaleidoscope_end.end_salad": "末地沙拉",
   "tooltip.kaleidoscope_end.end_salad.maxim": "用末地特有植物制作的沙拉，清爽中带着一丝虚空的神秘",
-  "item.kaleidoscope_end.dark_dragon_egg_stew": "暗黑龙蛋煲",
   "block.kaleidoscope_end.dark_dragon_egg_stew": "暗黑龙蛋煲",
   "tooltip.kaleidoscope_end.dark_dragon_egg_stew.maxim": "龙蛋壳熬制的浓汤，每一口都蕴含着龙的力量",
   "item.kaleidoscope_end.shulker_shell_meat": "潜影贝质",
@@ -78,6 +77,26 @@
   "effect.kaleidoscope_end.mint": "薄荷",
 
   "block.kaleidoscope_end.suspicious_end_stone": "可疑的末地石",
-  "block.kaleidoscope_end.suspicious_dragon_egg": "可疑的龙蛋"
+  "block.kaleidoscope_end.suspicious_dragon_egg": "可疑的龙蛋",
 
+  "advancements.kaleidoscope_end.root.title": "森罗物语：末地",
+  "advancements.kaleidoscope_end.root.description": "为末地带来奇幻生机！",
+  "advancements.kaleidoscope_end.dream_berry.title": "梦的果实",
+  "advancements.kaleidoscope_end.dream_berry.description": "在末地外岛采集到梦境浆果",
+  "advancements.kaleidoscope_end.dream.title": "飞起来了！",
+  "advancements.kaleidoscope_end.dream.description": "通过梦境效果漫步空中",
+  "advancements.kaleidoscope_end.void_conch.title": "来自虚空的回响",
+  "advancements.kaleidoscope_end.void_conch.description": "考古龙蛋时发现虚空海螺",
+  "advancements.kaleidoscope_end.void_erosion.title": "死亡的边界",
+  "advancements.kaleidoscope_end.void_erosion.description": "获得虚空侵蚀效果",
+  "advancements.kaleidoscope_end.end_caterpillar.title": "末地蛋白质",
+  "advancements.kaleidoscope_end.end_caterpillar.description": "在紫颂树上发现游荡的末地猪儿虫",
+  "advancements.kaleidoscope_end.dragon_dust.title": "龙之残息",
+  "advancements.kaleidoscope_end.dragon_dust.description": "考古龙蛋时发现龙尘",
+  "advancements.kaleidoscope_end.dragon_egg_shell.title": "破壳而生",
+  "advancements.kaleidoscope_end.dragon_egg_shell.description": "使用龙尘与黑曜石合成龙蛋壳",
+  "advancements.kaleidoscope_end.dragon_egg_diet.title": "以龙为宴",
+  "advancements.kaleidoscope_end.dragon_egg_diet.description": "食用所有龙蛋壳承装的大餐",
+  "advancements.kaleidoscope_end.dragon_tooth_knife.title": "终焉利刃",
+  "advancements.kaleidoscope_end.dragon_tooth_knife.description": "这把武器对末地生物展现出压倒性的锋芒"
 }

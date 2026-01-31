@@ -1,9 +1,5 @@
 {
   "values": [
-    "kaleidoscope_end:dragon_tooth_knife",
-    {
-      "id": "#farmersdelight:tools/knives",
-      "required": false
-    }
+    "kaleidoscope_end:dragon_tooth_knife"
   ]
 }
