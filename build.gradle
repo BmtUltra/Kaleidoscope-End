@@ -116,6 +116,9 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    flatDir {
+        dir 'libs'
+    }
     maven {
         url "https://cursemaven.com"
     }
@@ -129,8 +132,11 @@ dependencies {
         jarJar.ranged(it, "[0.5.0,)")
     }
 
+    implementation fg.deobf("blank:kaleidoscope_nether:1.0.6-1.20.1")
+    //implementation fg.deobf("blank:imblocker:5.4.6.1-forge+1.17-1.20.4")
+
     implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:7473809")
-    implementation fg.deobf("curse.maven:alexs-mobs-426558:5698791")
+    //implementation fg.deobf("curse.maven:alexs-mobs-426558:5698791")
     implementation fg.deobf("curse.maven:citadel-331936:6702068")
     implementation fg.deobf("curse.maven:jei-238222:7361881")
     implementation fg.deobf("curse.maven:jade-324717:6855440")
@@ -161,7 +167,6 @@ dependencies {
     implementation fg.deobf("curse.maven:lendercataclysm-551586:6906993")
     implementation fg.deobf("curse.maven:lionfish-api-1001614:5922047")
     implementation fg.deobf("curse.maven:screenshot-to-clipboard-326950:3643026")
-    //implementation fg.deobf("curse.maven:kaleidoscope-nether-1417862:7517902")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
