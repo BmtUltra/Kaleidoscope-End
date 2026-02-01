@@ -80,8 +80,11 @@
   "enchantment.kaleidoscope_end.void_assault.desc": "基于魔咒等级，有概率造成多倍伤害",
 
   "effect.kaleidoscope_end.dream": "梦境",
+  "effect.kaleidoscope_end.dream.description": "可以在天空中游泳",
   "effect.kaleidoscope_end.void_erosion": "虚空侵蚀",
+  "effect.kaleidoscope_end.void_erosion.description": "效果持续时间内，生命值无法低于1点，且造成的伤害无视护甲值",
   "effect.kaleidoscope_end.mint": "薄荷",
+  "effect.kaleidoscope_end.mint.description": "直视末影人时不会激怒，受到的魔法伤害大幅度降低",
 
   "block.kaleidoscope_end.suspicious_end_stone": "可疑的末地石",
   "block.kaleidoscope_end.suspicious_dragon_egg": "可疑的龙蛋",
