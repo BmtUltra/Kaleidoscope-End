@@ -3,6 +3,7 @@ package com.bmt.kaleidoscope_end.event;
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.registry.KEBlocks;
 import com.bmt.kaleidoscope_end.registry.KEEffects;
+import com.bmt.kaleidoscope_end.registry.KEItem;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;
@@ -52,7 +53,7 @@ public class EventHandler {
         public static void RightClickBlock(PlayerInteractEvent.RightClickBlock event) {
             @NotNull InteractionHand hand = event.getHand();
             Player player = event.getEntity();
-            if (player.getItemInHand(hand).is(Items.NETHER_STAR)) {
+            if (player.getItemInHand(hand).is(KEItem.DRAGON_TOOTH.get())) {
                 if (event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.END_STONE) {
                     event.getLevel().setBlock(event.getPos(), KEBlocks.SUSPICIOUS_END_STONE.get().defaultBlockState(), 3);
                     event.getLevel().getBlockEntity(event.getPos(), BlockEntityType.BRUSHABLE_BLOCK).ifPresent(brushableBlockEntity -> {
@@ -65,7 +66,7 @@ public class EventHandler {
                 }
             }
             if ((player.getMainHandItem().is(Items.BRUSH) || player.getOffhandItem().is(Items.BRUSH))||
-                    (player.getMainHandItem().is(Items.NETHER_STAR) || player.getOffhandItem().is(Items.NETHER_STAR))) {
+                    (player.getMainHandItem().is(KEItem.DRAGON_TOOTH.get()) || player.getOffhandItem().is(KEItem.DRAGON_TOOTH.get()))) {
                 if (event.getLevel().getBlockState(event.getPos()).is(KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) || event.getLevel().getBlockState(event.getPos()).is(Blocks.DRAGON_EGG)) {
                     event.setUseBlock(Event.Result.DENY);
                 }

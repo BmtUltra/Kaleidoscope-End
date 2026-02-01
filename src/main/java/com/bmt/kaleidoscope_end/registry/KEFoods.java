@@ -239,13 +239,21 @@ public class KEFoods {
             .alwaysEat().build();
 
     // 龙蛋羹
-    public static final FoodProperties DRAGON_EGG_CUSTARD = new FoodProperties.Builder()
+    public static final FoodProperties DRAGON_EGG_CUSTARD_ITEM = new FoodProperties.Builder()
             .nutrition(20)
-            .saturationMod(1.8f)
+            .saturationMod(1.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 35 * 20), 1.0F)
+            .meat().build();
+
+    public static final FoodProperties DRAGON_EGG_CUSTARD_BLOCK = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationMod(1.8F)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
-            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 35 * 20, 0), 1.0f)
-            .alwaysEat().build();
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 40 * 20), 1.0F)
+            .meat().build();
 
     // 紫颂花茶
     public static final FoodProperties CHORUS_FLOWER_TEA = new FoodProperties.Builder()

@@ -47,6 +47,10 @@ public class KEItem {
     public static final RegistryObject<Item> ENDERMITE_EGG = ITEMS.register("endermite_egg",
             () -> new Item(new Item.Properties()));
 
+    // 末地炉灶
+    public static final RegistryObject<Item> END_STOVE_ITEM = ITEMS.register("end_stove",
+            () -> new BlockItem(KEBlocks.END_STOVE.get(), new Item.Properties()));
+
     // 可疑的末地石
     public static final RegistryObject<Item> SUSPICIOUS_END_STONE_ITEM = ITEMS.register("suspicious_end_stone",
             () -> new BlockItem(KEBlocks.SUSPICIOUS_END_STONE.get(), new Item.Properties()));
@@ -187,10 +191,6 @@ public class KEItem {
     // 煎龙蛋
     public static final RegistryObject<Item> FRIED_DRAGON_EGG_ITEM = ITEMS.register("fried_dragon_egg",
             () -> new FoodWithEffectsItem(KEFoods.FRIED_DRAGON_EGG));
-
-    // 龙蛋羹
-    public static final RegistryObject<Item> DRAGON_EGG_CUSTARD_ITEM = ITEMS.register("dragon_egg_custard",
-            () -> new DragonEggShellFoodItem(KEFoods.DRAGON_EGG_CUSTARD));
 
     // 紫颂花茶
     public static final RegistryObject<Item> CHORUS_FLOWER_TEA_ITEM = ITEMS.register("chorus_flower_tea",

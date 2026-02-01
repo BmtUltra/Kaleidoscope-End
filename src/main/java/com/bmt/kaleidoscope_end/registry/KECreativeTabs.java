@@ -23,6 +23,8 @@ public class KECreativeTabs {
                     .title(Component.translatable("itemGroup.kaleidoscope_end_foods"))
                     .icon(() -> new ItemStack(KEItem.ENDER_MINT.get()))
                     .displayItems((parameters, output) -> {
+                        output.accept(KEItem.END_STOVE_ITEM.get());
+
                         output.accept(KEItem.DRAGON_TOOTH_KNIFE.get());
                         output.accept(KEItem.VOID_CONCH.get());
                         output.accept(KEItem.DRAGON_DUST.get());
@@ -68,7 +70,7 @@ public class KECreativeTabs {
                         output.accept(KEItem.CHORUS_SEED.get());
                         output.accept(KEItem.CHORUS_PETAL.get());
                         output.accept(KEItem.FRIED_DRAGON_EGG_ITEM.get());
-                        output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
+                        //output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_CAKE_ITEM.get());
                         output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());

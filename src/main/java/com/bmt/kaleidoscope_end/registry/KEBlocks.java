@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_end.registry;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.block.SuspiciousDragonEggBlock;
+import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.StoveBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -21,14 +22,18 @@ import java.util.Collection;
 public class KEBlocks {
     private static final DeferredRegister<Block> BLOCK_DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, KaleidoscopeEnd.MODID);
 
+    // 可疑的末地石
     public static final RegistryObject<Block> SUSPICIOUS_END_STONE = BLOCK_DEFERRED_REGISTER.register("suspicious_end_stone",
             () -> new BrushableBlock(Blocks.END_STONE, BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_SAND).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
 
+    // 可疑的龙蛋
     public static final RegistryObject<Block> SUSPICIOUS_DRAGON_EGG = BLOCK_DEFERRED_REGISTER.register("suspicious_dragon_egg",
             () -> new SuspiciousDragonEggBlock(Blocks.DRAGON_EGG, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(3.0F, 9.0F).lightLevel((p_50840_) -> {
-                return 1;
-            }).noOcclusion().pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
+                return 1;}).noOcclusion().pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
 
+    // 末地炉灶
+    public static final RegistryObject<Block> END_STOVE = BLOCK_DEFERRED_REGISTER.register("end_stove",
+            () -> new StoveBlock());
 
     public static void register(IEventBus eventBus) {
         BLOCK_DEFERRED_REGISTER.register(eventBus);

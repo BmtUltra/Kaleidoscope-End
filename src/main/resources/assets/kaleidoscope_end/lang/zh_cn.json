@@ -63,7 +63,7 @@
   "item.kaleidoscope_end.chorus_petal": "紫颂花瓣",
   "item.kaleidoscope_end.fried_dragon_egg": "煎龙蛋",
   "tooltip.kaleidoscope_end.fried_dragon_egg.maxim": "龙蛋煎至刚刚好，外脆内嫩，每一口都是享受",
-  "item.kaleidoscope_end.dragon_egg_custard": "龙蛋羹",
+  "block.kaleidoscope_end.dragon_egg_custard": "龙蛋羹",
   "tooltip.kaleidoscope_end.dragon_egg_custard.maxim": "龙蛋制成的蛋羹，口感细腻滑嫩，营养丰富",
   "item.kaleidoscope_end.chorus_flower_tea": "紫颂花茶",
   "tooltip.kaleidoscope_end.chorus_flower_tea.maxim": "紫颂花泡制的花茶，清香怡人，带着末地的宁静",
@@ -85,6 +85,7 @@
 
   "block.kaleidoscope_end.suspicious_end_stone": "可疑的末地石",
   "block.kaleidoscope_end.suspicious_dragon_egg": "可疑的龙蛋",
+  "block.kaleidoscope_end.end_stove": "末地炉灶",
 
   "advancements.kaleidoscope_end.root.title": "森罗物语：末地",
   "advancements.kaleidoscope_end.root.description": "为末地带来奇幻生机！",
