@@ -6,33 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "kaleidoscope_end:dragon_egg_liquid",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1.0,
-                "max": 2.0
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "kaleidoscope_end:dragon_dust",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1.0,
-                "max": 3.0
-              }
-            }
-          ]
+          "name": "minecraft:apple"
         }
       ],
       "rolls": 1.0
