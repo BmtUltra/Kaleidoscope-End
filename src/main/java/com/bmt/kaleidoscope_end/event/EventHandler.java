@@ -4,9 +4,12 @@ import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.registry.KEBlocks;
 import com.bmt.kaleidoscope_end.registry.KEEffects;
 import com.bmt.kaleidoscope_end.registry.KEItem;
+import net.minecraft.core.NonNullList;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -47,6 +50,17 @@ public class EventHandler {
                 event.setCanceled(true);
                 event.getEntity().setHealth(1);
             }
+
+            if (event.getEntity().getType() == EntityType.ENDER_DRAGON) {
+                if (event.getSource().getEntity() instanceof Player player) {
+                    NonNullList<ItemStack> items = player.getInventory().items;
+                    for (int i = 0; i < items.size(); i++) {
+                        if (items.get(i).is(Items.DRAGON_EGG)) {
+                            items.set(i, new ItemStack(KEItem.SUSPICIOUS_DRAGON_EGG_ITEM.get(), items.get(i).getCount()));
+                        }
+                    }
+                }
+            }
         }
 
         @SubscribeEvent
@@ -56,16 +70,13 @@ public class EventHandler {
             if (player.getItemInHand(hand).is(KEItem.DRAGON_TOOTH.get())) {
                 if (event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.END_STONE) {
                     event.getLevel().setBlock(event.getPos(), KEBlocks.SUSPICIOUS_END_STONE.get().defaultBlockState(), 3);
-                    event.getLevel().getBlockEntity(event.getPos(), BlockEntityType.BRUSHABLE_BLOCK).ifPresent(brushableBlockEntity -> {
-                        brushableBlockEntity.setLootTable(KaleidoscopeEnd.id("archaeology/suspicious_end_stone"), event.getLevel().getRandom().nextLong());
-                    });
                     event.getEntity().getItemInHand(hand).shrink(1);
                 } else if (event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.DRAGON_EGG) {
                     event.getLevel().setBlock(event.getPos(), KEBlocks.SUSPICIOUS_DRAGON_EGG.get().defaultBlockState(), 3);
                     event.getEntity().getItemInHand(hand).shrink(1);
                 }
             }
-            if ((player.getMainHandItem().is(Items.BRUSH) || player.getOffhandItem().is(Items.BRUSH))||
+            if ((player.getMainHandItem().is(Items.BRUSH) || player.getOffhandItem().is(Items.BRUSH)) ||
                     (player.getMainHandItem().is(KEItem.DRAGON_TOOTH.get()) || player.getOffhandItem().is(KEItem.DRAGON_TOOTH.get()))) {
                 if (event.getLevel().getBlockState(event.getPos()).is(KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) || event.getLevel().getBlockState(event.getPos()).is(Blocks.DRAGON_EGG)) {
                     event.setUseBlock(Event.Result.DENY);

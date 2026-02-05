@@ -42,7 +42,10 @@ public class KEBlockLoot extends BlockLootSubProvider {
     protected void generate() {
         this.add(KEBlocks.SUSPICIOUS_END_STONE.get(), noDrop());
 
+        dropSelf(KEBlocks.END_STOVE.get());
         dropOther(KEBlocks.SUSPICIOUS_DRAGON_EGG.get(), Blocks.DRAGON_EGG);
+
+
         FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
             if (resourceLocation.getNamespace().equals(KaleidoscopeEnd.MODID)) {
                 dropFoodBite(resourceLocation, foodData);
