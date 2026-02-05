@@ -204,6 +204,26 @@ public class KEItem {
     public static final RegistryObject<Item> CHORUS_SEED_COOKIE_ITEM = ITEMS.register("chorus_seed_cookie",
             () -> new FoodWithEffectsItem(KEFoods.CHORUS_SEED_COOKIE));
 
+    // 龙蛋冰淇淋
+    public static final RegistryObject<Item> DRAGON_EGG_ICE_CREAM_ITEM = ITEMS.register("dragon_egg_ice_cream",
+            () -> new DragonEggShellFoodItem(KEFoods.DRAGON_EGG_ICE_CREAM));
+
+    // 填馅虚空海螺
+    public static final RegistryObject<Item> STUFFED_VOID_CONCH_ITEM = ITEMS.register("stuffed_void_conch",
+            () -> new FoodWithEffectsItem(KEFoods.STUFFED_VOID_CONCH));
+
+    // 视神经咕噜肉
+    public static final RegistryObject<Item> OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM = ITEMS.register("optic_nerve_sweet_and_sour_pork",
+            () -> new BowlFoodOnlyItem(KEFoods.OPTIC_NERVE_SWEET_AND_SOUR_PORK));
+
+    // 末地猪儿虫刺身
+    public static final RegistryObject<Item> END_CATERPILLAR_SASHIMI_ITEM = ITEMS.register("end_caterpillar_sashimi",
+            () -> new BowlFoodOnlyItem(KEFoods.END_CATERPILLAR_SASHIMI));
+
+    // 虚空羊排
+    public static final RegistryObject<Item> VOID_MUTTON_STEAK_ITEM = ITEMS.register("void_mutton_steak",
+            () -> new BowlFoodOnlyItem(KEFoods.VOID_MUTTON_STEAK));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -133,9 +133,10 @@ dependencies {
     }
 
     implementation fg.deobf("blank:kaleidoscope_nether:1.0.6-1.20.1")
+    //implementation fg.deobf("blank:imblocker:5.4.6.1-forge+1.17-1.20.4")
 
     implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:7473809")
-    implementation fg.deobf("curse.maven:alexs-mobs-426558:5698791")
+    //implementation fg.deobf("curse.maven:alexs-mobs-426558:5698791")
     implementation fg.deobf("curse.maven:citadel-331936:6702068")
     implementation fg.deobf("curse.maven:jei-238222:7361881")
     implementation fg.deobf("curse.maven:jade-324717:6855440")
@@ -153,10 +154,7 @@ dependencies {
     implementation fg.deobf("curse.maven:i18nupdatemod-297404:7173159")
     implementation fg.deobf("curse.maven:mmmmmmmmmmmm-225738:6860192")
     implementation fg.deobf("curse.maven:selene-499980:7388296")
-
-    implementation fg.deobf("curse.maven:apothic-attributes-898963:5634071")
-    implementation fg.deobf("curse.maven:placebo-283644:6274231")
-
+    //implementation fg.deobf("curse.maven:apothic-attributes-898963:5634071")
     implementation fg.deobf("curse.maven:inventory-hud-forge-357540:5639966")
     //implementation fg.deobf("curse.maven:artifacts-312353:6351716")
     implementation fg.deobf("curse.maven:damage-number-998849:7060656")
@@ -170,7 +168,6 @@ dependencies {
     implementation fg.deobf("curse.maven:lionfish-api-1001614:5922047")
     implementation fg.deobf("curse.maven:screenshot-to-clipboard-326950:3643026")
 
-    implementation fg.deobf("curse.maven:scannable-266784:4763070")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
 }

@@ -1,7 +1,7 @@
 {
   "itemGroup.kaleidoscope_end_foods": "森罗物语：末地",
 
-  "item.kaleidoscope_end.dragon_tooth_knife": "龙牙刀",
+  "item.kaleidoscope_end.dragon_tooth_knife": "龙之刃",
 
   "item.kaleidoscope_end.void_conch": "虚空海螺",
   "item.kaleidoscope_end.dragon_dust": "龙尘",
@@ -71,9 +71,19 @@
   "tooltip.kaleidoscope_end.chorus_flower_cake.maxim": "紫颂花制成的糕点，清香甜美，带着末地的宁静",
   "item.kaleidoscope_end.chorus_seed_cookie": "紫颂果籽饼干",
   "tooltip.kaleidoscope_end.chorus_seed_cookie.maxim": "紫颂果籽烤制的小饼干，酥脆可口，带着淡淡的梦境气息",
+  "item.kaleidoscope_end.dragon_egg_ice_cream": "龙蛋冰淇淋",
+  "tooltip.kaleidoscope_end.dragon_egg_ice_cream.maxim": "龙蛋制成的冰淇淋，冰凉甜美，带着龙的神秘气息",
+  "item.kaleidoscope_end.stuffed_void_conch": "填馅虚空海螺",
+  "tooltip.kaleidoscope_end.stuffed_void_conch.maxim": "虚空海螺填满鲜美馅料，每一口都仿佛在虚空中漂浮",
+  "item.kaleidoscope_end.optic_nerve_sweet_and_sour_pork": "视神经咕噜肉",
+  "tooltip.kaleidoscope_end.optic_nerve_sweet_and_sour_pork.maxim": "视神经配以酸甜酱汁，口感独特，视觉敏锐",
+  "item.kaleidoscope_end.end_caterpillar_sashimi": "末地猪儿虫刺身",
+  "tooltip.kaleidoscope_end.end_caterpillar_sashimi.maxim": "新鲜的末地猪儿虫刺身，肉质鲜嫩，带着末地的纯净",
+  "item.kaleidoscope_end.void_mutton_steak": "虚空羊排",
+  "tooltip.kaleidoscope_end.void_mutton_steak.maxim": "虚空海螺制成的羊排，肉质紧实，带着虚空的神秘力量",
 
   "item.kaleidoscope_end.ender_dragon_smithing_template.upgrade_description":"§9下界合金菜刀",
-  "item.kaleidoscope_end.ender_dragon_smithing_template.applies_to_description": "§9龙牙",
+  "item.kaleidoscope_end.ender_dragon_smithing_template.applies_to_description": "§9龙尘",
   "item.kaleidoscope_end.ender_dragon_smithing_template.ingredients_description": "§7末影龙升级",
 
   "enchantment.kaleidoscope_end.void_assault": "虚空强袭",
