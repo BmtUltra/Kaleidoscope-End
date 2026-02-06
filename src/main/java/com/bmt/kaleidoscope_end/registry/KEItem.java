@@ -21,7 +21,7 @@ import java.util.List;
 public class KEItem {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, KaleidoscopeEnd.MODID);
 
-    // 龙牙刀
+    // 龙之刃
     public static final RegistryObject<Item> DRAGON_TOOTH_KNIFE = ITEMS.register("dragon_tooth_knife",
             () -> new DragonToothKnifeItem());
 
