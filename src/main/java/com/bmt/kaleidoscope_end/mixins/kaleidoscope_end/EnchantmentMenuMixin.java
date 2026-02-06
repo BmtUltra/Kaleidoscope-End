@@ -36,6 +36,11 @@ public abstract class EnchantmentMenuMixin {
     @Final
     private Container enchantSlots;
 
+
+    @Shadow
+    @Final
+    public int[] costs;
+
     @WrapOperation(method = "lambda$clickMenuButton$1", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/inventory/EnchantmentMenu;getEnchantmentList(Lnet/minecraft/world/item/ItemStack;II)Ljava/util/List;"))
     private List<EnchantmentInstance> modifyEnchantments(EnchantmentMenu instance, ItemStack itemStack, int seed, int cost, Operation<List<EnchantmentInstance>> original, @Local(argsOnly = true) Player player) {
         List<EnchantmentInstance> olds = original.call(instance, itemStack, seed, cost);
@@ -74,10 +79,21 @@ public abstract class EnchantmentMenuMixin {
 
             if (random.nextFloat() <= 0.6F) {
                 player.level().registryAccess().lookupOrThrow(ForgeRegistries.ENCHANTMENTS.getRegistryKey()).get(KETags.Enchantments.KE_ENCHANTMENTS).ifPresent(holders -> {
-                    Holder<Enchantment> holder = holders.get(random.nextInt(holders.size()));
+                    List<Holder<Enchantment>> list = holders.stream().filter(holder -> holder.value().canEnchant(itemStack)).toList();
+                    if (list.isEmpty()) {
+                        return;
+                    }
+                    Holder<Enchantment> holder = list.get(random.nextInt(list.size()));
+
 
                     int add = 1;
                     int maxLevel = holder.value().getMaxLevel();
+                    for (int i = 1; i <= maxLevel; i++) {
+                        if (holder.value().getMinCost(i) > cost) {
+                            maxLevel = maxLevel - 1;
+                            break;
+                        }
+                    }
                     int total = 0;
                     for (int i = 1; i <= maxLevel; i++) {
                         total = total + i + add;

@@ -1,7 +1,14 @@
 package com.bmt.kaleidoscope_end.registry;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
+import com.bmt.kaleidoscope_end.block.DreamBerryHeadBlock;
+import com.bmt.kaleidoscope_end.block.DreamBerryPlantBlock;
+import com.bmt.kaleidoscope_end.block.EnderMint;
 import com.bmt.kaleidoscope_end.block.SuspiciousDragonEggBlock;
+import com.bmt.kaleidoscope_nether.block.KNCaveVinesHeadBlock;
+import com.bmt.kaleidoscope_nether.block.KNCaveVinesPlantBlock;
+import com.bmt.kaleidoscope_nether.block.TwistingCaveVinesHead;
+import com.bmt.kaleidoscope_nether.block.TwistingCaveVinesPlant;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.StoveBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -24,13 +31,30 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
+import java.util.function.Supplier;
 
 public class KEBlocks {
     private static final DeferredRegister<Block> BLOCK_DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, KaleidoscopeEnd.MODID);
 
+    public static final Supplier<BlockBehaviour.Properties> CROP_DEFAULT_PROPERTIES =
+            () -> BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY);
+
+    public static final Supplier<BlockBehaviour.Properties> CAVE_VINES_PROPERTIES =
+            () -> BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).randomTicks().noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY);
+
+
+    public static final RegistryObject<DreamBerryPlantBlock> DREAM_BERRY_PLANT = BLOCK_DEFERRED_REGISTER.register("dream_berry_plant",
+            () -> new DreamBerryPlantBlock(CAVE_VINES_PROPERTIES.get()));
+
+    public static final RegistryObject<DreamBerryHeadBlock> DREAM_BERRY_HEAD = BLOCK_DEFERRED_REGISTER.register("dream_berry_head",
+            () -> new DreamBerryHeadBlock(CAVE_VINES_PROPERTIES.get()));
+
+
+    public static final RegistryObject<EnderMint> ENDER_MINT = BLOCK_DEFERRED_REGISTER.register("ender_mint", () -> new EnderMint(CROP_DEFAULT_PROPERTIES.get()));
+
     // 可疑的末地石
     public static final RegistryObject<Block> SUSPICIOUS_END_STONE = BLOCK_DEFERRED_REGISTER.register("suspicious_end_stone",
-            () -> new BrushableBlock(Blocks.END_STONE, BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_SAND).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED){
+            () -> new BrushableBlock(Blocks.END_STONE, BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_SAND).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED) {
                 @Override
                 public @NotNull BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
                     @Nullable BrushableBlockEntity blockEntity = (BrushableBlockEntity) super.newBlockEntity(blockPos, blockState);
@@ -42,7 +66,8 @@ public class KEBlocks {
     // 可疑的龙蛋
     public static final RegistryObject<Block> SUSPICIOUS_DRAGON_EGG = BLOCK_DEFERRED_REGISTER.register("suspicious_dragon_egg",
             () -> new SuspiciousDragonEggBlock(Blocks.DRAGON_EGG, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(3.0F, 9.0F).lightLevel((p_50840_) -> {
-                return 1;}).noOcclusion().pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
+                return 1;
+            }).noOcclusion().pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
 
     // 末地炉灶
     public static final RegistryObject<Block> END_STOVE = BLOCK_DEFERRED_REGISTER.register("end_stove",

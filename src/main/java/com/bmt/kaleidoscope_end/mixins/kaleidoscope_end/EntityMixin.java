@@ -28,7 +28,7 @@ public abstract class EntityMixin {
         }
     }
 
-    @WrapOperation(method = "updateSwimming", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;canStartSwimming()Z"))
+    @WrapOperation(method = "updateSwimming", at = @At(remap = false,value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;canStartSwimming()Z"))
     private boolean warpCanStartSwimming(Entity instance, Operation<Boolean> original) {
         if ((Object) this instanceof Player player) {
             if (player.hasEffect(KEEffects.DREAM.get())) {
@@ -38,7 +38,7 @@ public abstract class EntityMixin {
         return original.call(instance);
     }
 
-    @WrapOperation(method = {"updateSwimming", "isVisuallyCrawling"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;isInFluidType(Ljava/util/function/BiPredicate;)Z"))
+    @WrapOperation(method = {"updateSwimming", "isVisuallyCrawling"}, at = @At(remap = false,value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;isInFluidType(Ljava/util/function/BiPredicate;)Z"))
     private boolean warpIsInFluidType(Entity instance, BiPredicate<FluidType, Double> biPredicate, Operation<Boolean> original) {
         if ((Object) this instanceof Player player) {
             if (player.hasEffect(KEEffects.DREAM.get())) {

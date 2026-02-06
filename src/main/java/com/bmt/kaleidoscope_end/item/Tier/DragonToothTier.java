@@ -7,13 +7,13 @@ import net.minecraftforge.common.ForgeTier;
 
 public class DragonToothTier implements Tier {
     private static final ForgeTier BASE_TIER = new ForgeTier(
-            5,
-            2031,
-            8.0F,
-            0,
-            15,
-            null,
-            () -> Ingredient.of(KEItem.DRAGON_TOOTH.get())
+            5, //等级
+            2031, //耐久
+            8.0F, //伤害
+            0, //攻击速度加成
+            15, //附魔等级
+            null, //标签
+            () -> Ingredient.of(KEItem.DRAGON_TOOTH.get()) //修复材料
     );
 
     @Override

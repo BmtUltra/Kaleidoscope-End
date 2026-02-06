@@ -5,22 +5,30 @@ import com.bmt.kaleidoscope_end.registry.KEBlocks;
 import com.bmt.kaleidoscope_end.registry.KEEffects;
 import com.bmt.kaleidoscope_end.registry.KEItem;
 import net.minecraft.core.NonNullList;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.event.entity.living.EnderManAngerEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 
 public class EventHandler {
@@ -81,6 +89,28 @@ public class EventHandler {
                 if (event.getLevel().getBlockState(event.getPos()).is(KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) || event.getLevel().getBlockState(event.getPos()).is(Blocks.DRAGON_EGG)) {
                     event.setUseBlock(Event.Result.DENY);
                 }
+            }
+        }
+
+        private static EnderDragon FAKE_DRAGON = null;
+
+        @SubscribeEvent
+        public static void FillBucketEvent(FillBucketEvent event) {
+            if (FAKE_DRAGON == null) {
+                FAKE_DRAGON = EntityType.ENDER_DRAGON.create(event.getLevel());
+            }
+            Player player = event.getEntity();
+            Level level = player.level();
+            List<AreaEffectCloud> list = level.getEntitiesOfClass(AreaEffectCloud.class, player.getBoundingBox().inflate(2.0D), (areaEffectCloud) -> {
+                return areaEffectCloud != null && areaEffectCloud.isAlive() && areaEffectCloud.getOwner() instanceof EnderDragon;
+            });
+            if (!list.isEmpty()) {
+                AreaEffectCloud areaeffectcloud = list.get(0);
+                areaeffectcloud.kill();
+                level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BUCKET_FILL, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                level.gameEvent(player, GameEvent.FLUID_PICKUP, player.position());
+
+
             }
         }
     }

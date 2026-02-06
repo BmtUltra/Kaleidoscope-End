@@ -29,6 +29,16 @@ public class ModBiomeModifier {
             KaleidoscopeEnd.id("suspicious_end_stone_buried")
     );
 
+    public static final ResourceKey<BiomeModifier> ENDER_MINT = ResourceKey.create(
+            ForgeRegistries.Keys.BIOME_MODIFIERS,
+            KaleidoscopeEnd.id("ender_mint")
+    );
+
+    public static final ResourceKey<BiomeModifier> DREAM_BERRY = ResourceKey.create(
+            ForgeRegistries.Keys.BIOME_MODIFIERS,
+            KaleidoscopeEnd.id("dream_berry")
+    );
+
     public static void bootstrap(BootstapContext<BiomeModifier> bootstrap) {
         HolderGetter<Biome> biomes = bootstrap.lookup(Registries.BIOME);
         HolderGetter<PlacedFeature> placedFeatures = bootstrap.lookup(Registries.PLACED_FEATURE);
@@ -52,6 +62,22 @@ public class ModBiomeModifier {
                         biomes.getOrThrow(BiomeTags.IS_END),
                         HolderSet.direct(placedFeatures.getOrThrow(ModPlacements.SUSPICIOUS_END_STONE_BURIED)),
                         GenerationStep.Decoration.UNDERGROUND_ORES
+                )
+        );
+
+        bootstrap.register(ENDER_MINT,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(BiomeTags.IS_END),
+                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacements.ENDER_MINT)),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                )
+        );
+
+        bootstrap.register(DREAM_BERRY,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(BiomeTags.IS_END),
+                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacements.DREAM_BERRY)),
+                        GenerationStep.Decoration.UNDERGROUND_DECORATION
                 )
         );
     }

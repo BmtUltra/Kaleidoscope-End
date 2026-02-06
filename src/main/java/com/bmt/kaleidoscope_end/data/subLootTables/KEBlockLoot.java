@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_end.data.subLootTables;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.registry.KEBlocks;
+import com.bmt.kaleidoscope_end.registry.KEItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBiteBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -9,6 +10,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -52,7 +54,10 @@ public class KEBlockLoot extends BlockLootSubProvider {
             }
         });
 
+        simpleCropBlockLoot(KEBlocks.ENDER_MINT.get(), 7, KEItem.ENDER_MINT.get(), KEItem.ENDER_MINT.get(), 1);
 
+        vines(KEBlocks.DREAM_BERRY_HEAD.get(), Items.AIR, KEItem.DREAM_BERRY_ITEM.get());
+        vines(KEBlocks.DREAM_BERRY_PLANT.get(), Items.AIR, KEItem.DREAM_BERRY_ITEM.get());
     }
 
 

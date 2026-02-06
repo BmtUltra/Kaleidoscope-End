@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_end.data;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.registry.KEBlocks;
+import com.bmt.kaleidoscope_nether.registry.KNBlocks;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBiteBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import net.minecraft.data.PackOutput;
@@ -35,6 +36,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         suspiciousBlock(KEBlocks.SUSPICIOUS_END_STONE);
         suspiciousBlock(KEBlocks.SUSPICIOUS_DRAGON_EGG);
+
+        cropBlock(KEBlocks.ENDER_MINT);
+        caveVines(KEBlocks.DREAM_BERRY_PLANT);
+        caveVines(KEBlocks.DREAM_BERRY_HEAD);
     }
 
     protected void suspiciousBlock(RegistryObject<? extends Block> registryObject) {
