@@ -1,61 +1,63 @@
-[062月2026 22:10:44.149] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, D:\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, kaleidoscope_end, --all, --output, E:\moddig\project\Kaleidoscope-End\1.20.1\src\generated\resources, --existing, E:\moddig\project\Kaleidoscope-End\1.20.1\src\main\resources, --mixin.config, mixins.kaleidoscope_end.json]
-[062月2026 22:10:44.155] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.13 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[062月2026 22:10:44.316] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[062月2026 22:10:44.384] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/D:/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[062月2026 22:10:57.111] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[062月2026 22:10:57.119] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[062月2026 22:10:57.128] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[062月2026 22:10:57.136] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
-[062月2026 22:10:57.972] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
-[062月2026 22:11:01.331] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[062月2026 22:11:01.414] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, D:\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, kaleidoscope_end, --all, --output, E:\moddig\project\Kaleidoscope-End\1.20.1\src\generated\resources, --existing, E:\moddig\project\Kaleidoscope-End\1.20.1\src\main\resources]
-[062月2026 22:11:01.471] [main/INFO] [com.bmt.kaleidoscope_end.mixins.MainMixinPlugin/]: Initializing Kaleidoscope End Mixins
-[062月2026 22:11:01.480] [main/WARN] [mixin/]: Reference map 'kaleidoscope_end.refmap.json' for mixins.kaleidoscope_end.json could not be read. If this is a development environment you can ignore this message
-[062月2026 22:11:01.821] [main/INFO] [mixin/]: Remapping refMap farmersdelight.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.865] [main/INFO] [Radium Config/]: Loaded configuration file for Radium: 125 options available, 0 override(s) found
-[062月2026 22:11:01.870] [main/INFO] [mixin/]: Remapping refMap mixins.lithium.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.872] [main/INFO] [mixin/]: Remapping refMap rhino-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.873] [main/INFO] [mixin/]: Remapping refMap damage_number.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.877] [main/INFO] [mixin/]: Remapping refMap moonlight-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.879] [main/INFO] [mixin/]: Remapping refMap moonlight-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.880] [main/INFO] [com.bmt.kaleidoscope_nether.mixins.MainMixinPlugin/]: Initializing Kaleidoscope Nether Mixins
-[062月2026 22:11:01.881] [main/INFO] [mixin/]: Remapping refMap kaleidoscope_nether.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.905] [main/INFO] [mixin/]: Remapping refMap jade.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.906] [main/INFO] [mixin/]: Remapping refMap lionfishapi.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.907] [main/INFO] [mixin/]: Remapping refMap cataclysm.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.909] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.911] [main/INFO] [mixin/]: Remapping refMap citadel.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.912] [main/INFO] [mixin/]: Remapping refMap screenshot-to-clipboard-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.913] [main/INFO] [mixin/]: Remapping refMap screenshot-to-clipboard-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.916] [main/INFO] [mixin/]: Remapping refMap architectury-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.918] [main/INFO] [mixin/]: Remapping refMap architectury-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.919] [main/INFO] [mixin/]: Remapping refMap kubejs-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.921] [main/INFO] [mixin/]: Remapping refMap kubejs-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.922] [main/INFO] [mixin/]: Remapping refMap jeed-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.925] [main/INFO] [mixin/]: Remapping refMap kaleidoscope_cookery.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.927] [main/INFO] [mixin/]: Remapping refMap dummmmmmy-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:01.938] [main/INFO] [Embeddium/]: Loaded configuration file for Embeddium: 71 options available, 0 override(s) found
-[062月2026 22:11:01.940] [main/INFO] [Embeddium-GraphicsAdapterProbe/]: Searching for graphics cards...
-[062月2026 22:11:03.141] [main/INFO] [Embeddium-GraphicsAdapterProbe/]: Found graphics card: GraphicsAdapterInfo[vendor=INTEL, name=Intel(R) UHD Graphics 630, version=DriverVersion=26.20.100.7870]
-[062月2026 22:11:03.141] [main/INFO] [Embeddium-GraphicsAdapterProbe/]: Found graphics card: GraphicsAdapterInfo[vendor=NVIDIA, name=NVIDIA GeForce GTX 1050, version=DriverVersion=32.0.15.6109]
-[062月2026 22:11:03.148] [main/WARN] [Embeddium-Workarounds/]: Embeddium has applied one or more workarounds to prevent crashes or other issues on your system: [NVIDIA_THREADED_OPTIMIZATIONS]
-[062月2026 22:11:03.148] [main/WARN] [Embeddium-Workarounds/]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
-[062月2026 22:11:03.157] [main/INFO] [mixin/]: Remapping refMap embeddium-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
-[062月2026 22:11:04.398] [main/WARN] [mixin/]: Error loading class: mezz/modnametooltip/TooltipEventHandler (java.lang.ClassNotFoundException: mezz.modnametooltip.TooltipEventHandler)
-[062月2026 22:11:04.400] [main/WARN] [mixin/]: Error loading class: me/shedaniel/rei/impl/client/ClientHelperImpl (java.lang.ClassNotFoundException: me.shedaniel.rei.impl.client.ClientHelperImpl)
-[062月2026 22:11:04.786] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
-[062月2026 22:11:04.966] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [kaleidoscope_end]
-[062月2026 22:11:15.491] [modloading-worker-0/INFO] [KubeJS/]: Loaded common.properties
-[062月2026 22:11:15.493] [modloading-worker-0/INFO] [KubeJS/]: Loaded dev.properties
-[062月2026 22:11:15.547] [modloading-worker-0/INFO] [KubeJS Startup/]: Capturing errors for startup scripts enabled
-[062月2026 22:11:15.548] [modloading-worker-0/INFO] [KubeJS/]: Looking for KubeJS plugins...
-[062月2026 22:11:15.586] [modloading-worker-0/INFO] [KubeJS/]: Found plugin source kubejs
-[062月2026 22:11:15.619] [modloading-worker-0/WARN] [KubeJS/]: Plugin dev.latvian.mods.kubejs.integration.forge.gamestages.GameStagesIntegration does not have required mod gamestages loaded, skipping
-[062月2026 22:11:15.622] [modloading-worker-0/INFO] [KubeJS/]: Found plugin source kaleidoscope_cookery
-[062月2026 22:11:15.627] [modloading-worker-0/INFO] [KubeJS/]: Done in 76.26 ms
-[062月2026 22:11:15.685] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
-[062月2026 22:11:15.686] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
-[062月2026 22:11:15.836] [modloading-worker-0/ERROR] [Embeddium/]: Failed to update fingerprint
+[062月2026 22:42:30.592] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, D:\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, kaleidoscope_end, --all, --output, E:\moddig\project\Kaleidoscope-End\1.20.1\src\generated\resources, --existing, E:\moddig\project\Kaleidoscope-End\1.20.1\src\main\resources, --mixin.config, mixins.kaleidoscope_end.json]
+[062月2026 22:42:30.615] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.13 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[062月2026 22:42:30.918] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[062月2026 22:42:31.087] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/D:/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[062月2026 22:42:46.309] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[062月2026 22:42:46.322] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[062月2026 22:42:46.332] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[062月2026 22:42:46.346] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file D:\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
+[062月2026 22:42:47.543] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
+[062月2026 22:42:52.175] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[062月2026 22:42:52.262] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, D:\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, kaleidoscope_end, --all, --output, E:\moddig\project\Kaleidoscope-End\1.20.1\src\generated\resources, --existing, E:\moddig\project\Kaleidoscope-End\1.20.1\src\main\resources]
+[062月2026 22:42:52.329] [main/INFO] [com.bmt.kaleidoscope_end.mixins.MainMixinPlugin/]: Initializing Kaleidoscope End Mixins
+[062月2026 22:42:52.333] [main/WARN] [mixin/]: Reference map 'kaleidoscope_end.refmap.json' for mixins.kaleidoscope_end.json could not be read. If this is a development environment you can ignore this message
+[062月2026 22:42:52.695] [main/INFO] [mixin/]: Remapping refMap farmersdelight.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.757] [main/INFO] [Radium Config/]: Loaded configuration file for Radium: 125 options available, 0 override(s) found
+[062月2026 22:42:52.761] [main/INFO] [mixin/]: Remapping refMap mixins.lithium.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.763] [main/INFO] [mixin/]: Remapping refMap rhino-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.767] [main/INFO] [mixin/]: Remapping refMap damage_number.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.773] [main/INFO] [mixin/]: Remapping refMap moonlight-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.775] [main/INFO] [mixin/]: Remapping refMap moonlight-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.777] [main/INFO] [com.bmt.kaleidoscope_nether.mixins.MainMixinPlugin/]: Initializing Kaleidoscope Nether Mixins
+[062月2026 22:42:52.779] [main/INFO] [mixin/]: Remapping refMap kaleidoscope_nether.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.815] [main/INFO] [mixin/]: Remapping refMap jade.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.816] [main/INFO] [mixin/]: Remapping refMap lionfishapi.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.817] [main/INFO] [mixin/]: Remapping refMap cataclysm.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.818] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.819] [main/INFO] [mixin/]: Remapping refMap citadel.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.820] [main/INFO] [mixin/]: Remapping refMap screenshot-to-clipboard-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.821] [main/INFO] [mixin/]: Remapping refMap screenshot-to-clipboard-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.823] [main/INFO] [mixin/]: Remapping refMap architectury-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.824] [main/INFO] [mixin/]: Remapping refMap architectury-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.826] [main/INFO] [mixin/]: Remapping refMap kubejs-forge-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.827] [main/INFO] [mixin/]: Remapping refMap kubejs-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.828] [main/INFO] [mixin/]: Remapping refMap jeed-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.831] [main/INFO] [mixin/]: Remapping refMap kaleidoscope_cookery.refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.834] [main/INFO] [mixin/]: Remapping refMap dummmmmmy-common-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:52.846] [main/INFO] [Embeddium/]: Loaded configuration file for Embeddium: 71 options available, 0 override(s) found
+[062月2026 22:42:52.849] [main/INFO] [Embeddium-GraphicsAdapterProbe/]: Searching for graphics cards...
+[062月2026 22:42:54.209] [main/INFO] [Embeddium-GraphicsAdapterProbe/]: Found graphics card: GraphicsAdapterInfo[vendor=INTEL, name=Intel(R) UHD Graphics 630, version=DriverVersion=26.20.100.7870]
+[062月2026 22:42:54.209] [main/INFO] [Embeddium-GraphicsAdapterProbe/]: Found graphics card: GraphicsAdapterInfo[vendor=NVIDIA, name=NVIDIA GeForce GTX 1050, version=DriverVersion=32.0.15.6109]
+[062月2026 22:42:54.216] [main/WARN] [Embeddium-Workarounds/]: Embeddium has applied one or more workarounds to prevent crashes or other issues on your system: [NVIDIA_THREADED_OPTIMIZATIONS]
+[062月2026 22:42:54.216] [main/WARN] [Embeddium-Workarounds/]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
+[062月2026 22:42:54.230] [main/INFO] [mixin/]: Remapping refMap embeddium-refmap.json using E:\moddig\project\Kaleidoscope-End\1.20.1\build/createSrgToMcp/output.srg
+[062月2026 22:42:56.211] [main/WARN] [mixin/]: Error loading class: mezz/modnametooltip/TooltipEventHandler (java.lang.ClassNotFoundException: mezz.modnametooltip.TooltipEventHandler)
+[062月2026 22:42:56.213] [main/WARN] [mixin/]: Error loading class: me/shedaniel/rei/impl/client/ClientHelperImpl (java.lang.ClassNotFoundException: me.shedaniel.rei.impl.client.ClientHelperImpl)
+[062月2026 22:42:56.798] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[062月2026 22:42:56.975] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [kaleidoscope_end]
+[062月2026 22:43:12.689] [modloading-worker-0/INFO] [KubeJS/]: Loaded common.properties
+[062月2026 22:43:12.692] [modloading-worker-0/INFO] [KubeJS/]: Loaded dev.properties
+[062月2026 22:43:12.775] [modloading-worker-0/INFO] [KubeJS Startup/]: Capturing errors for startup scripts enabled
+[062月2026 22:43:12.805] [modloading-worker-0/INFO] [KubeJS/]: Looking for KubeJS plugins...
+[062月2026 22:43:12.820] [modloading-worker-0/INFO] [KubeJS/]: Found plugin source kubejs
+[062月2026 22:43:12.849] [modloading-worker-0/WARN] [KubeJS/]: Plugin dev.latvian.mods.kubejs.integration.forge.gamestages.GameStagesIntegration does not have required mod gamestages loaded, skipping
+[062月2026 22:43:12.852] [modloading-worker-0/INFO] [KubeJS/]: Found plugin source kaleidoscope_cookery
+[062月2026 22:43:12.873] [modloading-worker-0/INFO] [KubeJS/]: Done in 48.77 ms
+[062月2026 22:43:12.908] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
+[062月2026 22:43:12.914] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
+[062月2026 22:43:13.072] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id architectury:sync_ids
+[062月2026 22:43:13.076] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
+[062月2026 22:43:13.079] [modloading-worker-0/ERROR] [Embeddium/]: Failed to update fingerprint
 java.lang.NullPointerException: Cannot invoke "net.minecraft.client.Minecraft.getUser()" because the return value of "net.minecraft.client.Minecraft.getInstance()" is null
 	at me.jellysquid.mods.sodium.client.data.fingerprint.FingerprintMeasure.create(FingerprintMeasure.java:19) ~[embeddium-908741-5681725_mapped_official_1.20.1.jar%23206!/:?]
 	at me.jellysquid.mods.sodium.client.SodiumClientMod.updateFingerprint(SodiumClientMod.java:108) ~[embeddium-908741-5681725_mapped_official_1.20.1.jar%23206!/:?]
@@ -74,120 +76,119 @@ java.lang.NullPointerException: Cannot invoke "net.minecraft.client.Minecraft.ge
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[062月2026 22:11:15.970] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id architectury:sync_ids
-[062月2026 22:11:15.976] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
-[062月2026 22:11:16.002] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[062月2026 22:11:16.015] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 11.31 ms
-[062月2026 22:11:16.106] [modloading-worker-0/INFO] [Rhino Script Remapper/]: Loading Rhino Minecraft remapper...
-[062月2026 22:11:16.109] [modloading-worker-0/INFO] [dev.latvian.mods.rhino.mod.util.RhinoProperties/]: Rhino properties loaded.
-[062月2026 22:11:16.113] [modloading-worker-0/INFO] [Rhino Script Remapper/]: Loading mappings for 1.20.1
-[062月2026 22:11:16.205] [modloading-worker-0/INFO] [Rhino Script Remapper/]: Done in 0.099 s
-[062月2026 22:11:16.671] [modloading-worker-0/INFO] [KubeJS Startup/]: example.js#5: Hello, World! (Loaded startup scripts)
-[062月2026 22:11:16.676] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded script startup_scripts:example.js in 0.082 s
-[062月2026 22:11:16.681] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 1/1 KubeJS startup scripts in 0.47 s with 0 errors and 0 warnings
-[062月2026 22:11:16.795] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id kubejs:send_data_from_client
-[062月2026 22:11:16.797] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:send_data_from_server
-[062月2026 22:11:16.798] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:paint
-[062月2026 22:11:16.799] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:add_stage
-[062月2026 22:11:16.800] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:remove_stage
-[062月2026 22:11:16.801] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:sync_stages
-[062月2026 22:11:16.803] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id kubejs:first_click
-[062月2026 22:11:16.804] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:toast
-[062月2026 22:11:16.805] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:reload_startup_scripts
-[062月2026 22:11:16.806] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:display_server_errors
-[062月2026 22:11:16.807] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:display_client_errors
-[062月2026 22:11:17.005] [main/INFO] [KubeJS/]: Skipping minecraft:sound_event registry
-[062月2026 22:11:17.020] [main/INFO] [KubeJS/]: Skipping minecraft:fluid registry
-[062月2026 22:11:17.504] [main/INFO] [KubeJS/]: Skipping minecraft:block registry
-[062月2026 22:11:17.668] [main/INFO] [KubeJS/]: Skipping minecraft:attribute registry
-[062月2026 22:11:17.672] [main/INFO] [KubeJS/]: Skipping minecraft:mob_effect registry
-[062月2026 22:11:17.698] [main/INFO] [KubeJS/]: Skipping minecraft:particle_type registry
-[062月2026 22:11:17.818] [main/INFO] [KubeJS/]: Skipping minecraft:item registry
-[062月2026 22:11:17.880] [main/INFO] [Moonlight/]: Initialized block sets in 16ms
-[062月2026 22:11:18.331] [main/INFO] [KubeJS/]: Skipping minecraft:entity_type registry
-[062月2026 22:11:18.341] [main/INFO] [KubeJS/]: Skipping minecraft:sensor_type registry
-[062月2026 22:11:18.342] [main/INFO] [KubeJS/]: Skipping minecraft:memory_module_type registry
-[062月2026 22:11:18.343] [main/INFO] [KubeJS/]: Skipping minecraft:potion registry
-[062月2026 22:11:18.344] [main/INFO] [KubeJS/]: Skipping minecraft:game_event registry
-[062月2026 22:11:18.346] [main/INFO] [KubeJS/]: Skipping minecraft:enchantment registry
-[062月2026 22:11:18.375] [main/INFO] [KubeJS/]: Skipping minecraft:block_entity_type registry
-[062月2026 22:11:18.384] [main/INFO] [KubeJS/]: Skipping minecraft:painting_variant registry
-[062月2026 22:11:18.385] [main/INFO] [KubeJS/]: Skipping minecraft:stat_type registry
-[062月2026 22:11:18.387] [main/INFO] [KubeJS/]: Skipping minecraft:custom_stat registry
-[062月2026 22:11:18.388] [main/INFO] [KubeJS/]: Skipping minecraft:chunk_status registry
-[062月2026 22:11:18.392] [main/INFO] [KubeJS/]: Skipping minecraft:rule_test registry
-[062月2026 22:11:18.393] [main/INFO] [KubeJS/]: Skipping minecraft:rule_block_entity_modifier registry
-[062月2026 22:11:18.394] [main/INFO] [KubeJS/]: Skipping minecraft:pos_rule_test registry
-[062月2026 22:11:18.407] [main/INFO] [KubeJS/]: Skipping minecraft:menu registry
-[062月2026 22:11:18.411] [main/INFO] [KubeJS/]: Skipping minecraft:recipe_type registry
-[062月2026 22:11:18.415] [main/INFO] [KubeJS/]: Skipping minecraft:recipe_serializer registry
-[062月2026 22:11:18.439] [main/INFO] [KubeJS/]: Skipping minecraft:position_source_type registry
-[062月2026 22:11:18.440] [main/INFO] [KubeJS/]: Skipping minecraft:command_argument_type registry
-[062月2026 22:11:18.442] [main/INFO] [KubeJS/]: Skipping minecraft:villager_type registry
-[062月2026 22:11:18.443] [main/INFO] [KubeJS/]: Skipping minecraft:villager_profession registry
-[062月2026 22:11:18.444] [main/INFO] [KubeJS/]: Skipping minecraft:point_of_interest_type registry
-[062月2026 22:11:18.446] [main/INFO] [KubeJS/]: Skipping minecraft:schedule registry
-[062月2026 22:11:18.447] [main/INFO] [KubeJS/]: Skipping minecraft:activity registry
-[062月2026 22:11:18.449] [main/INFO] [KubeJS/]: Skipping minecraft:loot_pool_entry_type registry
-[062月2026 22:11:18.453] [main/INFO] [KubeJS/]: Skipping minecraft:loot_function_type registry
-[062月2026 22:11:18.456] [main/INFO] [KubeJS/]: Skipping minecraft:loot_condition_type registry
-[062月2026 22:11:18.458] [main/INFO] [KubeJS/]: Skipping minecraft:loot_number_provider_type registry
-[062月2026 22:11:18.459] [main/INFO] [KubeJS/]: Skipping minecraft:loot_nbt_provider_type registry
-[062月2026 22:11:18.460] [main/INFO] [KubeJS/]: Skipping minecraft:loot_score_provider_type registry
-[062月2026 22:11:18.460] [main/INFO] [KubeJS/]: Skipping minecraft:float_provider_type registry
-[062月2026 22:11:18.461] [main/INFO] [KubeJS/]: Skipping minecraft:int_provider_type registry
-[062月2026 22:11:18.461] [main/INFO] [KubeJS/]: Skipping minecraft:height_provider_type registry
-[062月2026 22:11:18.462] [main/INFO] [KubeJS/]: Skipping minecraft:block_predicate_type registry
-[062月2026 22:11:18.463] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/carver registry
-[062月2026 22:11:18.465] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/feature registry
-[062月2026 22:11:18.467] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_processor registry
-[062月2026 22:11:18.468] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_placement registry
-[062月2026 22:11:18.471] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_piece registry
-[062月2026 22:11:18.473] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_type registry
-[062月2026 22:11:18.475] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/placement_modifier_type registry
-[062月2026 22:11:18.476] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/block_state_provider_type registry
-[062月2026 22:11:18.477] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/foliage_placer_type registry
-[062月2026 22:11:18.478] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/trunk_placer_type registry
-[062月2026 22:11:18.479] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/root_placer_type registry
-[062月2026 22:11:18.480] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/tree_decorator_type registry
-[062月2026 22:11:18.481] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/feature_size_type registry
-[062月2026 22:11:18.485] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/biome_source registry
-[062月2026 22:11:18.487] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/chunk_generator registry
-[062月2026 22:11:18.488] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/material_condition registry
-[062月2026 22:11:18.489] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/material_rule registry
-[062月2026 22:11:18.491] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/density_function_type registry
-[062月2026 22:11:18.492] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_pool_element registry
-[062月2026 22:11:18.493] [main/INFO] [KubeJS/]: Skipping minecraft:cat_variant registry
-[062月2026 22:11:18.494] [main/INFO] [KubeJS/]: Skipping minecraft:frog_variant registry
-[062月2026 22:11:18.495] [main/INFO] [KubeJS/]: Skipping minecraft:banner_pattern registry
-[062月2026 22:11:18.496] [main/INFO] [KubeJS/]: Skipping minecraft:instrument registry
-[062月2026 22:11:18.498] [main/INFO] [KubeJS/]: Skipping minecraft:decorated_pot_patterns registry
-[062月2026 22:11:18.502] [main/INFO] [KubeJS/]: Skipping minecraft:creative_mode_tab registry
-[062月2026 22:11:18.509] [main/INFO] [KubeJS/]: Skipping forge:biome_modifier_serializers registry
-[062月2026 22:11:18.520] [main/INFO] [KubeJS/]: Skipping forge:display_contexts registry
-[062月2026 22:11:18.522] [main/INFO] [KubeJS/]: Skipping forge:entity_data_serializers registry
-[062月2026 22:11:18.523] [main/INFO] [KubeJS/]: Skipping forge:fluid_type registry
-[062月2026 22:11:18.535] [main/INFO] [KubeJS/]: Skipping forge:global_loot_modifier_serializers registry
-[062月2026 22:11:18.539] [main/INFO] [KubeJS/]: Skipping forge:holder_set_type registry
-[062月2026 22:11:18.547] [main/INFO] [KubeJS/]: Skipping forge:structure_modifier_serializers registry
-[062月2026 22:11:18.550] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/biome registry
-[062月2026 22:11:18.758] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23192!/assets/.mcassetsroot' uses unexpected schema
-[062月2026 22:11:18.759] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23192!/data/.mcassetsroot' uses unexpected schema
-[062月2026 22:11:19.212] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[062月2026 22:11:19.337] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 125 ms
-[062月2026 22:11:19.338] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[062月2026 22:11:19.339] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 1 ms
-[062月2026 22:11:19.339] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id kaleidoscope_end
-[062月2026 22:11:19.351] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id kaleidoscope_end finished after 11 ms
-[062月2026 22:11:19.351] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id kaleidoscope_end
-[062月2026 22:11:19.353] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id kaleidoscope_end finished after 2 ms
-[062月2026 22:11:19.354] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block Models: kaleidoscope_end
-[062月2026 22:11:19.377] [main/INFO] [net.minecraft.data.DataGenerator/]: Block Models: kaleidoscope_end finished after 22 ms
-[062月2026 22:11:19.377] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: kaleidoscope_end
-[062月2026 22:11:19.458] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: kaleidoscope_end finished after 80 ms
-[062月2026 22:11:19.458] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[062月2026 22:11:19.534] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 75 ms
-[062月2026 22:11:19.534] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:enchantment mod id kaleidoscope_end
-[062月2026 22:11:19.536] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:enchantment mod id kaleidoscope_end finished after 1 ms
-[062月2026 22:11:19.536] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 324 ms
-[062月2026 22:11:19.547] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 57, old count: 53, new count: 58, removed stale: 0, written: 12
+[062月2026 22:43:13.630] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[062月2026 22:43:13.715] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Sending ConfigManager: jei:minecraft took 74.33 milliseconds
+[062月2026 22:43:13.720] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 89.17 ms
+[062月2026 22:43:15.455] [modloading-worker-0/INFO] [Rhino Script Remapper/]: Loading Rhino Minecraft remapper...
+[062月2026 22:43:15.463] [modloading-worker-0/INFO] [dev.latvian.mods.rhino.mod.util.RhinoProperties/]: Rhino properties loaded.
+[062月2026 22:43:15.491] [modloading-worker-0/INFO] [Rhino Script Remapper/]: Loading mappings for 1.20.1
+[062月2026 22:43:15.733] [modloading-worker-0/INFO] [Rhino Script Remapper/]: Done in 0.274 s
+[062月2026 22:43:16.390] [modloading-worker-0/INFO] [KubeJS Startup/]: example.js#5: Hello, World! (Loaded startup scripts)
+[062月2026 22:43:16.394] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded script startup_scripts:example.js in 0.078 s
+[062月2026 22:43:16.399] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 1/1 KubeJS startup scripts in 0.661 s with 0 errors and 0 warnings
+[062月2026 22:43:16.487] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id kubejs:send_data_from_client
+[062月2026 22:43:16.489] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:send_data_from_server
+[062月2026 22:43:16.490] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:paint
+[062月2026 22:43:16.491] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:add_stage
+[062月2026 22:43:16.492] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:remove_stage
+[062月2026 22:43:16.493] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:sync_stages
+[062月2026 22:43:16.494] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id kubejs:first_click
+[062月2026 22:43:16.495] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:toast
+[062月2026 22:43:16.495] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:reload_startup_scripts
+[062月2026 22:43:16.496] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:display_server_errors
+[062月2026 22:43:16.496] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:display_client_errors
+[062月2026 22:43:16.628] [main/INFO] [KubeJS/]: Skipping minecraft:sound_event registry
+[062月2026 22:43:16.641] [main/INFO] [KubeJS/]: Skipping minecraft:fluid registry
+[062月2026 22:43:17.079] [main/INFO] [KubeJS/]: Skipping minecraft:block registry
+[062月2026 22:43:17.188] [main/INFO] [KubeJS/]: Skipping minecraft:attribute registry
+[062月2026 22:43:17.190] [main/INFO] [KubeJS/]: Skipping minecraft:mob_effect registry
+[062月2026 22:43:17.220] [main/INFO] [KubeJS/]: Skipping minecraft:particle_type registry
+[062月2026 22:43:17.312] [main/INFO] [KubeJS/]: Skipping minecraft:item registry
+[062月2026 22:43:17.344] [main/INFO] [Moonlight/]: Initialized block sets in 10ms
+[062月2026 22:43:17.854] [main/INFO] [KubeJS/]: Skipping minecraft:entity_type registry
+[062月2026 22:43:17.863] [main/INFO] [KubeJS/]: Skipping minecraft:sensor_type registry
+[062月2026 22:43:17.867] [main/INFO] [KubeJS/]: Skipping minecraft:memory_module_type registry
+[062月2026 22:43:17.868] [main/INFO] [KubeJS/]: Skipping minecraft:potion registry
+[062月2026 22:43:17.870] [main/INFO] [KubeJS/]: Skipping minecraft:game_event registry
+[062月2026 22:43:17.872] [main/INFO] [KubeJS/]: Skipping minecraft:enchantment registry
+[062月2026 22:43:17.893] [main/INFO] [KubeJS/]: Skipping minecraft:block_entity_type registry
+[062月2026 22:43:17.901] [main/INFO] [KubeJS/]: Skipping minecraft:painting_variant registry
+[062月2026 22:43:17.902] [main/INFO] [KubeJS/]: Skipping minecraft:stat_type registry
+[062月2026 22:43:17.903] [main/INFO] [KubeJS/]: Skipping minecraft:custom_stat registry
+[062月2026 22:43:17.904] [main/INFO] [KubeJS/]: Skipping minecraft:chunk_status registry
+[062月2026 22:43:17.906] [main/INFO] [KubeJS/]: Skipping minecraft:rule_test registry
+[062月2026 22:43:17.907] [main/INFO] [KubeJS/]: Skipping minecraft:rule_block_entity_modifier registry
+[062月2026 22:43:17.908] [main/INFO] [KubeJS/]: Skipping minecraft:pos_rule_test registry
+[062月2026 22:43:17.920] [main/INFO] [KubeJS/]: Skipping minecraft:menu registry
+[062月2026 22:43:17.926] [main/INFO] [KubeJS/]: Skipping minecraft:recipe_type registry
+[062月2026 22:43:17.938] [main/INFO] [KubeJS/]: Skipping minecraft:recipe_serializer registry
+[062月2026 22:43:17.954] [main/INFO] [KubeJS/]: Skipping minecraft:position_source_type registry
+[062月2026 22:43:17.956] [main/INFO] [KubeJS/]: Skipping minecraft:command_argument_type registry
+[062月2026 22:43:17.958] [main/INFO] [KubeJS/]: Skipping minecraft:villager_type registry
+[062月2026 22:43:17.959] [main/INFO] [KubeJS/]: Skipping minecraft:villager_profession registry
+[062月2026 22:43:17.960] [main/INFO] [KubeJS/]: Skipping minecraft:point_of_interest_type registry
+[062月2026 22:43:17.965] [main/INFO] [KubeJS/]: Skipping minecraft:schedule registry
+[062月2026 22:43:17.968] [main/INFO] [KubeJS/]: Skipping minecraft:activity registry
+[062月2026 22:43:17.972] [main/INFO] [KubeJS/]: Skipping minecraft:loot_pool_entry_type registry
+[062月2026 22:43:17.975] [main/INFO] [KubeJS/]: Skipping minecraft:loot_function_type registry
+[062月2026 22:43:17.978] [main/INFO] [KubeJS/]: Skipping minecraft:loot_condition_type registry
+[062月2026 22:43:17.981] [main/INFO] [KubeJS/]: Skipping minecraft:loot_number_provider_type registry
+[062月2026 22:43:17.982] [main/INFO] [KubeJS/]: Skipping minecraft:loot_nbt_provider_type registry
+[062月2026 22:43:17.983] [main/INFO] [KubeJS/]: Skipping minecraft:loot_score_provider_type registry
+[062月2026 22:43:17.984] [main/INFO] [KubeJS/]: Skipping minecraft:float_provider_type registry
+[062月2026 22:43:17.985] [main/INFO] [KubeJS/]: Skipping minecraft:int_provider_type registry
+[062月2026 22:43:17.986] [main/INFO] [KubeJS/]: Skipping minecraft:height_provider_type registry
+[062月2026 22:43:17.987] [main/INFO] [KubeJS/]: Skipping minecraft:block_predicate_type registry
+[062月2026 22:43:17.988] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/carver registry
+[062月2026 22:43:17.990] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/feature registry
+[062月2026 22:43:17.992] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_processor registry
+[062月2026 22:43:17.993] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_placement registry
+[062月2026 22:43:18.005] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_piece registry
+[062月2026 22:43:18.007] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_type registry
+[062月2026 22:43:18.010] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/placement_modifier_type registry
+[062月2026 22:43:18.011] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/block_state_provider_type registry
+[062月2026 22:43:18.013] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/foliage_placer_type registry
+[062月2026 22:43:18.014] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/trunk_placer_type registry
+[062月2026 22:43:18.015] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/root_placer_type registry
+[062月2026 22:43:18.015] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/tree_decorator_type registry
+[062月2026 22:43:18.016] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/feature_size_type registry
+[062月2026 22:43:18.019] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/biome_source registry
+[062月2026 22:43:18.020] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/chunk_generator registry
+[062月2026 22:43:18.021] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/material_condition registry
+[062月2026 22:43:18.022] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/material_rule registry
+[062月2026 22:43:18.023] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/density_function_type registry
+[062月2026 22:43:18.024] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/structure_pool_element registry
+[062月2026 22:43:18.025] [main/INFO] [KubeJS/]: Skipping minecraft:cat_variant registry
+[062月2026 22:43:18.026] [main/INFO] [KubeJS/]: Skipping minecraft:frog_variant registry
+[062月2026 22:43:18.027] [main/INFO] [KubeJS/]: Skipping minecraft:banner_pattern registry
+[062月2026 22:43:18.028] [main/INFO] [KubeJS/]: Skipping minecraft:instrument registry
+[062月2026 22:43:18.031] [main/INFO] [KubeJS/]: Skipping minecraft:decorated_pot_patterns registry
+[062月2026 22:43:18.034] [main/INFO] [KubeJS/]: Skipping minecraft:creative_mode_tab registry
+[062月2026 22:43:18.041] [main/INFO] [KubeJS/]: Skipping forge:biome_modifier_serializers registry
+[062月2026 22:43:18.052] [main/INFO] [KubeJS/]: Skipping forge:display_contexts registry
+[062月2026 22:43:18.054] [main/INFO] [KubeJS/]: Skipping forge:entity_data_serializers registry
+[062月2026 22:43:18.056] [main/INFO] [KubeJS/]: Skipping forge:fluid_type registry
+[062月2026 22:43:18.076] [main/INFO] [KubeJS/]: Skipping forge:global_loot_modifier_serializers registry
+[062月2026 22:43:18.079] [main/INFO] [KubeJS/]: Skipping forge:holder_set_type registry
+[062月2026 22:43:18.086] [main/INFO] [KubeJS/]: Skipping forge:structure_modifier_serializers registry
+[062月2026 22:43:18.088] [main/INFO] [KubeJS/]: Skipping minecraft:worldgen/biome registry
+[062月2026 22:43:18.346] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23192!/assets/.mcassetsroot' uses unexpected schema
+[062月2026 22:43:18.347] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23192!/data/.mcassetsroot' uses unexpected schema
+[062月2026 22:43:18.738] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[062月2026 22:43:18.878] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 140 ms
+[062月2026 22:43:18.879] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[062月2026 22:43:18.880] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 1 ms
+[062月2026 22:43:18.880] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id kaleidoscope_end
+[062月2026 22:43:18.890] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id kaleidoscope_end finished after 10 ms
+[062月2026 22:43:18.891] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id kaleidoscope_end
+[062月2026 22:43:18.892] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id kaleidoscope_end finished after 1 ms
+[062月2026 22:43:18.893] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block Models: kaleidoscope_end
+[062月2026 22:43:18.917] [main/INFO] [net.minecraft.data.DataGenerator/]: Block Models: kaleidoscope_end finished after 23 ms
+[062月2026 22:43:18.918] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: kaleidoscope_end
+[062月2026 22:43:19.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: kaleidoscope_end finished after 87 ms
+[062月2026 22:43:19.005] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[062月2026 22:43:19.088] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 82 ms
+[062月2026 22:43:19.088] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:enchantment mod id kaleidoscope_end
+[062月2026 22:43:19.090] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:enchantment mod id kaleidoscope_end finished after 1 ms
+[062月2026 22:43:19.090] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 353 ms
+[062月2026 22:43:19.101] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 57, old count: 57, new count: 58, removed stale: 0, written: 1
