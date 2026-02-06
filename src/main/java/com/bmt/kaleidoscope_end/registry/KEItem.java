@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_end.registry;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
+import com.bmt.kaleidoscope_end.item.DragonBreathBucket;
 import com.bmt.kaleidoscope_end.item.DragonEggShellFoodItem;
 import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
 import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
@@ -216,7 +217,7 @@ public class KEItem {
 
     // 龙息桶
     public static final RegistryObject<Item> DRAGON_BREATH_BUCKET_ITEM = ITEMS.register("dragon_breath_bucket",
-            () -> new Item(new Item.Properties()));
+            () -> new DragonBreathBucket(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

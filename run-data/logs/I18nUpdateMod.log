@@ -1,16 +1,16 @@
-[2026-02-06 21:47:55] [INFO]: I18nUpdate Mod 3.7.0 is loaded in 1.20.1 with Forge
-[2026-02-06 21:47:55] [DEBUG]: Minecraft path: .
-[2026-02-06 21:47:55] [DEBUG]: Local Storage Pos: C:\Users\Bmt Ultra
-[2026-02-06 21:47:56] [INFO]: Using fastest url: http://downloader1.meitangdehulu.com:22943/
-[2026-02-06 21:47:56] [DEBUG]: Using asset root: http://downloader1.meitangdehulu.com:22943/
-[2026-02-06 21:47:56] [DEBUG]: C:\Users\Bmt Ultra\.i18nupdatemod\1.20\Minecraft-Mod-Language-Modpack-1-20.zip md5: 4CDEB6A9ED073CD3A25046EACDFFC567, remote md5: 4CDEB6A9ED073CD3A25046EACDFFC567
-[2026-02-06 21:47:56] [DEBUG]: Already up to date.
-[2026-02-06 21:47:56] [DEBUG]: C:\Users\Bmt Ultra\.i18nupdatemod\1.19\Minecraft-Mod-Language-Modpack-1-19.zip md5: 122A4FCCC6B4C1218001010D23750821, remote md5: 122A4FCCC6B4C1218001010D23750821
-[2026-02-06 21:47:56] [DEBUG]: Already up to date.
-[2026-02-06 21:47:56] [DEBUG]: C:\Users\Bmt Ultra\.i18nupdatemod\1.18\Minecraft-Mod-Language-Modpack-1-18.zip md5: C965A0975AD4ECEE070E9BDB6FEF04C8, remote md5: C965A0975AD4ECEE070E9BDB6FEF04C8
-[2026-02-06 21:47:56] [DEBUG]: Already up to date.
-[2026-02-06 21:47:56] [INFO]: Converting: C:\Users\Bmt Ultra\.i18nupdatemod\1.20\Minecraft-Mod-Language-Modpack-1-20.zip
-[2026-02-06 21:47:56] [INFO]: Converting: C:\Users\Bmt Ultra\.i18nupdatemod\1.19\Minecraft-Mod-Language-Modpack-1-19.zip
-[2026-02-06 21:47:56] [INFO]: Converting: C:\Users\Bmt Ultra\.i18nupdatemod\1.18\Minecraft-Mod-Language-Modpack-1-18.zip
-[2026-02-06 21:47:57] [INFO]: Converted: [C:\Users\Bmt Ultra\.i18nupdatemod\1.20\Minecraft-Mod-Language-Modpack-1-20.zip, C:\Users\Bmt Ultra\.i18nupdatemod\1.19\Minecraft-Mod-Language-Modpack-1-19.zip, C:\Users\Bmt Ultra\.i18nupdatemod\1.18\Minecraft-Mod-Language-Modpack-1-18.zip] -> C:\Users\Bmt Ultra\.i18nupdatemod\1.20.1\Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip
-[2026-02-06 21:47:57] [INFO]: Synchronized: C:\Users\Bmt Ultra\.i18nupdatemod\1.20.1\Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip -> .\resourcepacks\Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip
+[2026-02-06 22:42:31] [INFO]: I18nUpdate Mod 3.7.0 is loaded in 1.20.1 with Forge
+[2026-02-06 22:42:31] [DEBUG]: Minecraft path: .
+[2026-02-06 22:42:31] [DEBUG]: Local Storage Pos: C:\Users\lenovo
+[2026-02-06 22:42:31] [INFO]: Using fastest url: http://8.137.167.65:64684/
+[2026-02-06 22:42:31] [DEBUG]: Using asset root: http://8.137.167.65:64684/
+[2026-02-06 22:42:31] [DEBUG]: Local file C:\Users\lenovo\.i18nupdatemod\1.20\Minecraft-Mod-Language-Modpack-1-20.zip has been updated recently.
+[2026-02-06 22:42:31] [DEBUG]: Already up to date.
+[2026-02-06 22:42:31] [DEBUG]: C:\Users\lenovo\.i18nupdatemod\1.19\Minecraft-Mod-Language-Modpack-1-19.zip md5: 122A4FCCC6B4C1218001010D23750821, remote md5: 122A4FCCC6B4C1218001010D23750821
+[2026-02-06 22:42:31] [DEBUG]: Already up to date.
+[2026-02-06 22:42:31] [DEBUG]: Local file C:\Users\lenovo\.i18nupdatemod\1.18\Minecraft-Mod-Language-Modpack-1-18.zip has been updated recently.
+[2026-02-06 22:42:31] [DEBUG]: Already up to date.
+[2026-02-06 22:42:31] [INFO]: Converting: C:\Users\lenovo\.i18nupdatemod\1.20\Minecraft-Mod-Language-Modpack-1-20.zip
+[2026-02-06 22:42:34] [INFO]: Converting: C:\Users\lenovo\.i18nupdatemod\1.19\Minecraft-Mod-Language-Modpack-1-19.zip
+[2026-02-06 22:42:34] [INFO]: Converting: C:\Users\lenovo\.i18nupdatemod\1.18\Minecraft-Mod-Language-Modpack-1-18.zip
+[2026-02-06 22:42:45] [INFO]: Converted: [C:\Users\lenovo\.i18nupdatemod\1.20\Minecraft-Mod-Language-Modpack-1-20.zip, C:\Users\lenovo\.i18nupdatemod\1.19\Minecraft-Mod-Language-Modpack-1-19.zip, C:\Users\lenovo\.i18nupdatemod\1.18\Minecraft-Mod-Language-Modpack-1-18.zip] -> C:\Users\lenovo\.i18nupdatemod\1.20.1\Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip
+[2026-02-06 22:42:45] [INFO]: Synchronized: C:\Users\lenovo\.i18nupdatemod\1.20.1\Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip -> .\resourcepacks\Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip

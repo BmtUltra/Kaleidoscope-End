@@ -5,6 +5,7 @@ import com.bmt.kaleidoscope_end.registry.KEBlocks;
 import com.bmt.kaleidoscope_end.registry.KEEffects;
 import com.bmt.kaleidoscope_end.registry.KEItem;
 import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -92,25 +93,27 @@ public class EventHandler {
             }
         }
 
-        private static EnderDragon FAKE_DRAGON = null;
+
 
         @SubscribeEvent
         public static void FillBucketEvent(FillBucketEvent event) {
-            if (FAKE_DRAGON == null) {
-                FAKE_DRAGON = EntityType.ENDER_DRAGON.create(event.getLevel());
-            }
             Player player = event.getEntity();
             Level level = player.level();
             List<AreaEffectCloud> list = level.getEntitiesOfClass(AreaEffectCloud.class, player.getBoundingBox().inflate(2.0D), (areaEffectCloud) -> {
-                return areaEffectCloud != null && areaEffectCloud.isAlive() && areaEffectCloud.getOwner() instanceof EnderDragon;
+                return areaEffectCloud != null && areaEffectCloud.isAlive();
             });
             if (!list.isEmpty()) {
                 AreaEffectCloud areaeffectcloud = list.get(0);
+                float radius = areaeffectcloud.getRadius();
                 areaeffectcloud.kill();
                 level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BUCKET_FILL, SoundSource.NEUTRAL, 1.0F, 1.0F);
                 level.gameEvent(player, GameEvent.FLUID_PICKUP, player.position());
+                ItemStack itemStack = KEItem.DRAGON_BREATH_BUCKET_ITEM.get().getDefaultInstance();
+                CompoundTag compoundTag = itemStack.getOrCreateTag();
+                compoundTag.putFloat("radius", radius);
 
-
+                event.setFilledBucket(itemStack);
+                event.setResult(Event.Result.ALLOW);
             }
         }
     }
