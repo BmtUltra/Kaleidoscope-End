@@ -217,11 +217,11 @@ public class KEItem {
     // 虚空羊排
     public static final RegistryObject<Item> VOID_MUTTON_STEAK_ITEM = ITEMS.register("void_mutton_steak",
             () -> new BowlFoodOnlyItem(KEFoods.VOID_MUTTON_STEAK));
-/*
+
     // 龙息桶
     public static final RegistryObject<Item> DRAGON_BREATH_BUCKET_ITEM = ITEMS.register("dragon_breath_bucket",
-            () -> new DragonBreathBucketItem());
-*/
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -8,15 +8,6 @@
   "finished_bubble_color": 16034443,
   "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
   "ingredients": [
-    {
-      "item": "minecraft:dragon_breath"
-    },
-    {
-      "item": "minecraft:dragon_breath"
-    },
-    {
-      "item": "minecraft:dragon_breath"
-    },
     [
       {
         "tag": "forge:fruits/chorus"
@@ -54,6 +45,6 @@
     "count": 3,
     "item": "kaleidoscope_end:dragon_breath_chorus_soup"
   },
-  "soup_base": "minecraft:water",
+  "soup_base": "kaleidoscope_end:dragon_breath",
   "time": 300
 }
