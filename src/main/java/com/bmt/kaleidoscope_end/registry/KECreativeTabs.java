@@ -23,8 +23,6 @@ public class KECreativeTabs {
                     .title(Component.translatable("itemGroup.kaleidoscope_end_foods"))
                     .icon(() -> new ItemStack(KEItem.ENDER_MINT.get()))
                     .displayItems((parameters, output) -> {
-                        output.accept(KEItem.END_STOVE_ITEM.get());
-
                         output.accept(KEItem.DRAGON_TOOTH_KNIFE.get());
                         output.accept(KEItem.VOID_CONCH.get());
                         output.accept(KEItem.DRAGON_DUST.get());
@@ -59,13 +57,13 @@ public class KECreativeTabs {
                         output.accept(KEItem.ROASTED_ENDERMITE_MEAT_ITEM.get());
                         output.accept(KEItem.END_CATERPILLAR_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_MIXED_STEW_ITEM.get());
-                        output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
+                        //output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
                         output.accept(KEItem.MINT_NOODLE_SOUP_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM.get());
                         output.accept(KEItem.ENDER_MINT_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_SOUFFLE_ITEM.get());
-                        output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
+                        //output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
                         output.accept(KEItem.DRAGON_EGG_LIQUID.get());
                         output.accept(KEItem.CHORUS_SEED.get());
                         output.accept(KEItem.CHORUS_PETAL.get());
@@ -74,6 +72,13 @@ public class KECreativeTabs {
                         output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_CAKE_ITEM.get());
                         output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());
+                        output.accept(KEItem.DRAGON_EGG_ICE_CREAM_ITEM.get());
+                        output.accept(KEItem.STUFFED_VOID_CONCH_ITEM.get());
+                        output.accept(KEItem.OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM.get());
+                        output.accept(KEItem.END_CATERPILLAR_SASHIMI_ITEM.get());
+                        output.accept(KEItem.VOID_MUTTON_STEAK_ITEM.get());
+                        output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
+                        output.accept(KEItem.END_STOVE_ITEM.get());
                     })
                     .build());
 
