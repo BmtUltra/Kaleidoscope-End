@@ -4,10 +4,8 @@ import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.item.DragonEggShellFoodItem;
 import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
 import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
-import com.github.ysbbbbbb.kaleidoscopecookery.init.ModFoods;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
-import com.github.ysbbbbbb.kaleidoscopecookery.item.WithTooltipsItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -172,10 +170,6 @@ public class KEItem {
     public static final RegistryObject<Item> DRAGON_SOUFFLE_ITEM = ITEMS.register("dragon_souffle",
             () -> new BowlFoodOnlyItem(KEFoods.DRAGON_SOUFFLE));
 
-    // 暗黑龙排
-    public static final RegistryObject<Item> DARK_DRAGON_STEAK_ITEM = ITEMS.register("dark_dragon_steak",
-            () -> new BowlFoodOnlyItem(KEFoods.DARK_DRAGON_STEAK));
-
     // 龙蛋液
     public static final RegistryObject<Item> DRAGON_EGG_LIQUID = ITEMS.register("dragon_egg_liquid",
             () -> new Item(new Item.Properties().food(KEFoods.DRAGON_EGG_LIQUID_FOOD)));
@@ -223,7 +217,11 @@ public class KEItem {
     // 虚空羊排
     public static final RegistryObject<Item> VOID_MUTTON_STEAK_ITEM = ITEMS.register("void_mutton_steak",
             () -> new BowlFoodOnlyItem(KEFoods.VOID_MUTTON_STEAK));
-
+/*
+    // 龙息桶
+    public static final RegistryObject<Item> DRAGON_BREATH_BUCKET_ITEM = ITEMS.register("dragon_breath_bucket",
+            () -> new DragonBreathBucketItem());
+*/
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

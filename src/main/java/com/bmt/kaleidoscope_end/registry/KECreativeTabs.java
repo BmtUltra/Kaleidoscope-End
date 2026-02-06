@@ -63,7 +63,7 @@ public class KECreativeTabs {
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM.get());
                         output.accept(KEItem.ENDER_MINT_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_SOUFFLE_ITEM.get());
-                        output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
+                        //output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
                         output.accept(KEItem.DRAGON_EGG_LIQUID.get());
                         output.accept(KEItem.CHORUS_SEED.get());
                         output.accept(KEItem.CHORUS_PETAL.get());
@@ -77,6 +77,7 @@ public class KECreativeTabs {
                         output.accept(KEItem.OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM.get());
                         output.accept(KEItem.END_CATERPILLAR_SASHIMI_ITEM.get());
                         output.accept(KEItem.VOID_MUTTON_STEAK_ITEM.get());
+                        //output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
                         output.accept(KEItem.END_STOVE_ITEM.get());
                     })
                     .build());

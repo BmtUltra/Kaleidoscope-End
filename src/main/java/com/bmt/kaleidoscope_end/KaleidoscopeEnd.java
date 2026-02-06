@@ -2,7 +2,6 @@ package com.bmt.kaleidoscope_end;
 
 import com.bmt.kaleidoscope_end.config.Config;
 import com.bmt.kaleidoscope_end.registry.*;
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -14,7 +13,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.slf4j.Logger;
 
 @Mod(KaleidoscopeEnd.MODID)
 public class KaleidoscopeEnd {

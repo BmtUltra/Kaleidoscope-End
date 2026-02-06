@@ -220,13 +220,21 @@ public class KEFoods {
             .alwaysEat().build();
 
     //暗黑龙排
-    public static final FoodProperties DARK_DRAGON_STEAK = new FoodProperties.Builder()
+    public static final FoodProperties DARK_DRAGON_STEAK_ITEM = new FoodProperties.Builder()
             .nutrition(24)
-            .saturationMod(0.8f)
-            .meat()
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 60 * 20, 0), 1.0f)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 60 * 20, 0), 1.0f)
-            .alwaysEat().build();
+            .saturationMod(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 35 * 20), 1.0F)
+            .meat().build();
+
+    public static final FoodProperties DARK_DRAGON_STEAK_BLOCK = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationMod(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 40 * 20), 1.0F)
+            .meat().build();
 
     // 煎龙蛋
     public static final FoodProperties FRIED_DRAGON_EGG = new FoodProperties.Builder()
