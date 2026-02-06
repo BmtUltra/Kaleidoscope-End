@@ -174,13 +174,21 @@ public class KEFoods {
             .alwaysEat().build();
 
     //浇汁龙首
-    public static final FoodProperties DRAGON_HEAD_WITH_SAUCE = new FoodProperties.Builder()
+    public static final FoodProperties DRAGON_HEAD_WITH_SAUCE_ITEM = new FoodProperties.Builder()
             .nutrition(24)
-            .saturationMod(1.0f)
-            .meat()
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 60 * 20, 1), 1.0f)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 60 * 20, 1), 1.0f)
-            .alwaysEat().build();
+            .saturationMod(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 35 * 20), 1.0F)
+            .meat().build();
+
+    public static final FoodProperties DRAGON_HEAD_WITH_SAUCE_BLOCK = new FoodProperties.Builder()
+            .nutrition(6)
+            .saturationMod(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 40 * 20), 1.0F)
+            .meat().build();
 
     //薄荷汤面
     public static final FoodProperties MINT_NOODLE_SOUP = new FoodProperties.Builder()

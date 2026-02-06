@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 public class KEFoodBiteRegistry {
     public static ResourceLocation END_SALAD;
     public static ResourceLocation DARK_DRAGON_STEAK;
+    public static ResourceLocation DRAGON_HEAD_WITH_SAUCE;
     public static ResourceLocation DARK_DRAGON_EGG_STEW;
     public static ResourceLocation DRAGON_EGG_CUSTARD;
 
@@ -21,6 +22,10 @@ public class KEFoodBiteRegistry {
         // 暗黑龙排
         DARK_DRAGON_STEAK = registry.registerFoodData(KaleidoscopeEnd.id("dark_dragon_steak"), FoodBiteRegistry.FoodData
                 .create(4, KEFoods.DARK_DRAGON_STEAK_BLOCK, KEFoods.DARK_DRAGON_STEAK_ITEM));
+
+        // 浇汁龙首
+        DRAGON_HEAD_WITH_SAUCE = registry.registerFoodData(KaleidoscopeEnd.id("dragon_head_with_sauce"), FoodBiteRegistry.FoodData
+                .createOneByTwo(6, KEFoods.DRAGON_HEAD_WITH_SAUCE_BLOCK, KEFoods.DRAGON_HEAD_WITH_SAUCE_ITEM));
 
         // 龙蛋煲
         DARK_DRAGON_EGG_STEW = registry.registerFoodData(KaleidoscopeEnd.id("dark_dragon_egg_stew"), FoodBiteRegistry.FoodData

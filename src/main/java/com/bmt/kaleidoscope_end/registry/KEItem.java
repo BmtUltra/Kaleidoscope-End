@@ -146,10 +146,6 @@ public class KEItem {
     public static final RegistryObject<Item> DRAGON_BREATH_MIXED_STEW_ITEM = ITEMS.register("dragon_breath_mixed_stew",
             () -> new ShulkerShellFoodItem(KEFoods.DRAGON_BREATH_MIXED_STEW));
 
-    // 浇汁龙首
-    public static final RegistryObject<Item> DRAGON_HEAD_WITH_SAUCE_ITEM = ITEMS.register("dragon_head_with_sauce",
-            () -> new BowlFoodOnlyItem(KEFoods.DRAGON_HEAD_WITH_SAUCE));
-
     // 薄荷汤面
     public static final RegistryObject<Item> MINT_NOODLE_SOUP_ITEM = ITEMS.register("mint_noodle_soup",
             () -> new BowlFoodOnlyItem(KEFoods.MINT_NOODLE_SOUP));

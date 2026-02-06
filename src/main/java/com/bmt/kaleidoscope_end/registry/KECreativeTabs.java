@@ -57,7 +57,7 @@ public class KECreativeTabs {
                         output.accept(KEItem.ROASTED_ENDERMITE_MEAT_ITEM.get());
                         output.accept(KEItem.END_CATERPILLAR_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_MIXED_STEW_ITEM.get());
-                        output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
+                        //output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
                         output.accept(KEItem.MINT_NOODLE_SOUP_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM.get());
