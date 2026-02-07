@@ -74,17 +74,7 @@ public class EventHandler {
 
         @SubscribeEvent
         public static void RightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-            @NotNull InteractionHand hand = event.getHand();
             Player player = event.getEntity();
-            if (player.getItemInHand(hand).is(KEItem.DRAGON_TOOTH.get())) {
-                if (event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.END_STONE) {
-                    event.getLevel().setBlock(event.getPos(), KEBlocks.SUSPICIOUS_END_STONE.get().defaultBlockState(), 3);
-                    event.getEntity().getItemInHand(hand).shrink(1);
-                } else if (event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.DRAGON_EGG) {
-                    event.getLevel().setBlock(event.getPos(), KEBlocks.SUSPICIOUS_DRAGON_EGG.get().defaultBlockState(), 3);
-                    event.getEntity().getItemInHand(hand).shrink(1);
-                }
-            }
             if ((player.getMainHandItem().is(Items.BRUSH) || player.getOffhandItem().is(Items.BRUSH)) ||
                     (player.getMainHandItem().is(KEItem.DRAGON_TOOTH.get()) || player.getOffhandItem().is(KEItem.DRAGON_TOOTH.get()))) {
                 if (event.getLevel().getBlockState(event.getPos()).is(KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) || event.getLevel().getBlockState(event.getPos()).is(Blocks.DRAGON_EGG)) {

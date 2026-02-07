@@ -6,10 +6,12 @@ import com.bmt.kaleidoscope_end.registry.KEItem;
 import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,9 +22,21 @@ import java.util.function.BiConsumer;
 public class KEArchaeologyLoot implements LootTableSubProvider {
     @Override
     public void generate(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> builderBiConsumer) {
+
+
         this.addArchaeology(builderBiConsumer, KEBlocks.SUSPICIOUS_END_STONE, LootTable.lootTable().withPool(
                 LootPool.lootPool().add(
-                        LootItem.lootTableItem(Items.APPLE)
+                        LootItem.lootTableItem(Items.DIAMOND).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
+                ).add(
+                        LootItem.lootTableItem(KEItem.VOID_CONCH.get())
+                ).add(
+                        LootItem.lootTableItem(Items.ENCHANTED_BOOK).apply(new SetEnchantmentsFunction.Builder().withEnchantment(Enchantments.SHARPNESS, UniformGenerator.between(1, 3)))
+                ).add(
+                        LootItem.lootTableItem(Items.ENCHANTED_BOOK).apply(new SetEnchantmentsFunction.Builder().withEnchantment(Enchantments.ALL_DAMAGE_PROTECTION, UniformGenerator.between(1, 3)))
+                ).add(
+                        LootItem.lootTableItem(Items.ENCHANTED_BOOK).apply(new SetEnchantmentsFunction.Builder().withEnchantment(Enchantments.UNBREAKING, UniformGenerator.between(1, 3)))
+                ).add(
+                        LootItem.lootTableItem(Items.GOLD_INGOT).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 5)))
                 )
         ));
         this.addArchaeology(builderBiConsumer, KEBlocks.SUSPICIOUS_DRAGON_EGG, LootTable.lootTable().withPool(
