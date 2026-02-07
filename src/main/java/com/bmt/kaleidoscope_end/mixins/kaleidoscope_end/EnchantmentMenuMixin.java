@@ -37,11 +37,8 @@ public abstract class EnchantmentMenuMixin {
     private Container enchantSlots;
 
 
-    @Shadow
-    @Final
-    public int[] costs;
 
-    @WrapOperation(method = "lambda$clickMenuButton$1", at = @At(remap = false,value = "INVOKE", target = "Lnet/minecraft/world/inventory/EnchantmentMenu;getEnchantmentList(Lnet/minecraft/world/item/ItemStack;II)Ljava/util/List;"))
+    @WrapOperation(method = "lambda$clickMenuButton$1", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/inventory/EnchantmentMenu;getEnchantmentList(Lnet/minecraft/world/item/ItemStack;II)Ljava/util/List;"))
     private List<EnchantmentInstance> modifyEnchantments(EnchantmentMenu instance, ItemStack itemStack, int seed, int cost, Operation<List<EnchantmentInstance>> original, @Local(argsOnly = true) Player player) {
         List<EnchantmentInstance> olds = original.call(instance, itemStack, seed, cost);
         ItemStack item = this.enchantSlots.getItem(1);
