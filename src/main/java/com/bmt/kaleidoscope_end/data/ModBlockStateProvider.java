@@ -35,6 +35,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         suspiciousBlock(KEBlocks.SUSPICIOUS_END_STONE);
         suspiciousBlock(KEBlocks.SUSPICIOUS_DRAGON_EGG);
+
+        cropBlock(KEBlocks.ENDER_MINT);
+        caveVines(KEBlocks.DREAM_BERRY_PLANT);
+        caveVines(KEBlocks.DREAM_BERRY_HEAD);
     }
 
     protected void suspiciousBlock(DeferredHolder<Block, ? extends Block> holder) {

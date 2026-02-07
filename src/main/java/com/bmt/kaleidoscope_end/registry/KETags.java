@@ -6,6 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.level.block.Block;
 
 public interface KETags {
     interface Items {
@@ -17,6 +18,13 @@ public interface KETags {
 
         private static TagKey<Enchantment> registry() {
             return TagKey.create(Registries.ENCHANTMENT, KaleidoscopeEnd.id("ke_enchantments"));
+        }
+    }
+
+    interface Blocks{
+        TagKey<Block> END_STONE_GROWABLE = registry();
+        private static TagKey<Block> registry() {
+            return TagKey.create(Registries.BLOCK, KaleidoscopeEnd.id("end_stone_growable"));
         }
     }
 }

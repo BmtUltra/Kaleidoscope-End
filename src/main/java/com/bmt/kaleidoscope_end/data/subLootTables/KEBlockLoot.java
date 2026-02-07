@@ -3,6 +3,8 @@ package com.bmt.kaleidoscope_end.data.subLootTables;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.bmt.kaleidoscope_end.registry.KEItem;
+import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
@@ -53,6 +55,11 @@ public class KEBlockLoot extends BlockLootSubProvider {
                 dropFoodBite(resourceLocation, foodData);
             }
         });
+
+        simpleCropBlockLoot(KEBlocks.ENDER_MINT.get(), 7, KEItem.ENDER_MINT.get(), KEItem.ENDER_MINT.get(), 1);
+
+        vines(KEBlocks.DREAM_BERRY_HEAD.get(), Items.AIR, KEItem.DREAM_BERRY_ITEM.get());
+        vines(KEBlocks.DREAM_BERRY_PLANT.get(), Items.AIR, KEItem.DREAM_BERRY_ITEM.get());
     }
 
     private void vines(Block block, Item normal, Item berries) {

@@ -21,7 +21,7 @@ public abstract class LocalPlayerMixin extends Player {
         super(p_250508_, p_250289_, p_251702_, p_252153_);
     }
 
-    @WrapOperation(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;canStartSwimming()Z"))
+    @WrapOperation(method = "aiStep", at = @At(remap = false, value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;canStartSwimming()Z"))
     private boolean warpCanStartSwimming(LocalPlayer instance, Operation<Boolean> original) {
         if (this.hasEffect(KEEffects.DREAM)) {
             return true;
@@ -29,7 +29,7 @@ public abstract class LocalPlayerMixin extends Player {
         return original.call(instance);
     }
 
-    @WrapOperation(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;isInFluidType(Ljava/util/function/BiPredicate;)Z"))
+    @WrapOperation(method = "aiStep", at = @At(remap = false, value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;isInFluidType(Ljava/util/function/BiPredicate;)Z"))
     private boolean warpIsInFluidType(LocalPlayer instance, BiPredicate<FluidType, Double> biPredicate, Operation<Boolean> original) {
         if (this.hasEffect(KEEffects.DREAM)) {
             return true;

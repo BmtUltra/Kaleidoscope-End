@@ -13,7 +13,7 @@ import java.util.function.BiPredicate;
 
 @Mixin(PlayerRenderer.class)
 public class PlayerRendererMixin {
-    @WrapOperation(method = "setupRotations*", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/AbstractClientPlayer;isInFluidType(Ljava/util/function/BiPredicate;)Z"))
+    @WrapOperation(method = "setupRotations*", at = @At(remap = false, value = "INVOKE", target = "Lnet/minecraft/client/player/AbstractClientPlayer;isInFluidType(Ljava/util/function/BiPredicate;)Z"))
     private boolean warpIsInFluidType(AbstractClientPlayer instance, BiPredicate<FluidType, Double> biPredicate, Operation<Boolean> original) {
         if (instance.hasEffect(KEEffects.DREAM)) {
             return true;

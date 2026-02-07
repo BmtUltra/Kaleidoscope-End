@@ -12,10 +12,10 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ModLootTableProvider extends LootTableProvider {
-    public ModLootTableProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+    public ModLootTableProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registryProvider) {
         super(packOutput, Set.of(), List.of(
                 new SubProviderEntry(KEBlockLoot::new, LootContextParamSets.BLOCK),
                 new SubProviderEntry(KEArchaeologyLoot::new, LootContextParamSets.ARCHAEOLOGY)
-        ), lookupProvider);
+        ), registryProvider);
     }
 }

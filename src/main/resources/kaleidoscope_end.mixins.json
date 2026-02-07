@@ -8,12 +8,14 @@
     "kaleidoscope_end.BlockEntityTypeMixin",
     "kaleidoscope_end.EnchantmentMenuMixin",
     "kaleidoscope_end.EnchantmentSlotMixin",
+    "kaleidoscope_end.EndDragonFightMixin",
     "kaleidoscope_end.EntityMixin",
     "kaleidoscope_end.FluidTypeMixin",
     "kaleidoscope_end.LivingEntityMixin",
     "kaleidoscope_end.PlayerMixin"
   ],
   "client": [
+    "kaleidoscope_end.EnchantmentScreenMixin",
     "kaleidoscope_end.LocalPlayerMixin",
     "kaleidoscope_end.PlayerRendererMixin"
   ],

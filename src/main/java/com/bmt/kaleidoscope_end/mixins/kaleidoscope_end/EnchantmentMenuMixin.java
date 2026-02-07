@@ -39,6 +39,10 @@ public abstract class EnchantmentMenuMixin {
     @Final
     private Container enchantSlots;
 
+    @Shadow
+    @Final
+    public int[] costs;
+
     @Unique
     private boolean kaleidoscope$calling = false;
 
@@ -100,6 +104,12 @@ public abstract class EnchantmentMenuMixin {
 
                     int add = 1;
                     int maxLevel = holder.value().getMaxLevel();
+                    for (int i = 1; i <= maxLevel; i++) {
+                        if (holder.value().getMinCost(i) > cost) {
+                            maxLevel = maxLevel - 1;
+                            break;
+                        }
+                    }
                     int total = 0;
                     for (int i = 1; i <= maxLevel; i++) {
                         total = total + i + add;

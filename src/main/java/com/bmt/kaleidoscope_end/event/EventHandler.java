@@ -1,6 +1,12 @@
 package com.bmt.kaleidoscope_end.event;
 
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.gameevent.GameEvent;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.registry.KEBlocks;
@@ -9,7 +15,6 @@ import com.bmt.kaleidoscope_end.registry.KEItem;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
@@ -22,6 +27,8 @@ import net.neoforged.neoforge.event.entity.living.EnderManAngerEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+
+import java.util.List;
 
 @EventBusSubscriber(modid = KaleidoscopeEnd.MOD_ID)
 public class EventHandler {
@@ -64,22 +71,40 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        @NotNull InteractionHand hand = event.getHand();
         Player player = event.getEntity();
-        if (player.getItemInHand(hand).is(KEItem.DRAGON_TOOTH.get())) {
-            if (event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.END_STONE) {
-                event.getLevel().setBlock(event.getPos(), KEBlocks.SUSPICIOUS_END_STONE.get().defaultBlockState(), 3);
-                event.getEntity().getItemInHand(hand).shrink(1);
-            } else if (event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.DRAGON_EGG) {
-                event.getLevel().setBlock(event.getPos(), KEBlocks.SUSPICIOUS_DRAGON_EGG.get().defaultBlockState(), 3);
-                event.getEntity().getItemInHand(hand).shrink(1);
-            }
-        }
         if ((player.getMainHandItem().is(Items.BRUSH) || player.getOffhandItem().is(Items.BRUSH)) ||
                 (player.getMainHandItem().is(KEItem.DRAGON_TOOTH.get()) || player.getOffhandItem().is(KEItem.DRAGON_TOOTH.get()))) {
             if (event.getLevel().getBlockState(event.getPos()).is(KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) || event.getLevel().getBlockState(event.getPos()).is(Blocks.DRAGON_EGG)) {
                 event.setCanceled(true);
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
+        Player player = event.getEntity();
+        Level level = player.level();
+        
+        // 只在使用桶时处理
+        if (!event.getItemStack().is(Items.BUCKET)) {
+            return;
+        }
+        
+        List<AreaEffectCloud> list = level.getEntitiesOfClass(AreaEffectCloud.class, player.getBoundingBox().inflate(2.0D), (areaEffectCloud) -> areaEffectCloud != null && areaEffectCloud.isAlive() && areaEffectCloud.getOwner() instanceof EnderDragon);
+        if (!list.isEmpty()) {
+            AreaEffectCloud areaeffectcloud = list.getFirst();
+            float radius = areaeffectcloud.getRadius();
+            areaeffectcloud.kill();
+            level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BUCKET_FILL, SoundSource.NEUTRAL, 1.0F, 1.0F);
+            level.gameEvent(player, GameEvent.FLUID_PICKUP, player.position());
+            
+            ItemStack itemStack = KEItem.DRAGON_BREATH_BUCKET_ITEM.get().getDefaultInstance();
+            CompoundTag tag = new CompoundTag();
+            tag.putFloat("radius", radius);
+            itemStack.set(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.of(tag));
+
+            player.setItemInHand(event.getHand(), itemStack);
+            event.setCanceled(true);
         }
     }
 }

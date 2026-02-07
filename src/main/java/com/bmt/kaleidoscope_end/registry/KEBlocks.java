@@ -1,7 +1,11 @@
 package com.bmt.kaleidoscope_end.registry;
 
 import java.util.Collection;
+import java.util.function.Supplier;
 
+import com.bmt.kaleidoscope_end.block.DreamBerryHeadBlock;
+import com.bmt.kaleidoscope_end.block.DreamBerryPlantBlock;
+import com.bmt.kaleidoscope_end.block.EnderMint;
 import org.jetbrains.annotations.NotNull;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
@@ -29,6 +33,21 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class KEBlocks {
     private static final DeferredRegister<Block> BLOCK_DEFERRED_REGISTER = DeferredRegister.create(Registries.BLOCK, KaleidoscopeEnd.MOD_ID);
+    public static final Supplier<BlockBehaviour.Properties> CROP_DEFAULT_PROPERTIES =
+            () -> BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY);
+
+    public static final Supplier<BlockBehaviour.Properties> CAVE_VINES_PROPERTIES =
+            () -> BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).randomTicks().noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY);
+
+
+    public static final DeferredHolder<Block, DreamBerryPlantBlock> DREAM_BERRY_PLANT = BLOCK_DEFERRED_REGISTER.register("dream_berry_plant",
+            () -> new DreamBerryPlantBlock(CAVE_VINES_PROPERTIES.get()));
+
+    public static final DeferredHolder<Block, DreamBerryHeadBlock> DREAM_BERRY_HEAD = BLOCK_DEFERRED_REGISTER.register("dream_berry_head",
+            () -> new DreamBerryHeadBlock(CAVE_VINES_PROPERTIES.get()));
+
+
+    public static final DeferredHolder<Block, EnderMint> ENDER_MINT = BLOCK_DEFERRED_REGISTER.register("ender_mint", () -> new EnderMint(CROP_DEFAULT_PROPERTIES.get()));
 
     // 可疑的末地石
     public static final DeferredHolder<Block, Block> SUSPICIOUS_END_STONE = BLOCK_DEFERRED_REGISTER.register("suspicious_end_stone",
@@ -50,10 +69,7 @@ public class KEBlocks {
                                         KaleidoscopeEnd.id("archaeology/suspicious_end_stone")), 
                                 0L);
                     }
-                    if (blockEntity != null) {
-                        return blockEntity;
-                    }
-                    return null;
+                    return blockEntity;
                 }
             });
 

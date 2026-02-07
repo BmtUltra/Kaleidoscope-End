@@ -5,6 +5,7 @@ import java.util.Objects;
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -42,7 +43,7 @@ public class KECreativeTabs {
 
                         FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
                             if (resourceLocation.getNamespace().equals(KaleidoscopeEnd.MOD_ID)) {
-                                Item item = net.minecraft.core.registries.BuiltInRegistries.ITEM.get(resourceLocation);
+                                Item item = BuiltInRegistries.ITEM.get(resourceLocation);
                                 output.accept(Objects.requireNonNull(item));
                             }
                         });
@@ -57,7 +58,7 @@ public class KECreativeTabs {
                         output.accept(KEItem.ROASTED_ENDERMITE_MEAT_ITEM.get());
                         output.accept(KEItem.END_CATERPILLAR_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_MIXED_STEW_ITEM.get());
-                        output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
+                        //output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
                         output.accept(KEItem.MINT_NOODLE_SOUP_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM.get());

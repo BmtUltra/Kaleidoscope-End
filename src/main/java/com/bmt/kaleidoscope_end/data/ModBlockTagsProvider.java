@@ -2,6 +2,8 @@ package com.bmt.kaleidoscope_end.data;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.bmt.kaleidoscope_end.registry.KETags;
+import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,6 +21,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
-
+        tag(KETags.Blocks.END_STONE_GROWABLE).add(
+                Blocks.END_STONE
+        );
     }
 }
