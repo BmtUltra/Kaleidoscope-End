@@ -10,6 +10,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import org.jetbrains.annotations.NotNull;
 
 public class ShulkerShellFoodItem extends FoodWithEffectsItem implements IHasContainer {
     public ShulkerShellFoodItem(FoodProperties properties) {
@@ -17,7 +19,7 @@ public class ShulkerShellFoodItem extends FoodWithEffectsItem implements IHasCon
     }
 
     @Override
-    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
+    public @NotNull ItemStack finishUsingItem(@NotNull ItemStack stack, @NotNull Level level, @NotNull LivingEntity entity) {
         ItemStack itemStack = super.finishUsingItem(stack, level, entity);
         ItemStack shulkerShell = new ItemStack(Items.SHULKER_SHELL);
 
@@ -26,7 +28,7 @@ public class ShulkerShellFoodItem extends FoodWithEffectsItem implements IHasCon
         }
 
         if (entity instanceof Player player) {
-            player.getInventory().add(shulkerShell);
+            ItemHandlerHelper.giveItemToPlayer(player, shulkerShell);
         } else {
             ItemEntity itemEntity = new ItemEntity(level, entity.getX(), entity.getY(), entity.getZ(), shulkerShell);
             level.addFreshEntity(itemEntity);

@@ -10,6 +10,8 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import org.jetbrains.annotations.NotNull;
 
 public class DragonEggShellFoodItem extends FoodWithEffectsItem implements IHasContainer {
     public DragonEggShellFoodItem(FoodProperties properties) {
@@ -17,7 +19,7 @@ public class DragonEggShellFoodItem extends FoodWithEffectsItem implements IHasC
     }
 
     @Override
-    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
+    public @NotNull ItemStack finishUsingItem(@NotNull ItemStack stack, @NotNull Level level, @NotNull LivingEntity entity) {
         ItemStack itemStack = super.finishUsingItem(stack, level, entity);
         ItemStack dragonEggShell = new ItemStack(KEItem.DRAGON_EGG_SHELL.get());
 
@@ -26,7 +28,7 @@ public class DragonEggShellFoodItem extends FoodWithEffectsItem implements IHasC
         }
 
         if (entity instanceof Player player) {
-            player.getInventory().add(dragonEggShell);
+            ItemHandlerHelper.giveItemToPlayer(player, dragonEggShell);
         } else {
             ItemEntity itemEntity = new ItemEntity(level, entity.getX(), entity.getY(), entity.getZ(), dragonEggShell);
             level.addFreshEntity(itemEntity);

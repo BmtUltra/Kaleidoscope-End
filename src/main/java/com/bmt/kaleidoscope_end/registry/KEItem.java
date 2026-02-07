@@ -1,39 +1,66 @@
 package com.bmt.kaleidoscope_end.registry;
 
+import java.util.List;
+
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.item.DragonEggShellFoodItem;
 import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
 import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
-import com.github.ysbbbbbb.kaleidoscopecookery.item.WithTooltipsItem;
+
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SmithingTemplateItem;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.List;
-import java.util.function.Supplier;
-
 public class KEItem {
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(KaleidoscopeEnd.MODID);
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, KaleidoscopeEnd.MOD_ID);
 
-    public static final DeferredItem<Item> DRAGON_TOOTH_KNIFE = registerItem("dragon_tooth_knife",
-            () -> new DragonToothKnifeItem());
+    // 龙之刃
+    public static final DeferredHolder<Item, DragonToothKnifeItem> DRAGON_TOOTH_KNIFE = ITEMS.register("dragon_tooth_knife",
+            DragonToothKnifeItem::new);
 
-    public static final DeferredItem<Item> ENDER_MINT = ITEMS.registerSimpleItem("ender_mint");
+    // 末影薄荷
+    public static final DeferredHolder<Item, Item> ENDER_MINT = ITEMS.register("ender_mint",
+            () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> VOID_CONCH = ITEMS.registerSimpleItem("void_conch");
+    // 虚空海螺
+    public static final DeferredHolder<Item, Item> VOID_CONCH = ITEMS.register("void_conch",
+            () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> DRAGON_DUST = ITEMS.registerSimpleItem("dragon_dust");
+    // 龙尘
+    public static final DeferredHolder<Item, Item> DRAGON_DUST = ITEMS.register("dragon_dust",
+            () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> DRAGON_TOOTH = ITEMS.registerSimpleItem("dragon_tooth");
+    // 龙牙
+    public static final DeferredHolder<Item, Item> DRAGON_TOOTH = ITEMS.register("dragon_tooth",
+            () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> ENDERMITE_EGG = ITEMS.registerSimpleItem("endermite_egg");
+    // 末影螨卵
+    public static final DeferredHolder<Item, Item> ENDERMITE_EGG = ITEMS.register("endermite_egg",
+            () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> ENDER_DRAGON_SMITHING_TEMPLATE = registerItem("ender_dragon_smithing_template",
+    // 末地炉灶
+    public static final DeferredHolder<Item, BlockItem> END_STOVE_ITEM = ITEMS.register("end_stove",
+            () -> new BlockItem(KEBlocks.END_STOVE.get(), new Item.Properties()));
+
+    // 可疑的末地石
+    public static final DeferredHolder<Item, BlockItem> SUSPICIOUS_END_STONE_ITEM = ITEMS.register("suspicious_end_stone",
+            () -> new BlockItem(KEBlocks.SUSPICIOUS_END_STONE.get(), new Item.Properties()));
+
+    // 可疑的龙蛋
+    public static final DeferredHolder<Item, BlockItem> SUSPICIOUS_DRAGON_EGG_ITEM = ITEMS.register("suspicious_dragon_egg",
+            () -> new BlockItem(KEBlocks.SUSPICIOUS_DRAGON_EGG.get(),
+                    new Item.Properties().rarity(Rarity.EPIC)));
+
+    // 锻造模板
+    public static final DeferredHolder<Item, SmithingTemplateItem> ENDER_DRAGON_SMITHING_TEMPLATE = ITEMS.register("ender_dragon_smithing_template",
             () -> new SmithingTemplateItem(
                     Component.translatable("item.kaleidoscope_end.ender_dragon_smithing_template.upgrade_description"),
                     Component.translatable("item.kaleidoscope_end.ender_dragon_smithing_template.applies_to_description"),
@@ -44,113 +71,157 @@ public class KEItem {
                     List.of()
             ));
 
-    public static final DeferredItem<Item> DRAGON_EGG_SHELL = ITEMS.registerSimpleItem("dragon_egg_shell");
+    // 龙蛋壳
+    public static final DeferredHolder<Item, Item> DRAGON_EGG_SHELL = ITEMS.register("dragon_egg_shell",
+            () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> DRAGON_BREATH_CHORUS_SOUP_ITEM = registerItem("dragon_breath_chorus_soup",
+    // 龙息紫颂汤
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> DRAGON_BREATH_CHORUS_SOUP_ITEM = ITEMS.register("dragon_breath_chorus_soup",
             () -> new BowlFoodOnlyItem(KEFoods.DRAGON_BREATH_CHORUS_SOUP));
 
-    public static final DeferredItem<Item> STUFFED_SHULKER_ITEM = registerItem("stuffed_shulker",
+    // 填馅潜影贝
+    public static final DeferredHolder<Item, ShulkerShellFoodItem> STUFFED_SHULKER_ITEM = ITEMS.register("stuffed_shulker",
             () -> new ShulkerShellFoodItem(KEFoods.STUFFED_SHULKER));
 
-    public static final DeferredItem<Item> CHORUS_PASTA_ITEM = registerItem("chorus_pasta",
+    // 紫颂果意面
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> CHORUS_PASTA_ITEM = ITEMS.register("chorus_pasta",
             () -> new BowlFoodOnlyItem(KEFoods.CHORUS_PASTA));
 
-    public static final DeferredItem<Item> RAW_ENDER_DRAGON_MEAT_ITEM = registerItem("raw_ender_dragon_meat",
+    // 生末影龙肉
+    public static final DeferredHolder<Item, Item> RAW_ENDER_DRAGON_MEAT_ITEM = ITEMS.register("raw_ender_dragon_meat",
             () -> new Item(new Item.Properties().food(KEFoods.RAW_ENDER_DRAGON_MEAT)));
 
-    public static final DeferredItem<Item> COOKED_ENDER_DRAGON_MEAT_ITEM = registerItem("cooked_ender_dragon_meat",
+    // 烤末影龙肉
+    public static final DeferredHolder<Item, Item> COOKED_ENDER_DRAGON_MEAT_ITEM = ITEMS.register("cooked_ender_dragon_meat",
             () -> new Item(new Item.Properties().food(KEFoods.COOKED_ENDER_DRAGON_MEAT)));
 
-    public static final DeferredItem<Item> DREAM_BERRY_ITEM = registerItem("dream_berry",
+    // 梦境浆果
+    public static final DeferredHolder<Item, Item> DREAM_BERRY_ITEM = ITEMS.register("dream_berry",
             () -> new Item(new Item.Properties().food(KEFoods.DREAM_BERRY)));
 
-    public static final DeferredItem<Item> MINT_CHORUS_MOUSSE_ITEM = registerItem("mint_chorus_mousse",
-            () -> new Item(new Item.Properties().food(KEFoods.MINT_CHORUS_MOUSSE)));
+    // 薄荷紫颂慕斯
+    public static final DeferredHolder<Item, FoodWithEffectsItem> MINT_CHORUS_MOUSSE_ITEM = ITEMS.register("mint_chorus_mousse",
+            () -> new FoodWithEffectsItem(KEFoods.MINT_CHORUS_MOUSSE));
 
-    public static final DeferredItem<Item> OPTIC_NERVE_ITEM = registerItem("optic_nerve",
+    // 视神经
+    public static final DeferredHolder<Item, Item> OPTIC_NERVE_ITEM = ITEMS.register("optic_nerve",
             () -> new Item(new Item.Properties().food(KEFoods.OPTIC_NERVE)));
 
-    public static final DeferredItem<Item> END_SALAD_ITEM = registerItem("end_salad",
-            () -> new BowlFoodOnlyItem(KEFoods.END_SALAD));
-
-    public static final DeferredItem<Item> DARK_DRAGON_EGG_STEW_ITEM = registerItem("dark_dragon_egg_stew",
-            () -> new DragonEggShellFoodItem(KEFoods.DARK_DRAGON_EGG_STEW));
-
-    public static final DeferredItem<Item> SHULKER_SHELL_MEAT_ITEM = registerItem("shulker_shell_meat",
+    // 潜影贝质
+    public static final DeferredHolder<Item, Item> SHULKER_SHELL_MEAT_ITEM = ITEMS.register("shulker_shell_meat",
             () -> new Item(new Item.Properties().food(KEFoods.SHULKER_SHELL_MEAT)));
 
-    public static final DeferredItem<Item> SHULKER_SHELL_STEW_ITEM = registerItem("shulker_shell_stew",
+    // 潜影贝质炖
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> SHULKER_SHELL_STEW_ITEM = ITEMS.register("shulker_shell_stew",
             () -> new BowlFoodOnlyItem(KEFoods.SHULKER_SHELL_STEW));
 
-    public static final DeferredItem<Item> SHULKER_ICE_CREAM_ITEM = registerItem("shulker_ice_cream",
+    // 潜影贝冰淇淋
+    public static final DeferredHolder<Item, ShulkerShellFoodItem> SHULKER_ICE_CREAM_ITEM = ITEMS.register("shulker_ice_cream",
             () -> new ShulkerShellFoodItem(KEFoods.SHULKER_ICE_CREAM));
 
-    public static final DeferredItem<Item> VOID_CONCH_NOODLE_SOUP_ITEM = registerItem("void_conch_noodle_soup",
+    // 虚空海螺汤面
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> VOID_CONCH_NOODLE_SOUP_ITEM = ITEMS.register("void_conch_noodle_soup",
             () -> new BowlFoodOnlyItem(KEFoods.VOID_CONCH_NOODLE_SOUP));
 
-    public static final DeferredItem<Item> STIR_FRIED_ENDERMITE_MEAT_ITEM = registerItem("stir_fried_endermite_meat",
+    // 炒末影螨肉
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> STIR_FRIED_ENDERMITE_MEAT_ITEM = ITEMS.register("stir_fried_endermite_meat",
             () -> new BowlFoodOnlyItem(KEFoods.STIR_FRIED_ENDERMITE_MEAT));
 
-    public static final DeferredItem<Item> STIR_FRIED_ENDERMITE_MEAT_RICE_BOWL_ITEM = registerItem("stir_fried_endermite_meat_rice_bowl",
+    // 炒末影螨肉盖饭
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> STIR_FRIED_ENDERMITE_MEAT_RICE_BOWL_ITEM = ITEMS.register("stir_fried_endermite_meat_rice_bowl",
             () -> new BowlFoodOnlyItem(KEFoods.STIR_FRIED_ENDERMITE_MEAT_RICE_BOWL));
 
-    public static final DeferredItem<Item> RAW_ENDERMITE_MEAT_ITEM = registerItem("raw_endermite_meat",
+    // 生末影螨肉
+    public static final DeferredHolder<Item, Item> RAW_ENDERMITE_MEAT_ITEM = ITEMS.register("raw_endermite_meat",
             () -> new Item(new Item.Properties().food(KEFoods.RAW_ENDERMITE_MEAT)));
 
-    public static final DeferredItem<Item> ROASTED_ENDERMITE_MEAT_ITEM = registerItem("roasted_endermite_meat",
+    // 烤末影螨肉
+    public static final DeferredHolder<Item, Item> ROASTED_ENDERMITE_MEAT_ITEM = ITEMS.register("roasted_endermite_meat",
             () -> new Item(new Item.Properties().food(KEFoods.ROASTED_ENDERMITE_MEAT)));
 
-    public static final DeferredItem<Item> END_CATERPILLAR_ITEM = registerItem("end_caterpillar",
+    // 末地猪儿虫
+    public static final DeferredHolder<Item, Item> END_CATERPILLAR_ITEM = ITEMS.register("end_caterpillar",
             () -> new Item(new Item.Properties().food(KEFoods.END_CATERPILLAR)));
 
-    public static final DeferredItem<Item> DRAGON_BREATH_MIXED_STEW_ITEM = registerItem("dragon_breath_mixed_stew",
+    // 龙息乱烩
+    public static final DeferredHolder<Item, ShulkerShellFoodItem> DRAGON_BREATH_MIXED_STEW_ITEM = ITEMS.register("dragon_breath_mixed_stew",
             () -> new ShulkerShellFoodItem(KEFoods.DRAGON_BREATH_MIXED_STEW));
 
-    public static final DeferredItem<Item> DRAGON_HEAD_WITH_SAUCE_ITEM = registerItem("dragon_head_with_sauce",
+    // 浇汁龙首
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> DRAGON_HEAD_WITH_SAUCE_ITEM = ITEMS.register("dragon_head_with_sauce",
             () -> new BowlFoodOnlyItem(KEFoods.DRAGON_HEAD_WITH_SAUCE));
 
-    public static final DeferredItem<Item> MINT_NOODLE_SOUP_ITEM = registerItem("mint_noodle_soup",
+    // 薄荷汤面
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> MINT_NOODLE_SOUP_ITEM = ITEMS.register("mint_noodle_soup",
             () -> new BowlFoodOnlyItem(KEFoods.MINT_NOODLE_SOUP));
 
-    public static final DeferredItem<Item> MINT_SAUCE_SHULKER_MEAT_ITEM = registerItem("mint_sauce_shulker_meat",
+    // 薄荷酱汁潜影贝质
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> MINT_SAUCE_SHULKER_MEAT_ITEM = ITEMS.register("mint_sauce_shulker_meat",
             () -> new BowlFoodOnlyItem(KEFoods.MINT_SAUCE_SHULKER_MEAT));
 
-    public static final DeferredItem<Item> MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM = registerItem("mint_sauce_shulker_meat_rice_bowl",
+    // 薄荷酱汁潜影贝质盖饭
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM = ITEMS.register("mint_sauce_shulker_meat_rice_bowl",
             () -> new BowlFoodOnlyItem(KEFoods.MINT_SAUCE_SHULKER_MEAT_RICE_BOWL));
 
-    public static final DeferredItem<Item> ENDER_MINT_CANDY_ITEM = registerItem("ender_mint_candy",
+    // 末影薄荷糖
+    public static final DeferredHolder<Item, FoodWithEffectsItem> ENDER_MINT_CANDY_ITEM = ITEMS.register("ender_mint_candy",
             () -> new FoodWithEffectsItem(KEFoods.ENDER_MINT_CANDY));
 
-    public static final DeferredItem<Item> DRAGON_SOUFFLE_ITEM = registerItem("dragon_souffle",
+    // 龙舒芙蕾
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> DRAGON_SOUFFLE_ITEM = ITEMS.register("dragon_souffle",
             () -> new BowlFoodOnlyItem(KEFoods.DRAGON_SOUFFLE));
 
-    public static final DeferredItem<Item> DARK_DRAGON_STEAK_ITEM = registerItem("dark_dragon_steak",
-            () -> new BowlFoodOnlyItem(KEFoods.DARK_DRAGON_STEAK));
-
     // 龙蛋液
-    public static final DeferredItem<Item> DRAGON_EGG_LIQUID = ITEMS.registerSimpleItem("dragon_egg_liquid");
+    public static final DeferredHolder<Item, Item> DRAGON_EGG_LIQUID = ITEMS.register("dragon_egg_liquid",
+            () -> new Item(new Item.Properties().food(KEFoods.DRAGON_EGG_LIQUID_FOOD)));
 
     // 紫颂果籽
-    public static final DeferredItem<Item> CHORUS_SEED = ITEMS.registerSimpleItem("chorus_seed");
+    public static final DeferredHolder<Item, Item> CHORUS_SEED = ITEMS.register("chorus_seed",
+            () -> new Item(new Item.Properties().food(KEFoods.CHORUS_SEED_FOOD)));
 
     // 紫颂花瓣
-    public static final DeferredItem<Item> CHORUS_PETAL = ITEMS.registerSimpleItem("chorus_petal");
+    public static final DeferredHolder<Item, Item> CHORUS_PETAL = ITEMS.register("chorus_petal",
+            () -> new Item(new Item.Properties()));
 
     // 煎龙蛋
-    public static final DeferredItem<Item> FRIED_DRAGON_EGG_ITEM = registerItem("fried_dragon_egg",
+    public static final DeferredHolder<Item, FoodWithEffectsItem> FRIED_DRAGON_EGG_ITEM = ITEMS.register("fried_dragon_egg",
             () -> new FoodWithEffectsItem(KEFoods.FRIED_DRAGON_EGG));
 
-    // 龙蛋羹
-    public static final DeferredItem<Item> DRAGON_EGG_CUSTARD_ITEM = registerItem("dragon_egg_custard",
-            () -> new DragonEggShellFoodItem(KEFoods.DRAGON_EGG_CUSTARD));
-
     // 紫颂花茶
-    public static final DeferredItem<Item> CHORUS_FLOWER_TEA_ITEM = registerItem("chorus_flower_tea",
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> CHORUS_FLOWER_TEA_ITEM = ITEMS.register("chorus_flower_tea",
             () -> new BowlFoodOnlyItem(KEFoods.CHORUS_FLOWER_TEA));
 
-    private static DeferredItem<Item> registerItem(String name, Supplier<Item> supplier) {
-        return ITEMS.registerItem(name, props -> supplier.get());
-    }
+    // 紫颂花糕
+    public static final DeferredHolder<Item, FoodWithEffectsItem> CHORUS_FLOWER_CAKE_ITEM = ITEMS.register("chorus_flower_cake",
+            () -> new FoodWithEffectsItem(KEFoods.CHORUS_FLOWER_CAKE));
+
+    // 紫颂果籽饼干
+    public static final DeferredHolder<Item, FoodWithEffectsItem> CHORUS_SEED_COOKIE_ITEM = ITEMS.register("chorus_seed_cookie",
+            () -> new FoodWithEffectsItem(KEFoods.CHORUS_SEED_COOKIE));
+
+    // 龙蛋冰淇淋
+    public static final DeferredHolder<Item, DragonEggShellFoodItem> DRAGON_EGG_ICE_CREAM_ITEM = ITEMS.register("dragon_egg_ice_cream",
+            () -> new DragonEggShellFoodItem(KEFoods.DRAGON_EGG_ICE_CREAM));
+
+    // 填馅虚空海螺
+    public static final DeferredHolder<Item, FoodWithEffectsItem> STUFFED_VOID_CONCH_ITEM = ITEMS.register("stuffed_void_conch",
+            () -> new FoodWithEffectsItem(KEFoods.STUFFED_VOID_CONCH));
+
+    // 视神经咕噜肉
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM = ITEMS.register("optic_nerve_sweet_and_sour_pork",
+            () -> new BowlFoodOnlyItem(KEFoods.OPTIC_NERVE_SWEET_AND_SOUR_PORK));
+
+    // 末地猪儿虫刺身
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> END_CATERPILLAR_SASHIMI_ITEM = ITEMS.register("end_caterpillar_sashimi",
+            () -> new BowlFoodOnlyItem(KEFoods.END_CATERPILLAR_SASHIMI));
+
+    // 虚空羊排
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> VOID_MUTTON_STEAK_ITEM = ITEMS.register("void_mutton_steak",
+            () -> new BowlFoodOnlyItem(KEFoods.VOID_MUTTON_STEAK));
+
+    // 龙息桶
+    public static final DeferredHolder<Item, Item> DRAGON_BREATH_BUCKET_ITEM = ITEMS.register("dragon_breath_bucket",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -1,13 +1,16 @@
 package com.bmt.kaleidoscope_end.item.Tier;
 
 import com.bmt.kaleidoscope_end.registry.KEItem;
+
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 public class DragonToothTier implements Tier {
+    
     @Override
     public int getUses() {
         return 2031;
@@ -24,7 +27,7 @@ public class DragonToothTier implements Tier {
     }
 
     @Override
-    public TagKey<Block> getIncorrectBlocksForDrops() {
+    public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
         return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
     }
 
@@ -34,7 +37,7 @@ public class DragonToothTier implements Tier {
     }
 
     @Override
-    public Ingredient getRepairIngredient() {
+    public @NotNull Ingredient getRepairIngredient() {
         return Ingredient.of(KEItem.DRAGON_TOOTH.get());
     }
 }

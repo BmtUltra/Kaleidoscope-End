@@ -5,7 +5,6 @@ import com.bmt.kaleidoscope_end.registry.KEItem;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +14,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
-@EventBusSubscriber(modid = KaleidoscopeEnd.MODID)
+@EventBusSubscriber(modid = KaleidoscopeEnd.MOD_ID)
 public class EndCaterpillarEvent {
     
     @SubscribeEvent

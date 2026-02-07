@@ -1,17 +1,19 @@
 package com.bmt.kaleidoscope_end.config;
 
-import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
-import net.neoforged.neoforge.common.ModConfigSpec;
-import net.neoforged.fml.event.config.ModConfigEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-
 import java.util.Arrays;
 import java.util.List;
 
-@EventBusSubscriber(modid = KaleidoscopeEnd.MODID)
-public class Config {
+import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
+import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
+
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.config.ModConfigEvent;
+import net.neoforged.neoforge.common.ModConfigSpec;
+
+@EventBusSubscriber(modid = KaleidoscopeEnd.MOD_ID)
+public class Config
+{
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
     public static final ModConfigSpec.ConfigValue<List<? extends String>> DRAGON_TOOTH_KNIFE_EXTRA_END_MOBS;
@@ -38,14 +40,16 @@ public class Config {
     public static final ModConfigSpec SPEC = BUILDER.build();
 
     @SubscribeEvent
-    static void onLoad(final ModConfigEvent.Loading event) {
+    static void onLoad(final ModConfigEvent.Loading event)
+    {
         if (event.getConfig().getSpec() == SPEC) {
             DragonToothKnifeItem.clearCache();
         }
     }
 
     @SubscribeEvent
-    static void onReload(final ModConfigEvent.Reloading event) {
+    static void onReload(final ModConfigEvent.Reloading event)
+    {
         if (event.getConfig().getSpec() == SPEC) {
             DragonToothKnifeItem.clearCache();
         }

@@ -1,9 +1,14 @@
 package com.bmt.kaleidoscope_end.registry;
 
+import java.util.Objects;
+
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -11,7 +16,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class KECreativeTabs {
     private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KaleidoscopeEnd.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KaleidoscopeEnd.MOD_ID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> KALEIDOSCOPE_END_FOODS = CREATIVE_MODE_TABS.register("kaleidoscope_end_foods",
             () -> CreativeModeTab.builder()
@@ -34,8 +39,14 @@ public class KECreativeTabs {
                         output.accept(KEItem.DREAM_BERRY_ITEM.get());
                         output.accept(KEItem.MINT_CHORUS_MOUSSE_ITEM.get());
                         output.accept(KEItem.OPTIC_NERVE_ITEM.get());
-                        output.accept(KEItem.END_SALAD_ITEM.get());
-                        output.accept(KEItem.DARK_DRAGON_EGG_STEW_ITEM.get());
+
+                        FoodBiteRegistry.FOOD_DATA_MAP.forEach((resourceLocation, foodData) -> {
+                            if (resourceLocation.getNamespace().equals(KaleidoscopeEnd.MOD_ID)) {
+                                Item item = net.minecraft.core.registries.BuiltInRegistries.ITEM.get(resourceLocation);
+                                output.accept(Objects.requireNonNull(item));
+                            }
+                        });
+
                         output.accept(KEItem.SHULKER_SHELL_MEAT_ITEM.get());
                         output.accept(KEItem.SHULKER_SHELL_STEW_ITEM.get());
                         output.accept(KEItem.SHULKER_ICE_CREAM_ITEM.get());
@@ -52,13 +63,22 @@ public class KECreativeTabs {
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM.get());
                         output.accept(KEItem.ENDER_MINT_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_SOUFFLE_ITEM.get());
-                        output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
+                        //output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
                         output.accept(KEItem.DRAGON_EGG_LIQUID.get());
                         output.accept(KEItem.CHORUS_SEED.get());
                         output.accept(KEItem.CHORUS_PETAL.get());
                         output.accept(KEItem.FRIED_DRAGON_EGG_ITEM.get());
-                        output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
+                        //output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
+                        output.accept(KEItem.CHORUS_FLOWER_CAKE_ITEM.get());
+                        output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());
+                        output.accept(KEItem.DRAGON_EGG_ICE_CREAM_ITEM.get());
+                        output.accept(KEItem.STUFFED_VOID_CONCH_ITEM.get());
+                        output.accept(KEItem.OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM.get());
+                        output.accept(KEItem.END_CATERPILLAR_SASHIMI_ITEM.get());
+                        output.accept(KEItem.VOID_MUTTON_STEAK_ITEM.get());
+                        output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
+                        output.accept(KEItem.END_STOVE_ITEM.get());
                     })
                     .build());
 
