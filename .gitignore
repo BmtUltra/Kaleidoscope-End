@@ -20,6 +20,9 @@ out
 build
 .gradle
 
+# data generation cache
+src/generated/resources/.cache
+
 # other
 eclipse
 run

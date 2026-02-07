@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "kaleidoscope_end:block/dream_berry_head"
+    },
+    "berries=true": {
+      "model": "kaleidoscope_end:block/dream_berry_head_berries"
+    }
+  }
+}
