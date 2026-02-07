@@ -9,7 +9,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -27,9 +26,10 @@ public class KECropBlockBase extends CropBlock {
         super(properties);
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (state.getBlock() instanceof CropBlock cropBlock && cropBlock.isMaxAge(state)) {
-            getHandHarvestItem(state, level, pos, null, player, player.getItemInHand(hand));
+            getHandHarvestItem(state, level, pos, null, player, ItemStack.EMPTY);
             int ageAfterUse = 5;
             level.playSound(null, (double) pos.getX() + 0.5, (double) pos.getY() + 0.5, (double) pos.getZ() + 0.5, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
             level.setBlock(pos, this.getStateForAge(ageAfterUse), 2);
