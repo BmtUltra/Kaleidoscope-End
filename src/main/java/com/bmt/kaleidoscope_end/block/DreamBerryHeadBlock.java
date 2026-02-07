@@ -5,6 +5,6 @@ import com.bmt.kaleidoscope_end.registry.KEItem;
 
 public class DreamBerryHeadBlock extends KECaveVinesHeadBlock {
     public DreamBerryHeadBlock(Properties properties) {
-        super(properties, KEBlocks.DREAM_BERRY_HEAD, KEItem.DREAM_BERRY_ITEM);
+        super(properties, KEBlocks.DREAM_BERRY_PLANT, KEItem.DREAM_BERRY_ITEM);
     }
 }
