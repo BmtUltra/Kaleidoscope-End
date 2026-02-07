@@ -1,10 +1,7 @@
 package com.bmt.kaleidoscope_end.registry;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.item.DragonBreathBucket;
-import com.bmt.kaleidoscope_end.item.DragonEggShellFoodItem;
-import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
-import com.bmt.kaleidoscope_end.item.ShulkerShellFoodItem;
+import com.bmt.kaleidoscope_end.item.*;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 import net.minecraft.network.chat.Component;
@@ -28,7 +25,7 @@ public class KEItem {
 
     // 末影薄荷
     public static final RegistryObject<Item> ENDER_MINT = ITEMS.register("ender_mint",
-            () -> new Item(new Item.Properties()));
+            () -> new KEBlockItem(KEBlocks.ENDER_MINT.get(),new Item.Properties()));
 
     // 虚空海螺
     public static final RegistryObject<Item> VOID_CONCH = ITEMS.register("void_conch",
@@ -97,7 +94,7 @@ public class KEItem {
 
     // 梦境浆果
     public static final RegistryObject<Item> DREAM_BERRY_ITEM = ITEMS.register("dream_berry",
-            () -> new Item(new Item.Properties().food(KEFoods.DREAM_BERRY)));
+            () -> new KEBlockItem(KEBlocks.DREAM_BERRY_HEAD.get(), new Item.Properties().food(KEFoods.DREAM_BERRY)));
 
     // 薄荷紫颂慕斯
     public static final RegistryObject<Item> MINT_CHORUS_MOUSSE_ITEM = ITEMS.register("mint_chorus_mousse",
