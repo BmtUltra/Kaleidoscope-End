@@ -45,7 +45,7 @@ public class DataMain {
 
         generator.addProvider(event.includeServer(), new ModBlockStateProvider(generator.getPackOutput(), event.getExistingFileHelper()));
 
-        generator.addProvider(event.includeServer(), new ModLootTableProvider(generator.getPackOutput()));
+        generator.addProvider(event.includeServer(), new ModLootTableProvider(generator.getPackOutput(),registryProvider));
 
         generator.addProvider(event.includeServer(), new EnchantmentTagsProvider(generator.getPackOutput(), registryProvider, event.getExistingFileHelper()));
     }

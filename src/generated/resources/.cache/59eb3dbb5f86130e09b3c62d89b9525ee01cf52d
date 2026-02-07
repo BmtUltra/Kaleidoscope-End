@@ -1,6 +1,6 @@
-// 1.20.1	2026-02-06T22:43:19.0924086	Loot Tables
+// 1.20.1	2026-02-07T11:52:15.2751258	Loot Tables
 f96ad66253772aa3cc8adc894365d04f8806c250 data/kaleidoscope_end/loot_tables/archaeology/suspicious_dragon_egg.json
-529ba898993535e3ae85fc0c4e7e04bff9a6b1c0 data/kaleidoscope_end/loot_tables/archaeology/suspicious_end_stone.json
+ced49aa5919890aee556a3934dd941e379a01966 data/kaleidoscope_end/loot_tables/archaeology/suspicious_end_stone.json
 a76913cfc7524d2d365682310ff8f2d65db5dd20 data/kaleidoscope_end/loot_tables/blocks/dark_dragon_egg_stew.json
 f77f95fa694416d7b8243e07e18e52eb8091f789 data/kaleidoscope_end/loot_tables/blocks/dark_dragon_steak.json
 f27a8e49571849c7bfa1e20c94d9fdc36d98568f data/kaleidoscope_end/loot_tables/blocks/dragon_egg_custard.json

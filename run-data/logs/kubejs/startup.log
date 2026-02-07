@@ -1,8 +1,8 @@
-[22:43:15] [INIT] KubeJS 2001.6.5-build.16; MC 2001 forge
-[22:43:15] [INIT] Loaded plugins:
-[22:43:15] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgePlugin
-[22:43:15] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgeClientPlugin
-[22:43:15] [INIT] - com.github.ysbbbbbb.kaleidoscopecookery.compat.kubejs.ModKubeJSPlugin
-[22:43:16] [INFO] example.js#5: Hello, World! (Loaded startup scripts)
-[22:43:16] [INFO] Loaded script startup_scripts:example.js in 0.078 s
-[22:43:16] [INFO] Loaded 1/1 KubeJS startup scripts in 0.661 s with 0 errors and 0 warnings
+[11:52:12] [INIT] KubeJS 2001.6.5-build.16; MC 2001 forge
+[11:52:12] [INIT] Loaded plugins:
+[11:52:12] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgePlugin
+[11:52:12] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgeClientPlugin
+[11:52:12] [INIT] - com.github.ysbbbbbb.kaleidoscopecookery.compat.kubejs.ModKubeJSPlugin
+[11:52:12] [INFO] example.js#5: Hello, World! (Loaded startup scripts)
+[11:52:12] [INFO] Loaded script startup_scripts:example.js in 0.044 s
+[11:52:12] [INFO] Loaded 1/1 KubeJS startup scripts in 0.416 s with 0 errors and 0 warnings
