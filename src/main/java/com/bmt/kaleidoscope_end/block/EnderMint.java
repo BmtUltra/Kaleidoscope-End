@@ -2,7 +2,6 @@ package com.bmt.kaleidoscope_end.block;
 
 import com.bmt.kaleidoscope_end.registry.KEItem;
 import com.bmt.kaleidoscope_end.registry.KETags;
-import com.bmt.kaleidoscope_nether.block.KNCropBlockBase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -12,7 +11,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class EnderMint extends KNCropBlockBase {
+public class EnderMint extends KECropBlockBase {
     public EnderMint(Properties properties) {
         super(properties);
     }

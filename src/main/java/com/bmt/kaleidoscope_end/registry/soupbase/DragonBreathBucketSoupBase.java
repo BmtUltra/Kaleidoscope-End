@@ -14,9 +14,7 @@ public class DragonBreathBucketSoupBase implements ISoupBase {
     private static final ResourceLocation NAME = ResourceLocation.fromNamespaceAndPath("kaleidoscope_end", "dragon_breath");
     private static final int BUBBLE_COLOR = 0xFF00FF;
     
-    //private static final ResourceLocation DRAGON_BREATH_TEXTURE = ResourceLocation.fromNamespaceAndPath("kaleidoscope_end", "block/dragon_breath_still");
-    private static final ResourceLocation DRAGON_BREATH_TEXTURE = ResourceLocation.fromNamespaceAndPath("minecraft", "block/water_still");
-
+    private static final ResourceLocation DRAGON_BREATH_TEXTURE = ResourceLocation.fromNamespaceAndPath("kaleidoscope_end", "block/dragon_breath_still");
 
     @Override
     public ResourceLocation getName() {
