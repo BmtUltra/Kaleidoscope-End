@@ -90,7 +90,7 @@ public class EventHandler {
             Player player = event.getEntity();
             Level level = player.level();
             List<AreaEffectCloud> list = level.getEntitiesOfClass(AreaEffectCloud.class, player.getBoundingBox().inflate(2.0D), (areaEffectCloud) -> {
-                return areaEffectCloud != null && areaEffectCloud.isAlive();
+                return areaEffectCloud != null && areaEffectCloud.isAlive() && areaEffectCloud.getOwner() instanceof EnderDragon;
             });
             if (!list.isEmpty()) {
                 AreaEffectCloud areaeffectcloud = list.get(0);
