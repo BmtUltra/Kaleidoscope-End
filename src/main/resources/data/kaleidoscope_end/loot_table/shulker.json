@@ -7,7 +7,7 @@
         {
           "condition": "kaleidoscope_cookery:advance_entity_match_tool",
           "predicate": {
-            "tag": "kaleidoscope_cookery:kitchen_knife"
+            "items": "#kaleidoscope_cookery:kitchen_knife"
           },
           "slot": "mainhand"
         }
@@ -20,13 +20,13 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 2.0
+                "max": 2.0,
+                "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "kaleidoscope_end:raw_ender_dragon_meat"
+          "name": "kaleidoscope_end:shulker_shell_meat"
         }
       ],
       "rolls": 1.0
@@ -41,8 +41,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 5.0,
-                "min": 3.0
+                "max": 3.0,
+                "min": 1.0
               },
               "function": "minecraft:set_count"
             },
@@ -50,26 +50,17 @@
               "count": {
                 "type": "minecraft:uniform",
                 "max": 1.0,
-                "min": 1.0
+                "min": 0.0
               },
-              "function": "minecraft:looting_enchant"
+              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchanted_count_increase"
             }
           ],
-          "name": "kaleidoscope_end:raw_ender_dragon_meat"
-        }
-      ],
-      "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "kaleidoscope_end:dragon_tooth"
+          "name": "kaleidoscope_end:shulker_shell_meat"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "kaleidoscope_end:ender_dragon"
+  "random_sequence": "kaleidoscope_end:shulker"
 }

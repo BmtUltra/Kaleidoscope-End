@@ -1,6 +1,8 @@
 package com.bmt.kaleidoscope_end.item;
 
 
+import javax.annotation.Nullable;
+
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
@@ -18,9 +20,6 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.NotNull;
-
-import javax.annotation.Nullable;
 
 public class DragonBreathBucket extends Item {
     @Nullable
@@ -56,7 +55,17 @@ public class DragonBreathBucket extends Item {
 
         Player player = useOnContext.getPlayer();
         if (player != null) {
-            player.setItemInHand(useOnContext.getHand(), Items.BUCKET.getDefaultInstance());
+            var itemInHand = useOnContext.getItemInHand();
+            itemInHand.shrink(1);
+            
+            if (itemInHand.isEmpty()) {
+                player.setItemInHand(useOnContext.getHand(), Items.BUCKET.getDefaultInstance());
+            } else {
+                if (!player.getInventory().add(Items.BUCKET.getDefaultInstance())) {
+                    player.drop(Items.BUCKET.getDefaultInstance(), false);
+                }
+            }
+            
             level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BUCKET_EMPTY, SoundSource.NEUTRAL, 1.0F, 1.0F);
         }
         return InteractionResult.SUCCESS;
