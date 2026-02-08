@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
+package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end.client;
 
 import com.bmt.kaleidoscope_end.registry.KEEffects;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
