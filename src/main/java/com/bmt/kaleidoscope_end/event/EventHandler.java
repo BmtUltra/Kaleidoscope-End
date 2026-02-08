@@ -1,12 +1,6 @@
 package com.bmt.kaleidoscope_end.event;
 
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.AreaEffectCloud;
-import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.gameevent.GameEvent;
+import java.util.List;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.registry.KEBlocks;
@@ -15,20 +9,25 @@ import com.bmt.kaleidoscope_end.registry.KEItem;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.EnderManAngerEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-
-import java.util.List;
 
 @EventBusSubscriber(modid = KaleidoscopeEnd.MOD_ID)
 public class EventHandler {
@@ -103,7 +102,17 @@ public class EventHandler {
             tag.putFloat("radius", radius);
             itemStack.set(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.of(tag));
 
-            player.setItemInHand(event.getHand(), itemStack);
+            ItemStack bucketInHand = event.getItemStack();
+            bucketInHand.shrink(1);
+            
+            if (bucketInHand.isEmpty()) {
+                player.setItemInHand(event.getHand(), itemStack);
+            } else {
+                if (!player.getInventory().add(itemStack)) {
+                    player.drop(itemStack, false);
+                }
+            }
+            
             event.setCanceled(true);
         }
     }

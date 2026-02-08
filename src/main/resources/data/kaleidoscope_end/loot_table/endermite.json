@@ -7,7 +7,7 @@
         {
           "condition": "kaleidoscope_cookery:advance_entity_match_tool",
           "predicate": {
-            "tag": "kaleidoscope_cookery:kitchen_knife"
+            "items": "#kaleidoscope_cookery:kitchen_knife"
           },
           "slot": "mainhand"
         }
@@ -26,7 +26,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "kaleidoscope_end:shulker_shell_meat"
+          "name": "kaleidoscope_end:raw_endermite_meat"
         }
       ],
       "rolls": 1.0
@@ -41,7 +41,7 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 3.0,
+                "max": 2.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
@@ -52,14 +52,15 @@
                 "max": 1.0,
                 "min": 0.0
               },
-              "function": "minecraft:looting_enchant"
+              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchanted_count_increase"
             }
           ],
-          "name": "kaleidoscope_end:shulker_shell_meat"
+          "name": "kaleidoscope_end:raw_endermite_meat"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "kaleidoscope_end:shulker"
+  "random_sequence": "kaleidoscope_end:endermite"
 }
