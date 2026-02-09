@@ -33,7 +33,7 @@ public class KEItem {
 
     // 龙尘
     public static final RegistryObject<Item> DRAGON_DUST = ITEMS.register("dragon_dust",
-            () -> new Item(new Item.Properties()));
+            () -> new DragonDustItem(new Item.Properties()));
 
     // 龙牙
     public static final RegistryObject<Item> DRAGON_TOOTH = ITEMS.register("dragon_tooth",
