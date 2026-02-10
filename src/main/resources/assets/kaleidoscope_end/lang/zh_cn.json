@@ -93,7 +93,7 @@
   "effect.kaleidoscope_end.dream": "梦境",
   "effect.kaleidoscope_end.dream.description": "可以在天空中游泳",
   "effect.kaleidoscope_end.void_erosion": "虚空侵蚀",
-  "effect.kaleidoscope_end.void_erosion.description": "效果持续时间内，生命值无法低于1点，且造成的伤害无视护甲值",
+  "effect.kaleidoscope_end.void_erosion.description": "效果持续时间内，无法死亡，且造成的伤害无视护甲值",
   "effect.kaleidoscope_end.mint": "薄荷",
   "effect.kaleidoscope_end.mint.description": "直视末影人时不会激怒，受到的魔法伤害大幅度降低",
 
@@ -108,7 +108,7 @@
   "advancements.kaleidoscope_end.dream.title": "飞起来了！",
   "advancements.kaleidoscope_end.dream.description": "通过梦境效果漫步空中",
   "advancements.kaleidoscope_end.void_conch.title": "来自虚空的回响",
-  "advancements.kaleidoscope_end.void_conch.description": "考古龙蛋时发现虚空海螺",
+  "advancements.kaleidoscope_end.void_conch.description": "考古末地石时发现虚空海螺",
   "advancements.kaleidoscope_end.void_erosion.title": "死亡的边界",
   "advancements.kaleidoscope_end.void_erosion.description": "获得虚空侵蚀效果",
   "advancements.kaleidoscope_end.end_caterpillar.title": "末地蛋白质",
