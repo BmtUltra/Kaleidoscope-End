@@ -1,10 +1,10 @@
 {
   "type": "kaleidoscope_cookery:chopping_board",
-  "cut_count": 3,
+  "cut_count": 2,
   "ingredient": {
     "item": "minecraft:chorus_fruit"
   },
-  "model_id": "kaleidoscope_cookery:raw_pork_belly",
+  "model_id": "kaleidoscope_end:chorus_fruit",
   "result": {
     "count": 2,
     "item": "kaleidoscope_end:chorus_seed"
