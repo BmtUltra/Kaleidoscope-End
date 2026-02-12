@@ -21,7 +21,7 @@ public class KEItem {
 
     // 龙之刃
     public static final RegistryObject<Item> DRAGON_TOOTH_KNIFE = ITEMS.register("dragon_tooth_knife",
-            () -> new DragonToothKnifeItem());
+            DragonToothKnifeItem::new);
 
     // 末影薄荷
     public static final RegistryObject<Item> ENDER_MINT = ITEMS.register("ender_mint",
