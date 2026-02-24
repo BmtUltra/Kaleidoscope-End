@@ -8,7 +8,7 @@ import net.minecraftforge.common.ForgeTier;
 public class DragonToothTier implements Tier {
     private static final ForgeTier BASE_TIER = new ForgeTier(
             5,
-            2031,
+            3542,
             8.0F,
             0,
             15,

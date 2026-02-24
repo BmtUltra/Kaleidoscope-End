@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_end.registry;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.item.*;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModFoods;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.WithTooltipsItem;
@@ -139,7 +140,7 @@ public class KEItem {
 
     // 末地猪儿虫
     public static final RegistryObject<Item> END_CATERPILLAR_ITEM = ITEMS.register("end_caterpillar",
-            () -> new WithTooltipsItem(new Item.Properties(), "end_caterpillar"));
+            () -> new WithTooltipsItem(new Item.Properties().food(ModFoods.CATERPILLAR), "end_caterpillar"));
 
     // 龙息乱烩
     public static final RegistryObject<Item> DRAGON_BREATH_MIXED_STEW_ITEM = ITEMS.register("dragon_breath_mixed_stew",
