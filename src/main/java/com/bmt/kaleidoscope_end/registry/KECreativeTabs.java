@@ -28,7 +28,7 @@ public class KECreativeTabs {
                         output.accept(KEItem.DRAGON_DUST.get());
                         output.accept(KEItem.DRAGON_TOOTH.get());
                         output.accept(KEItem.DRAGON_EGG_SHELL.get());
-                        output.accept(KEItem.ENDERMITE_EGG.get());
+//                        output.accept(KEItem.ENDERMITE_EGG.get());
                         output.accept(KEItem.ENDER_DRAGON_SMITHING_TEMPLATE.get());
                         output.accept(KEItem.ENDER_MINT.get());
                         output.accept(KEItem.DRAGON_BREATH_CHORUS_SOUP_ITEM.get());
@@ -74,11 +74,19 @@ public class KECreativeTabs {
                         output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());
                         output.accept(KEItem.DRAGON_EGG_ICE_CREAM_ITEM.get());
                         output.accept(KEItem.STUFFED_VOID_CONCH_ITEM.get());
-                        output.accept(KEItem.OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM.get());
+//                        output.accept(KEItem.OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM.get());
                         output.accept(KEItem.END_CATERPILLAR_SASHIMI_ITEM.get());
-                        output.accept(KEItem.VOID_MUTTON_STEAK_ITEM.get());
+                        //output.accept(KEItem.VOID_MUTTON_STEAK_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
                         output.accept(KEItem.END_STOVE_ITEM.get());
+
+//                        output.accept(KEPaintings.BMT_PAINTING_ITEM.get());
+//                        output.accept(KEPaintings.DREAM_PAINTING_ITEM.get());
+//                        output.accept(KEPaintings.CHA_PAINTING_ITEM.get());
+//                        output.accept(KEPaintings.CHEN_PAINTING_ITEM.get());
+//                        output.accept(KEPaintings.SMILE_PAINTING_ITEM.get());
+//                        output.accept(KEPaintings.DIAMOND_PAINTING_ITEM.get());
+//                        output.accept(KEPaintings.RABBIT_PAINTING_ITEM.get());
                     })
                     .build());
 

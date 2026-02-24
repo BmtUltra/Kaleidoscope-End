@@ -33,6 +33,7 @@ public class KaleidoscopeEnd {
         KEBlocks.register(modEventBus);
 //        KEBlockEntityType.register(modEventBus);
         KEItem.register(modEventBus);
+    //    KEPaintings.register(modEventBus);
         KECreativeTabs.register(modEventBus);
         KEEnchantments.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);

@@ -65,13 +65,11 @@ public class KEBlocks {
 
     // 可疑的龙蛋
     public static final RegistryObject<Block> SUSPICIOUS_DRAGON_EGG = BLOCK_DEFERRED_REGISTER.register("suspicious_dragon_egg",
-            () -> new SuspiciousDragonEggBlock(Blocks.DRAGON_EGG, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(3.0F, 9.0F).lightLevel((p_50840_) -> {
-                return 1;
-            }).noOcclusion().pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
+            () -> new SuspiciousDragonEggBlock(Blocks.DRAGON_EGG, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(3.0F, 9.0F).lightLevel((p_50840_) -> 1).noOcclusion().pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
 
     // 末地炉灶
     public static final RegistryObject<Block> END_STOVE = BLOCK_DEFERRED_REGISTER.register("end_stove",
-            () -> new StoveBlock());
+            StoveBlock::new);
 
     public static void register(IEventBus eventBus) {
         BLOCK_DEFERRED_REGISTER.register(eventBus);

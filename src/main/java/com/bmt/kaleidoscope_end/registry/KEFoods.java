@@ -21,14 +21,14 @@ public class KEFoods {
             .nutrition(13)
             .saturationMod(0.615f)
             .meat()
-            .effect(() -> new MobEffectInstance(SATIATED_SHIELD.get(), 90 * 20, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(SATIATED_SHIELD.get(), 240 * 20, 0), 1.0F)
             .alwaysEat().build();
 
     //紫颂果意面
     public static final FoodProperties CHORUS_PASTA = new FoodProperties.Builder()
             .nutrition(9)
             .saturationMod(0.611f)
-            .effect(() -> new MobEffectInstance(SULFUR.get(), 90 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(SULFUR.get(), 240 * 20, 0), 1.0f)
             .alwaysEat().build();
 
     //生末影龙肉
@@ -40,10 +40,10 @@ public class KEFoods {
 
     //熟末影龙肉
     public static final FoodProperties COOKED_ENDER_DRAGON_MEAT = new FoodProperties.Builder()
-            .nutrition(16)
+            .nutrition(24)
             .saturationMod(0.8f)
             .meat()
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 40 * 20, 1), 1.0f)
             .alwaysEat().build();
 
     //梦境浆果
@@ -117,14 +117,14 @@ public class KEFoods {
     public static final FoodProperties SHULKER_ICE_CREAM = new FoodProperties.Builder()
             .nutrition(6)
             .saturationMod(0.55f)
-            .effect(() -> new MobEffectInstance(TUNDRA_STRIDER.get(), 60 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(TUNDRA_STRIDER.get(), 480 * 20, 0), 1.0f)
             .alwaysEat().build();
 
     //虚空海螺汤面
     public static final FoodProperties VOID_CONCH_NOODLE_SOUP = new FoodProperties.Builder()
             .nutrition(14)
             .saturationMod(0.643f)
-            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 10 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 180 * 20, 0), 1.0f)
             .alwaysEat().build();
 
     //炒末影螨肉
@@ -224,7 +224,9 @@ public class KEFoods {
     public static final FoodProperties DRAGON_SOUFFLE = new FoodProperties.Builder()
             .nutrition(9)
             .saturationMod(0.8f)
-            .effect(() -> new MobEffectInstance(DREAM.get(), 90 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, -1, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, -1, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, -1, 1), 1.0f)
             .alwaysEat().build();
 
     //暗黑龙排
@@ -309,6 +311,9 @@ public class KEFoods {
     public static final FoodProperties DRAGON_EGG_ICE_CREAM = new FoodProperties.Builder()
             .nutrition(8)
             .saturationMod(0.6f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 35 * 20), 1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 60 * 20, 0), 1.0f)
             .alwaysEat().build();
 
@@ -317,16 +322,28 @@ public class KEFoods {
             .nutrition(12)
             .saturationMod(0.7f)
             .meat()
-            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 30 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 180 * 20, 0), 1.0f)
             .alwaysEat().build();
 
     // 视神经咕噜肉
-    public static final FoodProperties OPTIC_NERVE_SWEET_AND_SOUR_PORK = new FoodProperties.Builder()
+//    public static final FoodProperties OPTIC_NERVE_SWEET_AND_SOUR_PORK = new FoodProperties.Builder()
+//            .nutrition(14)
+//            .saturationMod(0.8f)
+//            .meat()
+//            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 180 * 20, 0), 1.0f)
+//            .alwaysEat().build();
+
+    public static final FoodProperties OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM = new FoodProperties.Builder()
             .nutrition(14)
-            .saturationMod(0.8f)
-            .meat()
-            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 180 * 20, 0), 1.0f)
-            .alwaysEat().build();
+            .saturationMod(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 480 * 20, 0), 1.0F)
+            .meat().build();
+
+    public static final FoodProperties OPTIC_NERVE_SWEET_AND_SOUR_PORK_BLOCK = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationMod(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 480 * 20, 0), 1.0f)
+            .meat().build();
 
     // 末地猪儿虫刺身
     public static final FoodProperties END_CATERPILLAR_SASHIMI = new FoodProperties.Builder()
@@ -337,10 +354,22 @@ public class KEFoods {
             .alwaysEat().build();
 
     // 虚空羊排
-    public static final FoodProperties VOID_MUTTON_STEAK = new FoodProperties.Builder()
+//    public static final FoodProperties VOID_MUTTON_STEAK = new FoodProperties.Builder()
+//            .nutrition(16)
+//            .saturationMod(1.2f)
+//            .meat()
+//            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 90 * 20, 0), 1.0f)
+//            .alwaysEat().build();
+
+    public static final FoodProperties VOID_MUTTON_STEAK_ITEM = new FoodProperties.Builder()
             .nutrition(16)
-            .saturationMod(1.2f)
-            .meat()
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 90 * 20, 0), 1.0f)
-            .alwaysEat().build();
+            .saturationMod(1.2F)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 180 * 20, 0), 1.0f)
+            .meat().build();
+
+    public static final FoodProperties VOID_MUTTON_STEAK_BLOCK = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationMod(1.2F)
+            .effect(() -> new MobEffectInstance(VOID_EROSION.get(), 30 * 20, 0), 1.0f)
+            .meat().build();
 }

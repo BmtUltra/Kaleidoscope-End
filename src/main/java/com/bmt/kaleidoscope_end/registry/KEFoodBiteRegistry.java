@@ -8,6 +8,8 @@ import net.minecraft.world.level.block.Block;
 public class KEFoodBiteRegistry {
     public static ResourceLocation END_SALAD;
     public static ResourceLocation DARK_DRAGON_STEAK;
+    public static ResourceLocation OPTIC_NERVE_SWEET_AND_SOUR_PORK;
+    public static ResourceLocation VOID_MUTTON_STEAK;
     public static ResourceLocation DRAGON_HEAD_WITH_SAUCE;
     public static ResourceLocation DARK_DRAGON_EGG_STEW;
     public static ResourceLocation DRAGON_EGG_CUSTARD;
@@ -22,6 +24,14 @@ public class KEFoodBiteRegistry {
         // 暗黑龙排
         DARK_DRAGON_STEAK = registry.registerFoodData(KaleidoscopeEnd.id("dark_dragon_steak"), FoodBiteRegistry.FoodData
                 .create(4, KEFoods.DARK_DRAGON_STEAK_BLOCK, KEFoods.DARK_DRAGON_STEAK_ITEM));
+
+        // 视神经咕噜肉
+        OPTIC_NERVE_SWEET_AND_SOUR_PORK = registry.registerFoodData(KaleidoscopeEnd.id("optic_nerve_sweet_and_sour_pork"), FoodBiteRegistry.FoodData
+                .create(3, KEFoods.OPTIC_NERVE_SWEET_AND_SOUR_PORK_BLOCK, KEFoods.OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM));
+
+        // 虚空羊排
+        VOID_MUTTON_STEAK = registry.registerFoodData(KaleidoscopeEnd.id("void_mutton_steak"), FoodBiteRegistry.FoodData
+                .create(3, KEFoods.VOID_MUTTON_STEAK_BLOCK, KEFoods.VOID_MUTTON_STEAK_ITEM));
 
         // 浇汁龙首
         DRAGON_HEAD_WITH_SAUCE = registry.registerFoodData(KaleidoscopeEnd.id("dragon_head_with_sauce"), FoodBiteRegistry.FoodData
