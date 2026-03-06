@@ -123,6 +123,7 @@ public class EventHandler {
                     info.setInLove(event.getEntity());
                     if (!entity.getAbilities().instabuild) {
                         event.getItemStack().shrink(1);
+                        endermite.setTarget(null);
                     }
                 }
             }
