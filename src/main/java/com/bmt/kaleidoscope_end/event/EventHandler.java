@@ -1,33 +1,40 @@
 package com.bmt.kaleidoscope_end.event;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
+import com.bmt.kaleidoscope_end.common.KEEndermiteInfo;
+import com.bmt.kaleidoscope_end.mixinsAPI.IEndermiteExtension;
 import com.bmt.kaleidoscope_end.registry.KEBlocks;
 import com.bmt.kaleidoscope_end.registry.KEEffects;
 import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.ai.memory.MemoryModuleType;
+import net.minecraft.world.entity.ai.memory.MemoryStatus;
+import net.minecraft.world.entity.ai.sensing.SensorType;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraftforge.common.util.BrainBuilder;
 import net.minecraftforge.event.entity.living.EnderManAngerEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.living.LivingMakeBrainEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -84,7 +91,6 @@ public class EventHandler {
         }
 
 
-
         @SubscribeEvent
         public static void FillBucketEvent(FillBucketEvent event) {
             Player player = event.getEntity();
@@ -104,6 +110,30 @@ public class EventHandler {
 
                 event.setFilledBucket(itemStack);
                 event.setResult(Event.Result.ALLOW);
+            }
+        }
+
+
+        @SubscribeEvent
+        public static void EntityInteract(PlayerInteractEvent.EntityInteract event) {
+            Player entity = event.getEntity();
+            if (event.getTarget() instanceof Endermite endermite && event.getItemStack().is(Items.AMETHYST_SHARD) && !event.getLevel().isClientSide) {
+                KEEndermiteInfo info = IEndermiteExtension.getInfo(endermite);
+                if (info.inLove <= 0) {
+                    info.setInLove(event.getEntity());
+                    if (!entity.getAbilities().instabuild) {
+                        event.getItemStack().shrink(1);
+                        endermite.setTarget(null);
+                    }
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void LivingMakeBrainEvent(LivingMakeBrainEvent event) {
+            if (event.getEntity() instanceof Endermite endermite) {
+                BrainBuilder<Endermite> builder = event.getTypedBrainBuilder(endermite);
+                builder.getMemoryTypes().add(MemoryModuleType.NEAREST_VISIBLE_LIVING_ENTITIES);
             }
         }
     }
