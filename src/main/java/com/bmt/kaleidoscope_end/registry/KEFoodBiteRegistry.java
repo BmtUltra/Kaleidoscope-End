@@ -40,13 +40,13 @@ public class KEFoodBiteRegistry {
         // 龙蛋煲
         DARK_DRAGON_EGG_STEW = registry.registerFoodData(KaleidoscopeEnd.id("dark_dragon_egg_stew"), FoodBiteRegistry.FoodData
                 .create(4, KEFoods.DARK_DRAGON_EGG_STEW_BLOCK, KEFoods.DARK_DRAGON_EGG_STEW_ITEM)
-                .setLootItem(() -> KEItem.DRAGON_EGG_SHELL.get())
+                .setLootItem(KEItem.DRAGON_EGG_SHELL::get)
                 .setAABB(Block.box(1, 0, 1, 15, 11, 15)));
 
         // 龙蛋羹
         DRAGON_EGG_CUSTARD = registry.registerFoodData(KaleidoscopeEnd.id("dragon_egg_custard"), FoodBiteRegistry.FoodData
                 .create(4, KEFoods.DRAGON_EGG_CUSTARD_BLOCK, KEFoods.DRAGON_EGG_CUSTARD_ITEM)
-                .setLootItem(() -> KEItem.DRAGON_EGG_SHELL.get())
+                .setLootItem(KEItem.DRAGON_EGG_SHELL::get)
                 .setAABB(Block.box(1, 0, 1, 15, 11, 15)));
     }
 }
