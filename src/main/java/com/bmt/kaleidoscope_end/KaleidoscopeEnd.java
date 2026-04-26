@@ -1,13 +1,13 @@
 package com.bmt.kaleidoscope_end;
 
-import com.bmt.kaleidoscope_end.config.Config;
-import com.bmt.kaleidoscope_end.registry.KEBlockEntityType;
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_end.registry.KECreativeTabs;
-import com.bmt.kaleidoscope_end.registry.KEEffects;
-import com.bmt.kaleidoscope_end.registry.KEFoodBiteRegistry;
-import com.bmt.kaleidoscope_end.registry.KEItem;
-import com.bmt.kaleidoscope_end.registry.KESoupBases;
+import com.bmt.kaleidoscope_end.config.MainConfig;
+import com.bmt.kaleidoscope_end.init.KEBlockEntityType;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KECreativeTabs;
+import com.bmt.kaleidoscope_end.init.KEEffects;
+import com.bmt.kaleidoscope_end.init.KEFoodBiteRegistry;
+import com.bmt.kaleidoscope_end.init.KEItem;
+import com.bmt.kaleidoscope_end.init.KESoupBases;
 
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
@@ -22,15 +22,12 @@ public class KaleidoscopeEnd {
 
     public KaleidoscopeEnd(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
-
         KEEffects.register(modEventBus);
         KEBlocks.register(modEventBus);
         KEBlockEntityType.register(modEventBus);
         KEItem.register(modEventBus);
         KECreativeTabs.register(modEventBus);
-
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-
+        modContainer.registerConfig(ModConfig.Type.COMMON, MainConfig.SPEC);
         KEFoodBiteRegistry.init();
     }
 

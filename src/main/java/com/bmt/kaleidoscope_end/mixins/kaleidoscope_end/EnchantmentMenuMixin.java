@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
 
-import com.bmt.kaleidoscope_end.registry.KEItem;
-import com.bmt.kaleidoscope_end.registry.KETags;
+import com.bmt.kaleidoscope_end.init.KEItem;
+import com.bmt.kaleidoscope_end.init.KETags;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;

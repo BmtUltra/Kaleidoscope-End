@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end.client;
 
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.init.KEItem;
 import com.bmt.kaleidoscope_end.util.EnchantmentScreenHelper;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;

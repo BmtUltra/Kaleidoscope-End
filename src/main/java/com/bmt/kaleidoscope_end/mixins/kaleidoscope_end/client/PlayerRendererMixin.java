@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end.client;
 
-import com.bmt.kaleidoscope_end.registry.KEEffects;
+import com.bmt.kaleidoscope_end.init.KEEffects;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.client.player.AbstractClientPlayer;

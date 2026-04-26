@@ -3,9 +3,11 @@ package com.bmt.kaleidoscope_end.event;
 import java.util.List;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_end.registry.KEEffects;
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.api.IEndermiteExtension;
+import com.bmt.kaleidoscope_end.common.KEEndermiteInfo;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KEEffects;
+import com.bmt.kaleidoscope_end.init.KEItem;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
@@ -16,6 +18,7 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -68,17 +71,6 @@ public class EventHandler {
         }
     }
 
-//    @SubscribeEvent
-//    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-//        Player player = event.getEntity();
-//        if ((player.getMainHandItem().is(Items.BRUSH) || player.getOffhandItem().is(Items.BRUSH)) ||
-//                (player.getMainHandItem().is(KEItem.DRAGON_TOOTH.get()) || player.getOffhandItem().is(KEItem.DRAGON_TOOTH.get()))) {
-//            if (event.getLevel().getBlockState(event.getPos()).is(KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) || event.getLevel().getBlockState(event.getPos()).is(Blocks.DRAGON_EGG)) {
-//                event.setCanceled(true);
-//            }
-//        }
-//    }
-
     @SubscribeEvent
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
         Player player = event.getEntity();
@@ -94,8 +86,7 @@ public class EventHandler {
     public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
         Player player = event.getEntity();
         Level level = player.level();
-        
-        // 只在使用桶时处理
+
         if (!event.getItemStack().is(Items.BUCKET)) {
             return;
         }
@@ -123,8 +114,25 @@ public class EventHandler {
                     player.drop(itemStack, false);
                 }
             }
-            
             event.setCanceled(true);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onEntityInteract(PlayerInteractEvent.EntityInteract event) {
+        Player player = event.getEntity();
+        if (event.getTarget() instanceof Endermite endermite &&
+                event.getItemStack().is(Items.AMETHYST_SHARD) &&
+                !event.getLevel().isClientSide) {
+
+            KEEndermiteInfo info = IEndermiteExtension.getInfo(endermite);
+            if (info.inLove <= 0) {
+                info.setInLove(event.getEntity());
+                if (!player.getAbilities().instabuild) {
+                    event.getItemStack().shrink(1);
+                    endermite.setTarget(null);
+                }
+            }
         }
     }
 }

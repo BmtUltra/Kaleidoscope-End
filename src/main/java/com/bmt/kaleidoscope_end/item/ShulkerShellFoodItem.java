@@ -33,7 +33,6 @@ public class ShulkerShellFoodItem extends FoodWithEffectsItem implements IHasCon
             ItemEntity itemEntity = new ItemEntity(level, entity.getX(), entity.getY(), entity.getZ(), shulkerShell);
             level.addFreshEntity(itemEntity);
         }
-
         return itemStack;
     }
 

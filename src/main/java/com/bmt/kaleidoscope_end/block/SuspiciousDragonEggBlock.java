@@ -14,11 +14,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -29,8 +26,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BrushableBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.border.WorldBorder;
-import net.minecraft.world.level.pathfinder.PathComputationType;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -56,19 +51,13 @@ public class SuspiciousDragonEggBlock extends BrushableBlock implements Fallable
         }
     }
 
+    @SuppressWarnings("deprecation")
     public static boolean isFree(BlockState p_53242_) {
         return p_53242_.isAir() || p_53242_.is(BlockTags.FIRE) || p_53242_.liquid() || p_53242_.canBeReplaced();
     }
 
     public VoxelShape getShape(BlockState p_52930_, BlockGetter p_52931_, BlockPos p_52932_, CollisionContext p_52933_) {
         return SHAPE;
-    }
-
-    public InteractionResult use(BlockState p_52923_, Level p_52924_, BlockPos p_52925_, Player player, InteractionHand p_52927_, BlockHitResult p_52928_) {
-        if (!(player.getMainHandItem().is(Items.BRUSH) || player.getOffhandItem().is(Items.BRUSH))) {
-            this.teleport(p_52923_, p_52924_, p_52925_);
-        }
-        return InteractionResult.sidedSuccess(p_52924_.isClientSide);
     }
 
     public void attack(BlockState p_52918_, Level p_52919_, BlockPos p_52920_, Player p_52921_) {
@@ -96,11 +85,9 @@ public class SuspiciousDragonEggBlock extends BrushableBlock implements Fallable
                     level.setBlock(blockpos, blockState, 2);
                     level.removeBlock(blockPos, false);
                 }
-
                 return;
             }
         }
-
     }
 
     protected int getDelayAfterPlace() {
@@ -117,9 +104,5 @@ public class SuspiciousDragonEggBlock extends BrushableBlock implements Fallable
                     0L);
         }
         return blockEntity;
-    }
-
-    public boolean isPathfindable(BlockState p_52913_, BlockGetter p_52914_, BlockPos p_52915_, PathComputationType p_52916_) {
-        return false;
     }
 }

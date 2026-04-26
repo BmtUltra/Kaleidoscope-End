@@ -3,7 +3,7 @@ package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-import com.bmt.kaleidoscope_end.registry.KEEffects;
+import com.bmt.kaleidoscope_end.init.KEEffects;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 
