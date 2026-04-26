@@ -50,7 +50,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(KEItem.ROASTED_ENDERMITE_MEAT_ITEM.get())
                 .add(KEItem.SHULKER_SHELL_MEAT_ITEM.get())
                 .add(KEItem.OPTIC_NERVE_ITEM.get())
-                .add(KEItem.ENDERMITE_EGG.get())
                 .add(KEItem.DRAGON_BREATH_BUCKET_ITEM.get())
                 .add(KEItem.ENDER_DRAGON_SMITHING_TEMPLATE.get());
     }

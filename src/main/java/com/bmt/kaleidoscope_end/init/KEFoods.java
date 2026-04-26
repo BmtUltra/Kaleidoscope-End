@@ -214,7 +214,9 @@ public class KEFoods {
     public static final FoodProperties DRAGON_SOUFFLE = new FoodProperties.Builder()
             .nutrition(9)
             .saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(DREAM, 90 * 20, 0), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, -1, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, -1, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, -1, 1), 1.0f)
             .alwaysEdible().build();
 
     //暗黑龙排
