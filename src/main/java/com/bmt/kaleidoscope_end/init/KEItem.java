@@ -41,10 +41,6 @@ public class KEItem {
     public static final RegistryObject<Item> DRAGON_TOOTH = ITEMS.register("dragon_tooth",
             () -> new Item(new Item.Properties()));
 
-    // 末影螨卵
-//    public static final RegistryObject<Item> ENDERMITE_EGG = ITEMS.register("endermite_egg",
-//            () -> new Item(new Item.Properties()));
-
     // 末地炉灶
     public static final RegistryObject<Item> END_STOVE_ITEM = ITEMS.register("end_stove",
             () -> new BlockItem(KEBlocks.END_STOVE.get(), new Item.Properties()));
@@ -202,17 +198,9 @@ public class KEItem {
     public static final RegistryObject<Item> STUFFED_VOID_CONCH_ITEM = ITEMS.register("stuffed_void_conch",
             () -> new FoodWithEffectsItem(KEFoods.STUFFED_VOID_CONCH));
 
-    // 视神经咕噜肉
-//    public static final RegistryObject<Item> OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM = ITEMS.register("optic_nerve_sweet_and_sour_pork",
-//            () -> new BowlFoodOnlyItem(KEFoods.OPTIC_NERVE_SWEET_AND_SOUR_PORK));
-
     // 末地猪儿虫刺身
     public static final RegistryObject<Item> END_CATERPILLAR_SASHIMI_ITEM = ITEMS.register("end_caterpillar_sashimi",
             () -> new BowlFoodOnlyItem(KEFoods.END_CATERPILLAR_SASHIMI));
-
-//    // 虚空羊排
-//    public static final RegistryObject<Item> VOID_MUTTON_STEAK_ITEM = ITEMS.register("void_mutton_steak",
-//            () -> new BowlFoodOnlyItem(KEFoods.VOID_MUTTON_STEAK));
 
     // 龙息桶
     public static final RegistryObject<Item> DRAGON_BREATH_BUCKET_ITEM = ITEMS.register("dragon_breath_bucket",

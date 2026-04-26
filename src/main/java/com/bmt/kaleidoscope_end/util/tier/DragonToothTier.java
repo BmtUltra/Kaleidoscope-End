@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.item.Tier;
+package com.bmt.kaleidoscope_end.util.tier;
 
 import com.bmt.kaleidoscope_end.init.KEItem;
 import net.minecraft.world.item.Tier;

@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.item;
 
 import com.bmt.kaleidoscope_end.config.Config;
-import com.bmt.kaleidoscope_end.item.Tier.DragonToothTier;
+import com.bmt.kaleidoscope_end.util.tier.DragonToothTier;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.KitchenKnifeItem;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
