@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
 
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.dimension.end.EndDragonFight;
 import org.spongepowered.asm.mixin.Mixin;

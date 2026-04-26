@@ -1,8 +1,7 @@
 package com.bmt.kaleidoscope_end.data;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_nether.KaleidoscopeNether;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;

@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.data;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KETags;
+import com.bmt.kaleidoscope_end.init.KETags;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;

@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.registry.soupbase;
+package com.bmt.kaleidoscope_end.init.soupbase;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.api.recipe.soupbase.ISoupBase;
 import com.github.ysbbbbbb.kaleidoscopecookery.client.render.soupbase.SimpleSoupBaseRender;
@@ -28,12 +28,12 @@ public class DragonBreathBucketSoupBase implements ISoupBase {
 
     @Override
     public ItemStack getDisplayStack() {
-        return new ItemStack(com.bmt.kaleidoscope_end.registry.KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
+        return new ItemStack(com.bmt.kaleidoscope_end.init.KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
     }
 
     @Override
     public boolean isSoupBase(ItemStack stack) {
-        return stack.getItem() == com.bmt.kaleidoscope_end.registry.KEItem.DRAGON_BREATH_BUCKET_ITEM.get();
+        return stack.getItem() == com.bmt.kaleidoscope_end.init.KEItem.DRAGON_BREATH_BUCKET_ITEM.get();
     }
 
     @Override
@@ -48,7 +48,7 @@ public class DragonBreathBucketSoupBase implements ISoupBase {
 
     @Override
     public ItemStack getReturnSoupBase(Level level, LivingEntity user, ItemStack container) {
-        return new ItemStack(com.bmt.kaleidoscope_end.registry.KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
+        return new ItemStack(com.bmt.kaleidoscope_end.init.KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.event;
 
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.init.KEItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

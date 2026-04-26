@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.enchantment;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KEEnchantments;
+import com.bmt.kaleidoscope_end.init.KEEnchantments;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;

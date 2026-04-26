@@ -1,8 +1,8 @@
 package com.bmt.kaleidoscope_end.data.subLootTables;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KEItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBiteBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;

@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
 
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;

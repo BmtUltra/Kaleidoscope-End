@@ -2,11 +2,10 @@ package com.bmt.kaleidoscope_end.event;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.common.KEEndermiteInfo;
-import com.bmt.kaleidoscope_end.mixinsAPI.IEndermiteExtension;
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_end.registry.KEEffects;
-import com.bmt.kaleidoscope_end.registry.KEItem;
-import com.google.common.collect.ImmutableMap;
+import com.bmt.kaleidoscope_end.api.IEndermiteExtension;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KEEffects;
+import com.bmt.kaleidoscope_end.init.KEItem;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvents;
@@ -15,8 +14,6 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
-import net.minecraft.world.entity.ai.memory.MemoryStatus;
-import net.minecraft.world.entity.ai.sensing.SensorType;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.player.Player;
@@ -95,9 +92,7 @@ public class EventHandler {
         public static void FillBucketEvent(FillBucketEvent event) {
             Player player = event.getEntity();
             Level level = player.level();
-            List<AreaEffectCloud> list = level.getEntitiesOfClass(AreaEffectCloud.class, player.getBoundingBox().inflate(2.0D), (areaEffectCloud) -> {
-                return areaEffectCloud != null && areaEffectCloud.isAlive() && areaEffectCloud.getOwner() instanceof EnderDragon;
-            });
+            List<AreaEffectCloud> list = level.getEntitiesOfClass(AreaEffectCloud.class, player.getBoundingBox().inflate(2.0D), (areaEffectCloud) -> areaEffectCloud != null && areaEffectCloud.isAlive() && areaEffectCloud.getOwner() instanceof EnderDragon);
             if (!list.isEmpty()) {
                 AreaEffectCloud areaeffectcloud = list.get(0);
                 float radius = areaeffectcloud.getRadius();

@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end.client;
 
-import com.bmt.kaleidoscope_end.mixinsHooks.kaleidoscope_end.EnchantmentScreenMixinHooks;
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.hooks.kaleidoscope_end.EnchantmentScreenMixinHooks;
+import com.bmt.kaleidoscope_end.init.KEItem;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.EnchantmentScreen;
 import net.minecraft.network.chat.Component;

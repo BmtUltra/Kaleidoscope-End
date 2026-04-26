@@ -1,6 +1,6 @@
-package com.bmt.kaleidoscope_end.registry;
+package com.bmt.kaleidoscope_end.init;
 
-import com.bmt.kaleidoscope_end.registry.soupbase.DragonBreathBucketSoupBase;
+import com.bmt.kaleidoscope_end.init.soupbase.DragonBreathBucketSoupBase;
 import com.github.ysbbbbbb.kaleidoscopecookery.crafting.soupbase.SoupBaseManager;
 
 public class KESoupBases {

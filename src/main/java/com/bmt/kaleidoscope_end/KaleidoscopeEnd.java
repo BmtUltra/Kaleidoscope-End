@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end;
 
 import com.bmt.kaleidoscope_end.config.Config;
-import com.bmt.kaleidoscope_end.registry.*;
+import com.bmt.kaleidoscope_end.init.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;

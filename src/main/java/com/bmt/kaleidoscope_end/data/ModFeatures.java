@@ -1,8 +1,8 @@
 package com.bmt.kaleidoscope_end.data;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_end.registry.KETags;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KETags;
 import com.bmt.kaleidoscope_nether.data.ModFeatureUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;

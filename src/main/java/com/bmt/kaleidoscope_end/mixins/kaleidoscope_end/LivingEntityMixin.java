@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
 
-import com.bmt.kaleidoscope_end.registry.KEEffects;
+import com.bmt.kaleidoscope_end.init.KEEffects;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;

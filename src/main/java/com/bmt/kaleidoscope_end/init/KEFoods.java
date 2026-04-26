@@ -1,12 +1,11 @@
-package com.bmt.kaleidoscope_end.registry;
+package com.bmt.kaleidoscope_end.init;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
-import static com.bmt.kaleidoscope_end.registry.KEEffects.*;
+import static com.bmt.kaleidoscope_end.init.KEEffects.*;
 import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.*;
-import static net.minecraft.world.effect.MobEffects.*;
 
 public class KEFoods {
     //龙息紫颂汤
@@ -326,13 +325,6 @@ public class KEFoods {
             .alwaysEat().build();
 
     // 视神经咕噜肉
-//    public static final FoodProperties OPTIC_NERVE_SWEET_AND_SOUR_PORK = new FoodProperties.Builder()
-//            .nutrition(14)
-//            .saturationMod(0.8f)
-//            .meat()
-//            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 180 * 20, 0), 1.0f)
-//            .alwaysEat().build();
-
     public static final FoodProperties OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM = new FoodProperties.Builder()
             .nutrition(14)
             .saturationMod(0.8F)
@@ -354,13 +346,6 @@ public class KEFoods {
             .alwaysEat().build();
 
     // 虚空羊排
-//    public static final FoodProperties VOID_MUTTON_STEAK = new FoodProperties.Builder()
-//            .nutrition(16)
-//            .saturationMod(1.2f)
-//            .meat()
-//            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 90 * 20, 0), 1.0f)
-//            .alwaysEat().build();
-
     public static final FoodProperties VOID_MUTTON_STEAK_ITEM = new FoodProperties.Builder()
             .nutrition(16)
             .saturationMod(1.2F)

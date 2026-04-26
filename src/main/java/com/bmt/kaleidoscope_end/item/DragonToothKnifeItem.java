@@ -50,10 +50,9 @@ public class DragonToothKnifeItem extends KitchenKnifeItem {
     }
 
     private boolean isInEndDimension(Level level) {
-        if (level == null) return false;
 
         ResourceKey<Level> dimension = level.dimension();
-        return dimension != null && dimension.location().equals(THE_END_DIMENSION);
+        return dimension.location().equals(THE_END_DIMENSION);
     }
 
     private boolean isEndMob(LivingEntity entity) {
@@ -75,7 +74,7 @@ public class DragonToothKnifeItem extends KitchenKnifeItem {
             try {
                 ResourceLocation location = ResourceLocation.parse(mobId);
                 END_MOBS_CACHE.add(location);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
         }
     }

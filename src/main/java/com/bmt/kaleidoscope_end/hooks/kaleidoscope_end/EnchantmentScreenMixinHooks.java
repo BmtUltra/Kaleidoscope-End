@@ -1,7 +1,7 @@
-package com.bmt.kaleidoscope_end.mixinsHooks.kaleidoscope_end;
+package com.bmt.kaleidoscope_end.hooks.kaleidoscope_end;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.init.KEItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.EnchantmentMenu;
 

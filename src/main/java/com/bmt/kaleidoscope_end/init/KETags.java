@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.registry;
+package com.bmt.kaleidoscope_end.init;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import net.minecraft.tags.TagKey;

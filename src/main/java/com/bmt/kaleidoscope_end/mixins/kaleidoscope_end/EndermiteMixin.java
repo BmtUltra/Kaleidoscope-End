@@ -1,12 +1,10 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
 
 import com.bmt.kaleidoscope_end.common.KEEndermiteInfo;
-import com.bmt.kaleidoscope_end.mixinsAPI.IEndermiteExtension;
+import com.bmt.kaleidoscope_end.api.IEndermiteExtension;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.Items;

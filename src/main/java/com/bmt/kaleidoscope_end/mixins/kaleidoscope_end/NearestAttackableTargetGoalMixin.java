@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.mixins.kaleidoscope_end;
 
 import com.bmt.kaleidoscope_end.common.KEEndermiteInfo;
-import com.bmt.kaleidoscope_end.mixinsAPI.IEndermiteExtension;
+import com.bmt.kaleidoscope_end.api.IEndermiteExtension;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;

@@ -1,8 +1,8 @@
 package com.bmt.kaleidoscope_end.data;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.registry.KEEnchantments;
-import com.bmt.kaleidoscope_end.registry.KETags;
+import com.bmt.kaleidoscope_end.init.KEEnchantments;
+import com.bmt.kaleidoscope_end.init.KETags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;

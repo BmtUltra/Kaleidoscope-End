@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.registry;
+package com.bmt.kaleidoscope_end.init;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
@@ -79,14 +79,6 @@ public class KECreativeTabs {
                         //output.accept(KEItem.VOID_MUTTON_STEAK_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
                         output.accept(KEItem.END_STOVE_ITEM.get());
-
-//                        output.accept(KEPaintings.BMT_PAINTING_ITEM.get());
-//                        output.accept(KEPaintings.DREAM_PAINTING_ITEM.get());
-//                        output.accept(KEPaintings.CHA_PAINTING_ITEM.get());
-//                        output.accept(KEPaintings.CHEN_PAINTING_ITEM.get());
-//                        output.accept(KEPaintings.SMILE_PAINTING_ITEM.get());
-//                        output.accept(KEPaintings.DIAMOND_PAINTING_ITEM.get());
-//                        output.accept(KEPaintings.RABBIT_PAINTING_ITEM.get());
                     })
                     .build());
 

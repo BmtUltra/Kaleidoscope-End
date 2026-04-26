@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.block;
 
-import com.bmt.kaleidoscope_end.registry.KEBlocks;
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.init.KEBlocks;
+import com.bmt.kaleidoscope_end.init.KEItem;
 
 public class DreamBerryHeadBlock extends KECaveVinesHeadBlock {
     public DreamBerryHeadBlock(Properties properties) {

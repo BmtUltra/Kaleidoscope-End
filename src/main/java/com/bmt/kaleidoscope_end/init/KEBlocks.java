@@ -1,14 +1,10 @@
-package com.bmt.kaleidoscope_end.registry;
+package com.bmt.kaleidoscope_end.init;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.block.DreamBerryHeadBlock;
 import com.bmt.kaleidoscope_end.block.DreamBerryPlantBlock;
 import com.bmt.kaleidoscope_end.block.EnderMint;
 import com.bmt.kaleidoscope_end.block.SuspiciousDragonEggBlock;
-import com.bmt.kaleidoscope_nether.block.KNCaveVinesHeadBlock;
-import com.bmt.kaleidoscope_nether.block.KNCaveVinesPlantBlock;
-import com.bmt.kaleidoscope_nether.block.TwistingCaveVinesHead;
-import com.bmt.kaleidoscope_nether.block.TwistingCaveVinesPlant;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.StoveBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;

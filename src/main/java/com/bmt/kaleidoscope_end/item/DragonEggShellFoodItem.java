@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.item;
 
-import com.bmt.kaleidoscope_end.registry.KEItem;
+import com.bmt.kaleidoscope_end.init.KEItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.api.item.IHasContainer;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 import net.minecraft.world.entity.LivingEntity;
