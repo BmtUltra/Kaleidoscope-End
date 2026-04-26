@@ -1467,10 +1467,10 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 [242月2026 13:41:38.439] [modloading-worker-0/DEBUG] [mixin/]: Renaming synthetic method lambda$renderLinesVanilla$0(Lme/jellysquid/mods/sodium/mixin/features/render/gui/debug/DebugScreenOverlayAccessor;Lnet/minecraft/client/gui/GuiGraphics;Ljava/util/ArrayList;Ljava/util/ArrayList;)V to mdca11fb$lambda$renderLinesVanilla$0$0 in embeddium.mixins.json:features.render.gui.debug.ForgeGuiMixin
 [242月2026 13:41:38.439] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing cc.xypp.damage_number.client.ClientEvent$FM to FORGE
 [242月2026 13:41:38.459] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for kaleidoscope_end
-[242月2026 13:41:38.459] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.bmt.kaleidoscope_end.config.Config to MOD
+[242月2026 13:41:38.459] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.bmt.kaleidoscope_end.config.MainConfig to MOD
 [242月2026 13:41:38.459] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing cc.xypp.damage_number.DamageTypeConfig to MOD
 [242月2026 13:41:38.461] [modloading-worker-0/DEBUG] [mixin/]: Mixing ButtonAccessor from moonlight.mixins.json into net.minecraft.client.gui.components.Button
-[242月2026 13:41:38.466] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.bmt.kaleidoscope_end.data.DataMain to MOD
+[242月2026 13:41:38.466] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.bmt.kaleidoscope_end.datagen.DataMain to MOD
 [242月2026 13:41:38.472] [modloading-worker-0/INFO] [KubeJS/]: Loaded common.properties
 [242月2026 13:41:38.474] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing cc.xypp.damage_number.Config to MOD
 [242月2026 13:41:38.479] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file kaleidoscope_doll-common.toml for kaleidoscope_doll tracking

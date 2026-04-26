@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = KaleidoscopeEnd.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class Config
+public class MainConfig
 {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 

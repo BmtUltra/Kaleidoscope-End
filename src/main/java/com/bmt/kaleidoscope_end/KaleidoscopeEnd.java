@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end;
 
-import com.bmt.kaleidoscope_end.config.Config;
+import com.bmt.kaleidoscope_end.config.MainConfig;
 import com.bmt.kaleidoscope_end.init.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -38,7 +38,7 @@ public class KaleidoscopeEnd {
         KEEnchantments.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
 
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        context.registerConfig(ModConfig.Type.COMMON, MainConfig.SPEC);
 
         KEFoodBiteRegistry.init();
     }

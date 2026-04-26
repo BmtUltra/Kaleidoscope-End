@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.data;
+package com.bmt.kaleidoscope_end.datagen;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import net.minecraft.data.PackOutput;

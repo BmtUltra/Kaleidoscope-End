@@ -1,7 +1,7 @@
-package com.bmt.kaleidoscope_end.data;
+package com.bmt.kaleidoscope_end.datagen;
 
-import com.bmt.kaleidoscope_end.data.subLootTables.KEArchaeologyLoot;
-import com.bmt.kaleidoscope_end.data.subLootTables.KEBlockLoot;
+import com.bmt.kaleidoscope_end.datagen.subLootTables.KEArchaeologyLoot;
+import com.bmt.kaleidoscope_end.datagen.subLootTables.KEBlockLoot;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;

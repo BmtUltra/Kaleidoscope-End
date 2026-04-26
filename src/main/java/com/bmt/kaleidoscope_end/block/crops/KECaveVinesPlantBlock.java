@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.block;
+package com.bmt.kaleidoscope_end.block.crops;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -12,26 +12,27 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CaveVinesBlock;
+import net.minecraft.world.level.block.CaveVinesPlantBlock;
+import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.function.Supplier;
 
-public class KECaveVinesHeadBlock extends CaveVinesBlock {
-    private final Supplier<? extends Block> bodyBlock;
+public class KECaveVinesPlantBlock extends CaveVinesPlantBlock {
+    private final Supplier<? extends GrowingPlantHeadBlock> headBlock;
     private final Supplier<Item> fruitItem;
 
-    public KECaveVinesHeadBlock(Properties properties, Supplier<? extends Block> bodyBlock, Supplier<Item> fruitItem) {
+    public KECaveVinesPlantBlock(Supplier<? extends GrowingPlantHeadBlock> headBlock, Properties properties, Supplier<Item> fruitItem) {
         super(properties);
-        this.bodyBlock = bodyBlock;
+        this.headBlock = headBlock;
         this.fruitItem = fruitItem;
     }
 
     @Override
-    protected Block getBodyBlock() {
-        return bodyBlock.get();
+    protected GrowingPlantHeadBlock getHeadBlock() {
+        return headBlock.get();
     }
 
     public ItemStack getCloneItemStack(BlockGetter p_153007_, BlockPos p_153008_, BlockState p_153009_) {

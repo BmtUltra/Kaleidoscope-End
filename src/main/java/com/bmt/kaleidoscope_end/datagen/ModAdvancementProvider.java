@@ -1,6 +1,6 @@
-package com.bmt.kaleidoscope_end.data;
+package com.bmt.kaleidoscope_end.datagen;
 
-import com.bmt.kaleidoscope_end.data.subAdvancements.KEAdvances;
+import com.bmt.kaleidoscope_end.datagen.subAdvancements.KEAdvances;
 import com.google.gson.JsonObject;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;

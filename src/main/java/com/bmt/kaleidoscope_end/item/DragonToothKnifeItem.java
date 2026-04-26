@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_end.item;
 
-import com.bmt.kaleidoscope_end.config.Config;
+import com.bmt.kaleidoscope_end.config.MainConfig;
 import com.bmt.kaleidoscope_end.util.tier.DragonToothTier;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.KitchenKnifeItem;
 import net.minecraft.resources.ResourceKey;
@@ -70,7 +70,7 @@ public class DragonToothKnifeItem extends KitchenKnifeItem {
 
     private static void loadEndMobsFromConfig() {
         END_MOBS_CACHE.clear();
-        for (String mobId : Config.DRAGON_TOOTH_KNIFE_EXTRA_END_MOBS.get()) {
+        for (String mobId : MainConfig.DRAGON_TOOTH_KNIFE_EXTRA_END_MOBS.get()) {
             try {
                 ResourceLocation location = ResourceLocation.parse(mobId);
                 END_MOBS_CACHE.add(location);

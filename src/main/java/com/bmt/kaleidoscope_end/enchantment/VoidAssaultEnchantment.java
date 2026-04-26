@@ -14,6 +14,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
@@ -47,7 +48,7 @@ public class VoidAssaultEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean checkCompatibility(Enchantment other) {
+    public boolean checkCompatibility(@NotNull Enchantment other) {
         return super.checkCompatibility(other)
                 && other != Enchantments.SHARPNESS
                 && other != Enchantments.SMITE
@@ -55,7 +56,7 @@ public class VoidAssaultEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean canEnchant(ItemStack stack) {
+    public boolean canEnchant(@NotNull ItemStack stack) {
         if (!ENABLED) {
             return false;
         }
@@ -66,13 +67,13 @@ public class VoidAssaultEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+    public boolean canApplyAtEnchantingTable(@NotNull ItemStack stack) {
         return canEnchant(stack);
     }
 
     @Override
     public boolean isAllowedOnBooks() {
-        return true;
+        return super.isAllowedOnBooks();
     }
 
     @Override
@@ -111,18 +112,16 @@ public class VoidAssaultEnchantment extends Enchantment {
                     float extraDamage = event.getAmount() * damageMultiplier;
                     event.setAmount(event.getAmount() + extraDamage);
 
-                    if (livingAttacker.level() != null) {
-                        livingAttacker.level().playSound(
-                                null,
-                                livingAttacker.getX(),
-                                livingAttacker.getY(),
-                                livingAttacker.getZ(),
-                                SoundEvents.ENDERMAN_TELEPORT,
-                                livingAttacker.getSoundSource(),
-                                1.0F,
-                                1.0F
-                        );
-                    }
+                    livingAttacker.level().playSound(
+                            null,
+                            livingAttacker.getX(),
+                            livingAttacker.getY(),
+                            livingAttacker.getZ(),
+                            SoundEvents.ENDERMAN_TELEPORT,
+                            livingAttacker.getSoundSource(),
+                            1.0F,
+                            1.0F
+                    );
                 }
             }
         }

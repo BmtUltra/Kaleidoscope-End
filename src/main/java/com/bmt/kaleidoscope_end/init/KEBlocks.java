@@ -1,9 +1,9 @@
 package com.bmt.kaleidoscope_end.init;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.block.DreamBerryHeadBlock;
-import com.bmt.kaleidoscope_end.block.DreamBerryPlantBlock;
-import com.bmt.kaleidoscope_end.block.EnderMint;
+import com.bmt.kaleidoscope_end.block.crops.DreamBerryHeadBlock;
+import com.bmt.kaleidoscope_end.block.crops.DreamBerryPlantBlock;
+import com.bmt.kaleidoscope_end.block.crops.EnderMint;
 import com.bmt.kaleidoscope_end.block.SuspiciousDragonEggBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.StoveBlock;
 import net.minecraft.core.BlockPos;

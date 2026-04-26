@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.block;
+package com.bmt.kaleidoscope_end.block.crops;
 
 import com.bmt.kaleidoscope_end.init.KEItem;
 import com.bmt.kaleidoscope_end.init.KETags;

@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.data.subLootTables;
+package com.bmt.kaleidoscope_end.datagen.subLootTables;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.init.KEBlocks;

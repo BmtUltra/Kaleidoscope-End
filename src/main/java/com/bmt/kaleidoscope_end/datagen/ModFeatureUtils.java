@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.data;
+package com.bmt.kaleidoscope_end.datagen;
 
 import net.minecraft.core.Direction;
 import net.minecraft.tags.TagKey;

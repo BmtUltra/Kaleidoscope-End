@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.data.subAdvancements;
+package com.bmt.kaleidoscope_end.datagen.subAdvancements;
 
 import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;

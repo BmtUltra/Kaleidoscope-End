@@ -1,4 +1,4 @@
-package com.bmt.kaleidoscope_end.block;
+package com.bmt.kaleidoscope_end.block.crops;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
