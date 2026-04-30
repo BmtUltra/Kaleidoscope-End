@@ -167,7 +167,7 @@ public class KEItem {
 
     // 紫颂果籽
     public static final DeferredHolder<Item, Item> CHORUS_SEED = ITEMS.register("chorus_seed",
-            () -> new Item(new Item.Properties().food(KEFoods.CHORUS_SEED_FOOD)));
+            () -> new Item(new Item.Properties()));
 
     // 紫颂花瓣
     public static final DeferredHolder<Item, Item> CHORUS_PETAL = ITEMS.register("chorus_petal",

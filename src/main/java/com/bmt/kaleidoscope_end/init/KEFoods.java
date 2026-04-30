@@ -289,13 +289,6 @@ public class KEFoods {
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 10 * 20, 0), 0.3f)
             .alwaysEdible().build();
 
-    // 紫颂果籽
-    public static final FoodProperties CHORUS_SEED_FOOD = new FoodProperties.Builder()
-            .nutrition(1)
-            .saturationModifier(0.1f)
-            .alwaysEdible().build();
-
-
     // 龙蛋冰淇淋
     public static final FoodProperties DRAGON_EGG_ICE_CREAM = new FoodProperties.Builder()
             .nutrition(8)
