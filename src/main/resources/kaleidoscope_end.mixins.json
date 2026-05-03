@@ -12,6 +12,7 @@
     "kaleidoscope_end.EndermiteMixin",
     "kaleidoscope_end.EntityMixin",
     "kaleidoscope_end.FluidTypeMixin",
+    "kaleidoscope_end.LivingEntityAccessor",
     "kaleidoscope_end.LivingEntityMixin",
     "kaleidoscope_end.NearestAttackableTargetGoalMixin",
     "kaleidoscope_end.PlayerMixin"

@@ -17,13 +17,7 @@ public abstract class EnchantmentSlotMixin {
     private static final TagKey<Item> EXTRA_FUEL =
             TagKey.create(Registries.ITEM,  ResourceLocation.fromNamespaceAndPath("neoforge", "enchanting_fuels"));
 
-    @Redirect(
-            method = "mayPlace",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"
-            )
-    )
+    @Redirect(method = "mayPlace", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"))
     private boolean kaleidoscope$allowExtra(ItemStack stack, Item item) {
         if (stack.is(item)) return true;
         return stack.is(EXTRA_FUEL);
