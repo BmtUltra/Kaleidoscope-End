@@ -59,21 +59,6 @@
     "bites=3,facing=west": {
       "model": "kaleidoscope_end:block/food/dragon_egg_custard/dragon_egg_custard_3",
       "y": 270
-    },
-    "bites=4,facing=east": {
-      "model": "kaleidoscope_end:block/food/dragon_egg_custard/dragon_egg_custard_4",
-      "y": 90
-    },
-    "bites=4,facing=north": {
-      "model": "kaleidoscope_end:block/food/dragon_egg_custard/dragon_egg_custard_4"
-    },
-    "bites=4,facing=south": {
-      "model": "kaleidoscope_end:block/food/dragon_egg_custard/dragon_egg_custard_4",
-      "y": 180
-    },
-    "bites=4,facing=west": {
-      "model": "kaleidoscope_end:block/food/dragon_egg_custard/dragon_egg_custard_4",
-      "y": 270
     }
   }
 }

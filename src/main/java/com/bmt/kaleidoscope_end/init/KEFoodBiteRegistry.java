@@ -13,6 +13,7 @@ public class KEFoodBiteRegistry {
     public static ResourceLocation DRAGON_HEAD_WITH_SAUCE;
     public static ResourceLocation DARK_DRAGON_EGG_STEW;
     public static ResourceLocation DRAGON_EGG_CUSTARD;
+    public static ResourceLocation DRAGON_EGG_ICE_CREAM;
 
     public static void init() {
         FoodBiteRegistry registry = new FoodBiteRegistry();
@@ -45,7 +46,13 @@ public class KEFoodBiteRegistry {
 
         // 龙蛋羹
         DRAGON_EGG_CUSTARD = registry.registerFoodData(KaleidoscopeEnd.id("dragon_egg_custard"), FoodBiteRegistry.FoodData
-                .create(4, KEFoods.DRAGON_EGG_CUSTARD_BLOCK, KEFoods.DRAGON_EGG_CUSTARD_ITEM)
+                .create(3, KEFoods.DRAGON_EGG_CUSTARD_BLOCK, KEFoods.DRAGON_EGG_CUSTARD_ITEM)
+                .setLootItem(KEItem.DRAGON_EGG_SHELL::get)
+                .setAABB(Block.box(1, 0, 1, 15, 11, 15)));
+
+        // 龙蛋冰淇淋
+        DRAGON_EGG_ICE_CREAM = registry.registerFoodData(KaleidoscopeEnd.id("dragon_egg_ice_cream"), FoodBiteRegistry.FoodData
+                .create(3, KEFoods.DRAGON_EGG_ICE_CREAM_BLOCK, KEFoods.DRAGON_EGG_ICE_CREAM_ITEM)
                 .setLootItem(KEItem.DRAGON_EGG_SHELL::get)
                 .setAABB(Block.box(1, 0, 1, 15, 11, 15)));
     }

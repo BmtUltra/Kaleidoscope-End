@@ -69,7 +69,6 @@ public class KECreativeTabs {
                         output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_CAKE_ITEM.get());
                         output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());
-                        output.accept(KEItem.DRAGON_EGG_ICE_CREAM_ITEM.get());
                         output.accept(KEItem.STUFFED_VOID_CONCH_ITEM.get());
                         output.accept(KEItem.END_CATERPILLAR_SASHIMI_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());

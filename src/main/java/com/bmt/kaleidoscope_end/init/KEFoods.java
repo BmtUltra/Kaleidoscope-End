@@ -290,10 +290,20 @@ public class KEFoods {
             .alwaysEdible().build();
 
     // 龙蛋冰淇淋
-    public static final FoodProperties DRAGON_EGG_ICE_CREAM = new FoodProperties.Builder()
-            .nutrition(8)
-            .saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 60 * 20, 0), 1.0f)
+    public static final FoodProperties DRAGON_EGG_ICE_CREAM_ITEM = new FoodProperties.Builder()
+            .nutrition(16)
+            .saturationModifier(1.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION, 35 * 20), 1.0F)
+            .alwaysEdible().build();
+
+    public static final FoodProperties DRAGON_EGG_ICE_CREAM_BLOCK = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationModifier(1.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300 * 20, 1), 1.0f)
+            .effect(() -> new MobEffectInstance(VOID_EROSION, 40 * 20), 1.0F)
             .alwaysEdible().build();
 
     // 填馅虚空海螺

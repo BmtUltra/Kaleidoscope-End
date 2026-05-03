@@ -10,7 +10,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class KEBlockEntityType {
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPE_DEFERRED_REGISTER = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, KaleidoscopeEnd.MOD_ID);
 
-
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITY_TYPE_DEFERRED_REGISTER.register(eventBus);
     }

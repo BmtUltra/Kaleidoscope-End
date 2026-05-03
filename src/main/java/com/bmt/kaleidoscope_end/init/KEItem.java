@@ -189,10 +189,6 @@ public class KEItem {
     public static final DeferredHolder<Item, FoodWithEffectsItem> CHORUS_SEED_COOKIE_ITEM = ITEMS.register("chorus_seed_cookie",
             () -> new FoodWithEffectsItem(KEFoods.CHORUS_SEED_COOKIE));
 
-    // 龙蛋冰淇淋
-    public static final DeferredHolder<Item, Item> DRAGON_EGG_ICE_CREAM_ITEM = ITEMS.register("dragon_egg_ice_cream",
-            () -> new DragonEggShellFoodItem(KEFoods.DRAGON_EGG_ICE_CREAM));
-
     // 填馅虚空海螺
     public static final DeferredHolder<Item, Item> STUFFED_VOID_CONCH_ITEM = ITEMS.register("stuffed_void_conch",
             () -> new FoodWithEffectsItem(KEFoods.STUFFED_VOID_CONCH));
