@@ -103,6 +103,8 @@
 
   "enchantment.kaleidoscope_end.void_assault": "虚空强袭",
   "enchantment.kaleidoscope_end.void_assault.desc": "基于魔咒等级，有概率造成多倍伤害",
+  "enchantment.kaleidoscope_end.void_echo": "虚空回响",
+  "enchantment.kaleidoscope_end.void_echo.desc": "基于魔咒等级，有概率造成范围伤害",
 
   "effect.kaleidoscope_end.dream": "梦境",
   "effect.kaleidoscope_end.dream.description": "可以在天空中游泳",

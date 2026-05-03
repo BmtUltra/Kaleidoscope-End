@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
+import com.bmt.kaleidoscope_end.event.EventHandler;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -41,14 +41,14 @@ public class MainConfig {
     @SubscribeEvent
     static void onLoad(final ModConfigEvent.Loading event) {
         if (event.getConfig().getSpec() == SPEC) {
-            DragonToothKnifeItem.clearCache();
+            EventHandler.clearEndMobsCache();
         }
     }
 
     @SubscribeEvent
     static void onReload(final ModConfigEvent.Reloading event) {
         if (event.getConfig().getSpec() == SPEC) {
-            DragonToothKnifeItem.clearCache();
+            EventHandler.clearEndMobsCache();
         }
     }
 }
