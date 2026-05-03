@@ -22,8 +22,8 @@ public class ModEnchantmentProvider {
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         HolderGetter<Item> items = context.lookup(Registries.ITEM);
         
-        register(context, VOID_ASSAULT, 
-            Enchantment.enchantment(
+        register(context,
+                Enchantment.enchantment(
                 Enchantment.definition(
                     items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                     items.getOrThrow(ItemTags.SHARP_WEAPON_ENCHANTABLE),
@@ -38,7 +38,7 @@ public class ModEnchantmentProvider {
         );
     }
 
-    private static void register(BootstrapContext<Enchantment> context, ResourceKey<Enchantment> key, Enchantment.Builder builder) {
-        context.register(key, builder.build(key.location()));
+    private static void register(BootstrapContext<Enchantment> context, Enchantment.Builder builder) {
+        context.register(ModEnchantmentProvider.VOID_ASSAULT, builder.build(ModEnchantmentProvider.VOID_ASSAULT.location()));
     }
 }

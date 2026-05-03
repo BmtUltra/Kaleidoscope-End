@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "kaleidoscope_end.refmap.json",
   "mixins": [
+    "kaleidoscope_end.BlockBehaviourMixin",
     "kaleidoscope_end.BlockEntityTypeMixin",
     "kaleidoscope_end.EnchantmentMenuMixin",
     "kaleidoscope_end.EnchantmentSlotMixin",
@@ -12,7 +13,6 @@
     "kaleidoscope_end.EndermiteMixin",
     "kaleidoscope_end.EntityMixin",
     "kaleidoscope_end.FluidTypeMixin",
-    "kaleidoscope_end.LivingEntityAccessor",
     "kaleidoscope_end.LivingEntityMixin",
     "kaleidoscope_end.NearestAttackableTargetGoalMixin",
     "kaleidoscope_end.PlayerMixin"

@@ -15,4 +15,8 @@ public class KEEnchantments {
             Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(KaleidoscopeEnd.MOD_ID, "void_echo")
     );
+    public static final ResourceKey<Enchantment> VOID_WALKER = ResourceKey.create(
+            Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(KaleidoscopeEnd.MOD_ID, "void_walker")
+    );
 }
