@@ -327,9 +327,15 @@ public class KEFoods {
             .alwaysEdible().build();
 
     // 末地猪儿虫刺身
-    public static final FoodProperties END_CATERPILLAR_SASHIMI = new FoodProperties.Builder()
-            .nutrition(10)
-            .saturationModifier(0.5f)
+    public static final FoodProperties END_CATERPILLAR_SASHIMI_ITEM = new FoodProperties.Builder()
+            .nutrition(18)
+            .saturationModifier(1.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 120 * 20, 0), 1.0f)
+            .alwaysEdible().build();
+
+    public static final FoodProperties END_CATERPILLAR_SASHIMI_BLOCK = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationModifier(1.8F)
             .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 120 * 20, 0), 1.0f)
             .alwaysEdible().build();
 

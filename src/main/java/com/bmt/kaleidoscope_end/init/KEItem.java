@@ -193,10 +193,6 @@ public class KEItem {
     public static final DeferredHolder<Item, Item> STUFFED_VOID_CONCH_ITEM = ITEMS.register("stuffed_void_conch",
             () -> new FoodWithEffectsItem(KEFoods.STUFFED_VOID_CONCH));
 
-    // 末地猪儿虫刺身
-    public static final DeferredHolder<Item, Item> END_CATERPILLAR_SASHIMI_ITEM = ITEMS.register("end_caterpillar_sashimi",
-            () -> new BowlFoodOnlyItem(KEFoods.END_CATERPILLAR_SASHIMI));
-
     // 龙息桶
     public static final DeferredHolder<Item, Item> DRAGON_BREATH_BUCKET_ITEM = ITEMS.register("dragon_breath_bucket",
             () -> new DragonBreathBucket(new Item.Properties()));

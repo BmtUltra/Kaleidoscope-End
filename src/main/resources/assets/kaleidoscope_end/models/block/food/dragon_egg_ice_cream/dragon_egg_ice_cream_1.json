@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "block/texture",
-		"particle": "block/texture"
+		"2": "kaleidoscope_end:block/food/dragon_egg_ice_cream",
+		"particle":"block/dragon_egg"
 	},
 	"elements": [
 		{

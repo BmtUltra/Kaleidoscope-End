@@ -11,6 +11,7 @@ public class KEFoodBiteRegistry {
     public static ResourceLocation OPTIC_NERVE_SWEET_AND_SOUR_PORK;
     public static ResourceLocation VOID_MUTTON_STEAK;
     public static ResourceLocation DRAGON_HEAD_WITH_SAUCE;
+    public static ResourceLocation END_CATERPILLAR_SASHIMI;
     public static ResourceLocation DARK_DRAGON_EGG_STEW;
     public static ResourceLocation DRAGON_EGG_CUSTARD;
     public static ResourceLocation DRAGON_EGG_ICE_CREAM;
@@ -37,6 +38,10 @@ public class KEFoodBiteRegistry {
         // 浇汁龙首
         DRAGON_HEAD_WITH_SAUCE = registry.registerFoodData(KaleidoscopeEnd.id("dragon_head_with_sauce"), FoodBiteRegistry.FoodData
                 .createOneByTwo(6, KEFoods.DRAGON_HEAD_WITH_SAUCE_BLOCK, KEFoods.DRAGON_HEAD_WITH_SAUCE_ITEM));
+
+        // 末地猪儿虫刺身
+        END_CATERPILLAR_SASHIMI = registry.registerFoodData(KaleidoscopeEnd.id("end_caterpillar_sashimi"), FoodBiteRegistry.FoodData
+                .create(3, KEFoods.END_CATERPILLAR_SASHIMI_BLOCK, KEFoods.END_CATERPILLAR_SASHIMI_ITEM));
 
         // 龙蛋煲
         DARK_DRAGON_EGG_STEW = registry.registerFoodData(KaleidoscopeEnd.id("dark_dragon_egg_stew"), FoodBiteRegistry.FoodData
