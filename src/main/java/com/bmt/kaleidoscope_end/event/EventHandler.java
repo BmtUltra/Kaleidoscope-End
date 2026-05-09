@@ -48,6 +48,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 public class EventHandler {
 
     private static final Set<ResourceLocation> END_MOBS_CACHE = new HashSet<>();
+    private static final ThreadLocal<Boolean> IS_PROCESSING_VOID_ECHO = ThreadLocal.withInitial(() -> false);
     private static final ResourceLocation THE_END_DIMENSION =
             ResourceLocation.fromNamespaceAndPath("minecraft", "the_end");
 
@@ -130,10 +131,15 @@ public class EventHandler {
                         livingAttacker.level().holderOrThrow(KEEnchantments.VOID_ECHO)
                 );
 
-                if (voidEchoLevel > 0 && livingAttacker.getRandom().nextFloat() < 0.25F) {
+                if (voidEchoLevel > 0 && livingAttacker.getRandom().nextFloat() < 0.25F
+                        && !IS_PROCESSING_VOID_ECHO.get()) {
+                    IS_PROCESSING_VOID_ECHO.set(true);
+
                     LivingEntity target = event.getEntity();
                     float originalDamage = event.getAmount();
                     float echoDamage = originalDamage * (0.40F + (voidEchoLevel - 1) * 0.15F);
+                    float flatDamage = 2.0F + (voidEchoLevel - 1) * 1.0F;
+                    float totalEchoDamage = echoDamage + flatDamage;
 
                     Level level = livingAttacker.level();
                     AABB area = target.getBoundingBox().inflate(4.0D);
@@ -143,7 +149,7 @@ public class EventHandler {
                     );
 
                     for (LivingEntity nearby : nearbyEntities) {
-                        nearby.hurt(nearby.damageSources().sonicBoom(livingAttacker), echoDamage);
+                        nearby.hurt(nearby.damageSources().sonicBoom(livingAttacker), totalEchoDamage);
                     }
 
                     if (level instanceof ServerLevel serverLevel) {
@@ -167,6 +173,7 @@ public class EventHandler {
                             1.0F,
                             1.0F
                     );
+                    IS_PROCESSING_VOID_ECHO.set(false);
                 }
             }
         }
