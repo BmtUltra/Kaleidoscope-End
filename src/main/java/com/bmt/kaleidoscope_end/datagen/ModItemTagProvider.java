@@ -35,7 +35,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(KEItem.CHORUS_SEED_COOKIE_ITEM.get())
                 .add(KEItem.CHORUS_PASTA_ITEM.get())
                 .add(KEItem.CHORUS_FLOWER_CAKE_ITEM.get())
-                .add(KEItem.CHORUS_FLOWER_TEA_ITEM.get())
+                .add(KEItem.CHORUS_FLOWER_SOUP_ITEM.get())
                 .add(KEItem.DREAM_BERRY_ITEM.get())
                 .add(KEItem.DRAGON_DUST.get())
                 .add(KEItem.DRAGON_TOOTH.get())

@@ -262,7 +262,7 @@ public class KEFoods {
             .build();
 
     // 紫颂花茶
-    public static final FoodProperties CHORUS_FLOWER_TEA = new FoodProperties.Builder()
+    public static final FoodProperties CHORUS_FLOWER_SOUP = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.667f)
             .effect(() -> new MobEffectInstance(PRESERVATION, 180 * 20, 0), 1.0f)

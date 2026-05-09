@@ -177,9 +177,9 @@ public class KEItem {
     public static final DeferredHolder<Item, FoodWithEffectsItem> FRIED_DRAGON_EGG_ITEM = ITEMS.register("fried_dragon_egg",
             () -> new FoodWithEffectsItem(KEFoods.FRIED_DRAGON_EGG));
 
-    // 紫颂花茶
-    public static final DeferredHolder<Item, BowlFoodOnlyItem> CHORUS_FLOWER_TEA_ITEM = ITEMS.register("chorus_flower_tea",
-            () -> new BowlFoodOnlyItem(KEFoods.CHORUS_FLOWER_TEA));
+    // 紫颂汤
+    public static final DeferredHolder<Item, BowlFoodOnlyItem> CHORUS_FLOWER_SOUP_ITEM = ITEMS.register("chorus_flower_soup",
+            () -> new BowlFoodOnlyItem(KEFoods.CHORUS_FLOWER_SOUP));
 
     // 紫颂花糕
     public static final DeferredHolder<Item, FoodWithEffectsItem> CHORUS_FLOWER_CAKE_ITEM = ITEMS.register("chorus_flower_cake",
