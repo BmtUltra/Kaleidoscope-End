@@ -1,13 +1,7 @@
 package com.bmt.kaleidoscope_end;
 
 import com.bmt.kaleidoscope_end.config.MainConfig;
-import com.bmt.kaleidoscope_end.init.KEBlockEntityType;
-import com.bmt.kaleidoscope_end.init.KEBlocks;
-import com.bmt.kaleidoscope_end.init.KECreativeTabs;
-import com.bmt.kaleidoscope_end.init.KEEffects;
-import com.bmt.kaleidoscope_end.init.KEFoodBiteRegistry;
-import com.bmt.kaleidoscope_end.init.KEItem;
-import com.bmt.kaleidoscope_end.init.KESoupBases;
+import com.bmt.kaleidoscope_end.init.*;
 
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
@@ -29,6 +23,7 @@ public class KaleidoscopeEnd {
         KECreativeTabs.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.COMMON, MainConfig.SPEC);
         KEFoodBiteRegistry.init();
+        KETeacups.init();
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

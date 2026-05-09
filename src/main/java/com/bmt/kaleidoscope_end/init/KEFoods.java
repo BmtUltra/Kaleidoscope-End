@@ -351,4 +351,12 @@ public class KEFoods {
             .saturationModifier(1.2F)
             .effect(() -> new MobEffectInstance(VOID_EROSION, 30 * 20, 0), 1.0f)
             .alwaysEdible().build();
+
+    // 龙息跳跳糖
+    public static final FoodProperties DRAGON_BREATH_POPPING_CANDY = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.1F)
+            .alwaysEdible()
+//            .effect(() -> new MobEffectInstance(DREAM, 30 * 20, 0), 0.5f)
+            .build();
 }
