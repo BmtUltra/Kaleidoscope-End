@@ -100,11 +100,11 @@
   "tooltip.kaleidoscope_end.dragon_breath_popping_candy.maxim": "呃呃，我的舌头有点疼",
 
   "block.kaleidoscope_end.void_tea": "虚空茶",
-  "tooltip.kaleidoscope_end.void_tea.maxim": "虚空海螺泡制的茶，喝下后仿佛与虚空融为一体",
+  "tooltip.kaleidoscope_end.void_tea.maxim": "喝下后仿佛与虚空融为一体",
   "block.kaleidoscope_end.ender_mint_tea": "末影薄荷茶",
   "tooltip.kaleidoscope_end.ender_mint_tea.maxim": "末影薄荷泡制的清茶，清凉提神",
   "block.kaleidoscope_end.chorus_flower_tea": "紫颂花茶",
-  "tooltip.kaleidoscope_end.chorus_flower_tea.maxim": "紫颂花泡制的花茶，清香怡人，让人仿佛置身梦境",
+  "tooltip.kaleidoscope_end.chorus_flower_tea.maxim": "清香怡人，让人仿佛置身梦境",
   "block.kaleidoscope_end.ender_dragon_tea": "末影龙茶",
   "tooltip.kaleidoscope_end.ender_dragon_tea.maxim": "带着龙尘的独特香气",
 
@@ -127,6 +127,7 @@
   "effect.kaleidoscope_end.mint.description": "直视末影人时不会激怒，受到的魔法伤害大幅度降低",
 
   "block.kaleidoscope_end.suspicious_end_stone": "可疑的末地石",
+  "block.kaleidoscope_end.suspicious_purpur_block": "可疑的紫珀块",
   "block.kaleidoscope_end.suspicious_dragon_egg": "可疑的龙蛋",
   "block.kaleidoscope_end.end_stove": "末地炉灶",
 

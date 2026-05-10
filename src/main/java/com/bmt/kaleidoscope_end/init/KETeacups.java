@@ -43,9 +43,9 @@ public class KETeacups {
         // 末影龙茶
         ENDER_DRAGON_TEA = registry.registerTeacupData("ender_dragon_tea",
                 TeacupRegistry.TeacupData.create(6)
-                        .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3 * 60 * 20,1))
-                        .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3 * 60 * 20, 1))
-                        .addEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, 3 * 60 * 20, 1))
+                        .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3 * 60 * 20,2))
+                        .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3 * 60 * 20, 2))
+                        .addEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, 3 * 60 * 20, 2))
         );
     }
 

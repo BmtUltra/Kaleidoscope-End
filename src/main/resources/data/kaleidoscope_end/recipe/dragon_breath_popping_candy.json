@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SBS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "minecraft:dragon_breath"
+    }
+  },
+  "result": {
+    "id": "kaleidoscope_end:dragon_breath_popping_candy",
+    "count": 8
+  }
+}

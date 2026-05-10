@@ -69,13 +69,13 @@ public class KECreativeTabs {
                         output.accept(KEItem.FRIED_DRAGON_EGG_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_SOUP_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_CAKE_ITEM.get());
+                        output.accept(TeacupRegistry.getItem(KETeacups.CHORUS_FLOWER_TEA));
                         output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());
-                        output.accept(KEItem.DRAGON_BREATH_POPPING_CANDY_ITEM.get());
                         output.accept(KEItem.STUFFED_VOID_CONCH_ITEM.get());
                         output.accept(TeacupRegistry.getItem(KETeacups.ENDER_MINT_TEA));
-                        output.accept(TeacupRegistry.getItem(KETeacups.CHORUS_FLOWER_TEA));
                         output.accept(TeacupRegistry.getItem(KETeacups.VOID_TEA));
                         output.accept(TeacupRegistry.getItem(KETeacups.ENDER_DRAGON_TEA));
+                        output.accept(KEItem.DRAGON_BREATH_POPPING_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
                         output.accept(KEItem.END_STOVE_ITEM.get());
                     })

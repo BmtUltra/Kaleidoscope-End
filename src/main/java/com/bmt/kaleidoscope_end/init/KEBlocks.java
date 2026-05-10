@@ -58,7 +58,7 @@ public class KEBlocks {
                             .mapColor(MapColor.SAND)
                             .instrument(NoteBlockInstrument.SNARE)
                             .strength(0.25F)
-                            .sound(SoundType.SUSPICIOUS_SAND)
+                            .sound(SoundType.STONE)
                             .pushReaction(PushReaction.DESTROY)){
                 @Override
                 public @NotNull BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
@@ -67,6 +67,29 @@ public class KEBlocks {
                         blockEntity.setLootTable(
                                 ResourceKey.create(Registries.LOOT_TABLE, 
                                         KaleidoscopeEnd.id("archaeology/suspicious_end_stone")), 
+                                0L);
+                    }
+                    return blockEntity;
+                }
+            });
+
+    public static final DeferredHolder<Block, Block> SUSPICIOUS_PURPUR_BLOCK = BLOCK_DEFERRED_REGISTER.register("suspicious_purpur_block",
+            () -> new BrushableBlock(Blocks.PURPUR_BLOCK,
+                    SoundEvents.BRUSH_SAND,
+                    SoundEvents.BRUSH_SAND_COMPLETED,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_MAGENTA)
+                            .instrument(NoteBlockInstrument.SNARE)
+                            .strength(0.25F)
+                            .sound(SoundType.STONE)
+                            .pushReaction(PushReaction.DESTROY)){
+                @Override
+                public @NotNull BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
+                    BrushableBlockEntity blockEntity = (BrushableBlockEntity) super.newBlockEntity(blockPos, blockState);
+                    if (blockEntity != null) {
+                        blockEntity.setLootTable(
+                                ResourceKey.create(Registries.LOOT_TABLE,
+                                        KaleidoscopeEnd.id("archaeology/suspicious_purpur_block")),
                                 0L);
                     }
                     return blockEntity;

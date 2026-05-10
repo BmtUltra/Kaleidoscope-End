@@ -48,6 +48,9 @@ public class KEItem {
     public static final DeferredHolder<Item, BlockItem> SUSPICIOUS_END_STONE_ITEM = ITEMS.register("suspicious_end_stone",
             () -> new BlockItem(KEBlocks.SUSPICIOUS_END_STONE.get(), new Item.Properties()));
 
+    public static final DeferredHolder<Item, BlockItem> SUSPICIOUS_PURPUR_BLOCK_ITEM = ITEMS.register("suspicious_purpur_block",
+            () -> new BlockItem(KEBlocks.SUSPICIOUS_PURPUR_BLOCK.get(), new Item.Properties()));
+
     // 可疑的龙蛋
     public static final DeferredHolder<Item, BlockItem> SUSPICIOUS_DRAGON_EGG_ITEM = ITEMS.register("suspicious_dragon_egg",
             () -> new BlockItem(KEBlocks.SUSPICIOUS_DRAGON_EGG.get(),

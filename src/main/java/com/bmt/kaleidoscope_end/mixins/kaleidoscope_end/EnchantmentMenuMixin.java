@@ -39,14 +39,11 @@ public abstract class EnchantmentMenuMixin {
     @Final
     private Container enchantSlots;
 
-    @Shadow
-    @Final
-    public int[] costs;
-
     @Unique
     private boolean kaleidoscope$calling = false;
 
     @Inject(method = "getEnchantmentList", at = @At("RETURN"), cancellable = true)
+    @SuppressWarnings("deprecation")
     private void modifyEnchantments(RegistryAccess registryAccess, ItemStack stack, int slot, int cost, CallbackInfoReturnable<List<EnchantmentInstance>> cir) {
 
         if (kaleidoscope$calling) return;
@@ -61,79 +58,91 @@ public abstract class EnchantmentMenuMixin {
         List<EnchantmentInstance> olds = new ArrayList<>(cir.getReturnValue());
         List<EnchantmentInstance> news = getEnchantmentList(registryAccess, stack, slot + 1, cost);
         List<EnchantmentInstance> toAdd = new ArrayList<>();
-        
-        for (int i = 0; i < news.size(); i++) {
-            EnchantmentInstance e1 = news.get(i);
+
+        for (EnchantmentInstance newEnchant : news) {
             boolean found = false;
-            
             for (int j = 0; j < olds.size(); j++) {
-                EnchantmentInstance e2 = olds.get(j);
-                if (e2.enchantment.equals(e1.enchantment)) {
+                EnchantmentInstance oldEnchant = olds.get(j);
+                if (oldEnchant.enchantment.equals(newEnchant.enchantment)) {
                     found = true;
-                    if (e1.level > e2.level) {
-                        olds.set(j, e1);
-                    } else if (e1.level == e2.level) {
-                        olds.set(j, new EnchantmentInstance(e1.enchantment, e1.level + 1));
+                    if (newEnchant.level > oldEnchant.level) {
+                        olds.set(j, newEnchant);
+                    } else if (newEnchant.level == oldEnchant.level) {
+                        olds.set(j, new EnchantmentInstance(newEnchant.enchantment, newEnchant.level + 1));
                     }
                     break;
                 }
             }
 
-            if (!found && i == news.size() - 1) {
+            if (!found) {
                 boolean compatible = true;
-                for (EnchantmentInstance old : olds) {
-                    if (!Enchantment.areCompatible(e1.enchantment, old.enchantment)) {
+                for (EnchantmentInstance oldEnchant : olds) {
+                    if (!Enchantment.areCompatible(newEnchant.enchantment, oldEnchant.enchantment)) {
                         compatible = false;
                         break;
                     }
                 }
                 if (compatible) {
-                    toAdd.add(e1);
+                    toAdd.add(newEnchant);
                 }
             }
         }
-
         olds.addAll(toAdd);
 
         if (random.nextFloat() <= 0.6F) {
             var enchantmentRegistry = registryAccess.registryOrThrow(Registries.ENCHANTMENT);
             enchantmentRegistry.getTag(KETags.Enchantments.KE_ENCHANTMENTS).ifPresent(holders -> {
-                List<Holder<Enchantment>> holderList = holders.stream().toList();
-                if (!holderList.isEmpty()) {
-                    Holder<Enchantment> holder = holderList.get(random.nextInt(holderList.size()));
+                List<Holder<Enchantment>> compatibleHolders = holders.stream()
+                        .filter(holder -> {
+                            Enchantment enchantment = holder.value();
+                            if (!enchantment.canEnchant(stack)) {
+                                return false;
+                            }
+                            for (EnchantmentInstance oldEnchant : olds) {
+                                if (!Enchantment.areCompatible(holder, oldEnchant.enchantment)) {
+                                    return false;
+                                }
+                            }
+                            return true;
+                        })
+                        .toList();
+
+                if (!compatibleHolders.isEmpty()) {
+                    Holder<Enchantment> holder = compatibleHolders.get(random.nextInt(compatibleHolders.size()));
 
                     int add = 1;
                     int maxLevel = holder.value().getMaxLevel();
                     for (int i = 1; i <= maxLevel; i++) {
                         if (holder.value().getMinCost(i) > cost) {
-                            maxLevel = maxLevel - 1;
+                            maxLevel = i - 1;
                             break;
                         }
                     }
-                    int total = 0;
-                    for (int i = 1; i <= maxLevel; i++) {
-                        total = total + i + add;
-                    }
-                    int nextInt = 1 + random.nextInt(total);
-                    for (int i = 1; i <= maxLevel; i++) {
-                        nextInt = nextInt - (i + add);
-                        if (nextInt <= 0) {
-                            olds.add(new EnchantmentInstance(holder, i));
-                            break;
+
+                    if (maxLevel >= 1) {
+                        int total = 0;
+                        for (int i = 1; i <= maxLevel; i++) {
+                            total = total + i + add;
+                        }
+                        int nextInt = 1 + random.nextInt(total);
+                        for (int i = 1; i <= maxLevel; i++) {
+                            nextInt = nextInt - (i + add);
+                            if (nextInt <= 0) {
+                                olds.add(new EnchantmentInstance(holder, i));
+                                break;
+                            }
                         }
                     }
                 }
             });
         }
-
         kaleidoscope$calling = false;
-
         cir.setReturnValue(olds);
     }
+
     @Unique
     private static final TagKey<Item> EXTRA_FUEL =
-            TagKey.create(Registries.ITEM,  ResourceLocation.fromNamespaceAndPath("neoforge", "enchanting_fuels"));
-
+            TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("neoforge", "enchanting_fuels"));
 
     @Redirect(
             method = "quickMoveStack",

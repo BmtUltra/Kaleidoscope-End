@@ -15,10 +15,10 @@ public class BlockEntityTypeMixin {
         BlockEntityType<?> blockEntityType = (BlockEntityType<?>) (Object) this;
         if (blockEntityType == BlockEntityType.BRUSHABLE_BLOCK) {
             if (blockState.getBlock() == KEBlocks.SUSPICIOUS_END_STONE.get()
-                    || blockState.getBlock() == KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) {
+                    || blockState.getBlock() == KEBlocks.SUSPICIOUS_DRAGON_EGG.get()
+                    || blockState.getBlock() == KEBlocks.SUSPICIOUS_PURPUR_BLOCK.get()) {
                 cir.setReturnValue(true);
             }
         }
     }
-
 }
