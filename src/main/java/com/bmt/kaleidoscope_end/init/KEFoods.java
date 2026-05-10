@@ -3,11 +3,7 @@ package com.bmt.kaleidoscope_end.init;
 import static com.bmt.kaleidoscope_end.init.KEEffects.DREAM;
 import static com.bmt.kaleidoscope_end.init.KEEffects.MINT;
 import static com.bmt.kaleidoscope_end.init.KEEffects.VOID_EROSION;
-import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.PRESERVATION;
-import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.SATIATED_SHIELD;
-import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.SULFUR;
-import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.TUNDRA_STRIDER;
-import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.VIGOR;
+import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModEffects.*;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -357,6 +353,7 @@ public class KEFoods {
             .nutrition(2)
             .saturationModifier(0.1F)
             .alwaysEdible()
-//            .effect(() -> new MobEffectInstance(DREAM, 30 * 20, 0), 0.5f)
+            .fast()
+            .effect(() -> new MobEffectInstance(PROJECTILE_DODGE, 60 * 20, 0), 1.0f)
             .build();
 }
