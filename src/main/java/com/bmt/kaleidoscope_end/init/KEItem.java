@@ -30,11 +30,11 @@ public class KEItem {
 
     // 虚空海螺
     public static final DeferredHolder<Item, Item> VOID_CONCH = ITEMS.register("void_conch",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
     // 龙尘
     public static final DeferredHolder<Item, Item> DRAGON_DUST = ITEMS.register("dragon_dust",
-            () -> new DragonDustItem(new Item.Properties()));
+            () -> new DragonDustItem(new Item.Properties().rarity(Rarity.EPIC)));
 
     // 龙牙
     public static final DeferredHolder<Item, Item> DRAGON_TOOTH = ITEMS.register("dragon_tooth",
@@ -166,7 +166,7 @@ public class KEItem {
 
     // 龙蛋液
     public static final DeferredHolder<Item, Item> DRAGON_EGG_LIQUID = ITEMS.register("dragon_egg_liquid",
-            () -> new Item(new Item.Properties().food(KEFoods.DRAGON_EGG_LIQUID_FOOD)));
+            () -> new Item(new Item.Properties().food(KEFoods.DRAGON_EGG_LIQUID_FOOD).rarity(Rarity.EPIC)));
 
     // 紫颂果籽
     public static final DeferredHolder<Item, Item> CHORUS_SEED = ITEMS.register("chorus_seed",
