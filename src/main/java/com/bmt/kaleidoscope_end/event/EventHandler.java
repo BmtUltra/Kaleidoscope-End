@@ -8,12 +8,10 @@ import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.api.IEndermiteExtension;
 import com.bmt.kaleidoscope_end.common.KEEndermiteInfo;
 import com.bmt.kaleidoscope_end.config.MainConfig;
-import com.bmt.kaleidoscope_end.init.KEBlocks;
 import com.bmt.kaleidoscope_end.init.KEEffects;
 import com.bmt.kaleidoscope_end.init.KEEnchantments;
 import com.bmt.kaleidoscope_end.init.KEItem;
 
-import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -33,7 +31,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -54,7 +51,7 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onEnderManAnger(EnderManAngerEvent event) {
-        if (event.getPlayer().hasEffect(Holder.direct(KEEffects.MINT.get()))) {
+        if (event.getPlayer().hasEffect(KEEffects.MINT)) {
             event.setCanceled(true);
         }
     }
@@ -88,7 +85,7 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onLivingIncomingDamage(LivingIncomingDamageEvent event) {
-        if (event.getEntity().hasEffect(Holder.direct(KEEffects.DREAM.get()))
+        if (event.getEntity().hasEffect(KEEffects.DREAM)
                 && event.getSource().is(DamageTypeTags.IS_FALL)) {
             event.setCanceled(true);
         }
@@ -181,14 +178,14 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent.Pre event) {
-        if (event.getEntity().hasEffect(Holder.direct(KEEffects.MINT.get()))) {
+        if (event.getEntity().hasEffect(KEEffects.MINT)) {
             event.setNewDamage(event.getNewDamage() * 0.2F);
         }
     }
 
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) {
-        if (event.getEntity().hasEffect(Holder.direct(KEEffects.VOID_EROSION.get()))) {
+        if (event.getEntity().hasEffect(KEEffects.VOID_EROSION)) {
             event.setCanceled(true);
             event.getEntity().setHealth(1);
         }
@@ -201,17 +198,6 @@ public class EventHandler {
                         items.set(i, new ItemStack(KEItem.SUSPICIOUS_DRAGON_EGG_ITEM.get(), items.get(i).getCount()));
                     }
                 }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        Player player = event.getEntity();
-        if ((player.getMainHandItem().is(KEItem.DRAGON_TOOTH.get()) || player.getOffhandItem().is(KEItem.DRAGON_TOOTH.get()))) {
-            if (event.getLevel().getBlockState(event.getPos()).is(KEBlocks.SUSPICIOUS_DRAGON_EGG.get()) ||
-                    event.getLevel().getBlockState(event.getPos()).is(Blocks.DRAGON_EGG)) {
-                event.setCanceled(true);
             }
         }
     }
