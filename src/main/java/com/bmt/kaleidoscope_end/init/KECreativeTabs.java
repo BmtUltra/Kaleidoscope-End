@@ -32,12 +32,12 @@ public class KECreativeTabs {
                         output.accept(KEItem.DRAGON_EGG_SHELL.get());
                         output.accept(KEItem.ENDER_DRAGON_SMITHING_TEMPLATE.get());
                         output.accept(KEItem.ENDER_MINT.get());
+                        output.accept(KEItem.DREAM_BERRY_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_CHORUS_SOUP_ITEM.get());
                         output.accept(KEItem.STUFFED_SHULKER_ITEM.get());
                         output.accept(KEItem.CHORUS_PASTA_ITEM.get());
                         output.accept(KEItem.RAW_ENDER_DRAGON_MEAT_ITEM.get());
                         output.accept(KEItem.COOKED_ENDER_DRAGON_MEAT_ITEM.get());
-                        output.accept(KEItem.DREAM_BERRY_ITEM.get());
                         output.accept(KEItem.MINT_CHORUS_MOUSSE_ITEM.get());
                         output.accept(KEItem.OPTIC_NERVE_ITEM.get());
 
