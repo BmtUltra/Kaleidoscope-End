@@ -28,6 +28,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -121,6 +122,30 @@ public class EventHandler {
                                 1.0F,
                                 1.0F
                         );
+                    }
+                }
+
+                if (event.getSource().getDirectEntity() instanceof Projectile) {
+                    int voidShotLevel = weapon.getEnchantmentLevel(
+                            livingAttacker.level().holderOrThrow(KEEnchantments.VOID_SHOT)
+                    );
+
+                    if (voidShotLevel > 0) {
+                        if (livingAttacker.getRandom().nextFloat() < 0.15F) {
+                            float damageMultiplier = 1.0F + voidShotLevel;
+                            float originalDamage = event.getAmount();
+                            event.setAmount(originalDamage * damageMultiplier);
+                            livingAttacker.level().playSound(
+                                    null,
+                                    livingAttacker.getX(),
+                                    livingAttacker.getY(),
+                                    livingAttacker.getZ(),
+                                    SoundEvents.ENDERMAN_TELEPORT,
+                                    livingAttacker.getSoundSource(),
+                                    1.0F,
+                                    1.0F
+                            );
+                        }
                     }
                 }
 
