@@ -23,7 +23,7 @@ public class DragonToothTier implements Tier {
 
     @Override
     public float getAttackDamageBonus() {
-        return 13.0F;
+        return 10.0F;
     }
 
     @Override

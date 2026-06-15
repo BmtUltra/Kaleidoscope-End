@@ -18,11 +18,11 @@ public class KaleidoscopeEnd {
         modEventBus.addListener(this::commonSetup);
         KEEffects.register(modEventBus);
         KEBlocks.register(modEventBus);
-        KEBlockEntityType.register(modEventBus);
         KEItem.register(modEventBus);
         KECreativeTabs.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.COMMON, MainConfig.SPEC);
         KEFoodBiteRegistry.init();
+        KEBlockEntities.register(modEventBus);
         KETeacups.init();
     }
 

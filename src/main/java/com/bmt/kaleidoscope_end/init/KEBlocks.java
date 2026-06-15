@@ -3,6 +3,7 @@ package com.bmt.kaleidoscope_end.init;
 import java.util.Collection;
 import java.util.function.Supplier;
 
+import com.bmt.kaleidoscope_end.block.DragonEggShellBlock;
 import com.bmt.kaleidoscope_end.block.crops.DreamBerryHeadBlock;
 import com.bmt.kaleidoscope_end.block.crops.DreamBerryPlantBlock;
 import com.bmt.kaleidoscope_end.block.crops.EnderMint;
@@ -46,6 +47,8 @@ public class KEBlocks {
     public static final DeferredHolder<Block, DreamBerryHeadBlock> DREAM_BERRY_HEAD = BLOCK_DEFERRED_REGISTER.register("dream_berry_head",
             () -> new DreamBerryHeadBlock(CAVE_VINES_PROPERTIES.get()));
 
+    public static final DeferredHolder<Block, DragonEggShellBlock> DRAGON_EGG_SHELL = BLOCK_DEFERRED_REGISTER.register("dragon_egg_shell",
+            DragonEggShellBlock::new);
 
     public static final DeferredHolder<Block, EnderMint> ENDER_MINT = BLOCK_DEFERRED_REGISTER.register("ender_mint", () -> new EnderMint(CROP_DEFAULT_PROPERTIES.get()));
 

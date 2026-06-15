@@ -38,7 +38,7 @@ public class KEItem {
 
     // 龙牙
     public static final DeferredHolder<Item, Item> DRAGON_TOOTH = ITEMS.register("dragon_tooth",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
     // 末地炉灶
     public static final DeferredHolder<Item, BlockItem> END_STOVE_ITEM = ITEMS.register("end_stove",
@@ -69,8 +69,8 @@ public class KEItem {
             ));
 
     // 龙蛋壳
-    public static final DeferredHolder<Item, Item> DRAGON_EGG_SHELL = ITEMS.register("dragon_egg_shell",
-            () -> new Item(new Item.Properties()));
+    public static final DeferredHolder<Item, BlockItem> DRAGON_EGG_SHELL = ITEMS.register("dragon_egg_shell",
+            () -> new BlockItem(KEBlocks.DRAGON_EGG_SHELL.get(), new Item.Properties()));
 
     // 龙息紫颂汤
     public static final DeferredHolder<Item, BowlFoodOnlyItem> DRAGON_BREATH_CHORUS_SOUP_ITEM = ITEMS.register("dragon_breath_chorus_soup",
