@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_end.config;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
-import com.bmt.kaleidoscope_end.item.DragonToothKnifeItem;
+import com.bmt.kaleidoscope_end.event.EventHandler;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -11,8 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = KaleidoscopeEnd.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class MainConfig
-{
+public class MainConfig {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
     public static final ForgeConfigSpec.ConfigValue<List<? extends String>> DRAGON_TOOTH_KNIFE_EXTRA_END_MOBS;
@@ -32,25 +31,22 @@ public class MainConfig
                                 "minecraft:ender_dragon"
                         ),
                         obj -> obj instanceof String);
-
         BUILDER.pop();
     }
 
     public static final ForgeConfigSpec SPEC = BUILDER.build();
 
     @SubscribeEvent
-    static void onLoad(final ModConfigEvent.Loading event)
-    {
+    static void onLoad(final ModConfigEvent.Loading event) {
         if (event.getConfig().getSpec() == SPEC) {
-            DragonToothKnifeItem.clearCache();
+            EventHandler.GAME.clearEndMobsCache();
         }
     }
 
     @SubscribeEvent
-    static void onReload(final ModConfigEvent.Reloading event)
-    {
+    static void onReload(final ModConfigEvent.Reloading event) {
         if (event.getConfig().getSpec() == SPEC) {
-            DragonToothKnifeItem.clearCache();
+            EventHandler.GAME.clearEndMobsCache();
         }
     }
 }

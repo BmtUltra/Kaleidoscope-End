@@ -67,9 +67,7 @@ public class ChorusFlowerInteractionHandler {
                 itemEntity.setDefaultPickUpDelay();
                 level.addFreshEntity(itemEntity);
             }
-
             level.playSound(null, pos, SoundEvents.SHEEP_SHEAR, SoundSource.PLAYERS, 1.0F, 1.0F);
-
             event.setCanceled(true);
         }
     }

@@ -3,7 +3,6 @@ package com.bmt.kaleidoscope_end.datagen;
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.init.KEBlocks;
 import com.bmt.kaleidoscope_end.init.KETags;
-import com.bmt.kaleidoscope_nether.data.ModFeatureUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

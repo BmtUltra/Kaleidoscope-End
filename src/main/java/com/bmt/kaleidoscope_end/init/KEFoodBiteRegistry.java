@@ -11,8 +11,10 @@ public class KEFoodBiteRegistry {
     public static ResourceLocation OPTIC_NERVE_SWEET_AND_SOUR_PORK;
     public static ResourceLocation VOID_MUTTON_STEAK;
     public static ResourceLocation DRAGON_HEAD_WITH_SAUCE;
+    public static ResourceLocation END_CATERPILLAR_SASHIMI;
     public static ResourceLocation DARK_DRAGON_EGG_STEW;
     public static ResourceLocation DRAGON_EGG_CUSTARD;
+    public static ResourceLocation DRAGON_EGG_ICE_CREAM;
 
     public static void init() {
         FoodBiteRegistry registry = new FoodBiteRegistry();
@@ -35,7 +37,11 @@ public class KEFoodBiteRegistry {
 
         // 浇汁龙首
         DRAGON_HEAD_WITH_SAUCE = registry.registerFoodData(KaleidoscopeEnd.id("dragon_head_with_sauce"), FoodBiteRegistry.FoodData
-                .createOneByTwo(6, KEFoods.DRAGON_HEAD_WITH_SAUCE_BLOCK, KEFoods.DRAGON_HEAD_WITH_SAUCE_ITEM));
+                .createOneByTwo(7, KEFoods.DRAGON_HEAD_WITH_SAUCE_BLOCK, KEFoods.DRAGON_HEAD_WITH_SAUCE_ITEM));
+
+        // 末地猪儿虫刺身
+        END_CATERPILLAR_SASHIMI = registry.registerFoodData(KaleidoscopeEnd.id("end_caterpillar_sashimi"), FoodBiteRegistry.FoodData
+                .create(3, KEFoods.END_CATERPILLAR_SASHIMI_BLOCK, KEFoods.END_CATERPILLAR_SASHIMI_ITEM));
 
         // 龙蛋煲
         DARK_DRAGON_EGG_STEW = registry.registerFoodData(KaleidoscopeEnd.id("dark_dragon_egg_stew"), FoodBiteRegistry.FoodData
@@ -45,7 +51,13 @@ public class KEFoodBiteRegistry {
 
         // 龙蛋羹
         DRAGON_EGG_CUSTARD = registry.registerFoodData(KaleidoscopeEnd.id("dragon_egg_custard"), FoodBiteRegistry.FoodData
-                .create(4, KEFoods.DRAGON_EGG_CUSTARD_BLOCK, KEFoods.DRAGON_EGG_CUSTARD_ITEM)
+                .create(3, KEFoods.DRAGON_EGG_CUSTARD_BLOCK, KEFoods.DRAGON_EGG_CUSTARD_ITEM)
+                .setLootItem(KEItem.DRAGON_EGG_SHELL::get)
+                .setAABB(Block.box(1, 0, 1, 15, 11, 15)));
+
+        // 龙蛋冰淇淋
+        DRAGON_EGG_ICE_CREAM = registry.registerFoodData(KaleidoscopeEnd.id("dragon_egg_ice_cream"), FoodBiteRegistry.FoodData
+                .create(3, KEFoods.DRAGON_EGG_ICE_CREAM_BLOCK, KEFoods.DRAGON_EGG_ICE_CREAM_ITEM)
                 .setLootItem(KEItem.DRAGON_EGG_SHELL::get)
                 .setAABB(Block.box(1, 0, 1, 15, 11, 15)));
     }

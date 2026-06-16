@@ -4,6 +4,7 @@ import com.bmt.kaleidoscope_end.init.KEItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
+import org.jetbrains.annotations.NotNull;
 
 public class DragonToothTier implements Tier {
     private static final ForgeTier BASE_TIER = new ForgeTier(
@@ -28,7 +29,7 @@ public class DragonToothTier implements Tier {
 
     @Override
     public float getAttackDamageBonus() {
-        return 8.0F;
+        return 10.0F;
     }
 
     @Override
@@ -42,7 +43,7 @@ public class DragonToothTier implements Tier {
     }
 
     @Override
-    public Ingredient getRepairIngredient() {
+    public @NotNull Ingredient getRepairIngredient() {
         return BASE_TIER.getRepairIngredient();
     }
 }

@@ -24,23 +24,19 @@ public class KaleidoscopeEnd {
 
     public KaleidoscopeEnd(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-
         modEventBus.addListener(this::commonSetup);
-
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         KEEffects.register(modEventBus);
         KEBlocks.register(modEventBus);
-//        KEBlockEntityType.register(modEventBus);
+        KEBlockEntities.register(modEventBus);
         KEItem.register(modEventBus);
-    //    KEPaintings.register(modEventBus);
         KECreativeTabs.register(modEventBus);
         KEEnchantments.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
-
         context.registerConfig(ModConfig.Type.COMMON, MainConfig.SPEC);
-
         KEFoodBiteRegistry.init();
+        KETeacups.init();
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

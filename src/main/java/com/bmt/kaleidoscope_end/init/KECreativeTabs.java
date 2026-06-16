@@ -2,6 +2,7 @@ package com.bmt.kaleidoscope_end.init;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.TeacupRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,15 +29,14 @@ public class KECreativeTabs {
                         output.accept(KEItem.DRAGON_DUST.get());
                         output.accept(KEItem.DRAGON_TOOTH.get());
                         output.accept(KEItem.DRAGON_EGG_SHELL.get());
-//                        output.accept(KEItem.ENDERMITE_EGG.get());
                         output.accept(KEItem.ENDER_DRAGON_SMITHING_TEMPLATE.get());
                         output.accept(KEItem.ENDER_MINT.get());
+                        output.accept(KEItem.DREAM_BERRY_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_CHORUS_SOUP_ITEM.get());
                         output.accept(KEItem.STUFFED_SHULKER_ITEM.get());
                         output.accept(KEItem.CHORUS_PASTA_ITEM.get());
                         output.accept(KEItem.RAW_ENDER_DRAGON_MEAT_ITEM.get());
                         output.accept(KEItem.COOKED_ENDER_DRAGON_MEAT_ITEM.get());
-                        output.accept(KEItem.DREAM_BERRY_ITEM.get());
                         output.accept(KEItem.MINT_CHORUS_MOUSSE_ITEM.get());
                         output.accept(KEItem.OPTIC_NERVE_ITEM.get());
 
@@ -57,26 +57,24 @@ public class KECreativeTabs {
                         output.accept(KEItem.ROASTED_ENDERMITE_MEAT_ITEM.get());
                         output.accept(KEItem.END_CATERPILLAR_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_MIXED_STEW_ITEM.get());
-                        //output.accept(KEItem.DRAGON_HEAD_WITH_SAUCE_ITEM.get());
                         output.accept(KEItem.MINT_NOODLE_SOUP_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_ITEM.get());
                         output.accept(KEItem.MINT_SAUCE_SHULKER_MEAT_RICE_BOWL_ITEM.get());
                         output.accept(KEItem.ENDER_MINT_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_SOUFFLE_ITEM.get());
-                        //output.accept(KEItem.DARK_DRAGON_STEAK_ITEM.get());
                         output.accept(KEItem.DRAGON_EGG_LIQUID.get());
                         output.accept(KEItem.CHORUS_SEED.get());
                         output.accept(KEItem.CHORUS_PETAL.get());
                         output.accept(KEItem.FRIED_DRAGON_EGG_ITEM.get());
-                        //output.accept(KEItem.DRAGON_EGG_CUSTARD_ITEM.get());
-                        output.accept(KEItem.CHORUS_FLOWER_TEA_ITEM.get());
+                        output.accept(KEItem.CHORUS_FLOWER_SOUP_ITEM.get());
                         output.accept(KEItem.CHORUS_FLOWER_CAKE_ITEM.get());
+                        output.accept(TeacupRegistry.getItem(KETeacups.CHORUS_FLOWER_TEA));
                         output.accept(KEItem.CHORUS_SEED_COOKIE_ITEM.get());
-                        output.accept(KEItem.DRAGON_EGG_ICE_CREAM_ITEM.get());
                         output.accept(KEItem.STUFFED_VOID_CONCH_ITEM.get());
-//                        output.accept(KEItem.OPTIC_NERVE_SWEET_AND_SOUR_PORK_ITEM.get());
-                        output.accept(KEItem.END_CATERPILLAR_SASHIMI_ITEM.get());
-                        //output.accept(KEItem.VOID_MUTTON_STEAK_ITEM.get());
+                        output.accept(TeacupRegistry.getItem(KETeacups.ENDER_MINT_TEA));
+                        output.accept(TeacupRegistry.getItem(KETeacups.VOID_TEA));
+                        output.accept(TeacupRegistry.getItem(KETeacups.ENDER_DRAGON_TEA));
+                        output.accept(KEItem.DRAGON_BREATH_POPPING_CANDY_ITEM.get());
                         output.accept(KEItem.DRAGON_BREATH_BUCKET_ITEM.get());
                         output.accept(KEItem.END_STOVE_ITEM.get());
                     })

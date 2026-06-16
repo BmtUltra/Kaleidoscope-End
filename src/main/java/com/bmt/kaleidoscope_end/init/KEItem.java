@@ -2,7 +2,6 @@ package com.bmt.kaleidoscope_end.init;
 
 import com.bmt.kaleidoscope_end.KaleidoscopeEnd;
 import com.bmt.kaleidoscope_end.item.*;
-import com.github.ysbbbbbb.kaleidoscopecookery.init.ModFoods;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.BowlFoodOnlyItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.FoodWithEffectsItem;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.WithTooltipsItem;
@@ -21,25 +20,25 @@ import java.util.List;
 public class KEItem {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, KaleidoscopeEnd.MODID);
 
-    // 龙之刃
+    // 龙牙刀
     public static final RegistryObject<Item> DRAGON_TOOTH_KNIFE = ITEMS.register("dragon_tooth_knife",
             DragonToothKnifeItem::new);
 
     // 末影薄荷
     public static final RegistryObject<Item> ENDER_MINT = ITEMS.register("ender_mint",
-            () -> new KEBlockItem(KEBlocks.ENDER_MINT.get(),new Item.Properties()));
+            () -> new KEBlockItem(KEBlocks.ENDER_MINT.get(), new Item.Properties()));
 
     // 虚空海螺
     public static final RegistryObject<Item> VOID_CONCH = ITEMS.register("void_conch",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
     // 龙尘
     public static final RegistryObject<Item> DRAGON_DUST = ITEMS.register("dragon_dust",
-            () -> new DragonDustItem(new Item.Properties()));
+            () -> new DragonDustItem(new Item.Properties().rarity(Rarity.EPIC)));
 
     // 龙牙
     public static final RegistryObject<Item> DRAGON_TOOTH = ITEMS.register("dragon_tooth",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
     // 末地炉灶
     public static final RegistryObject<Item> END_STOVE_ITEM = ITEMS.register("end_stove",
@@ -48,6 +47,10 @@ public class KEItem {
     // 可疑的末地石
     public static final RegistryObject<Item> SUSPICIOUS_END_STONE_ITEM = ITEMS.register("suspicious_end_stone",
             () -> new BlockItem(KEBlocks.SUSPICIOUS_END_STONE.get(), new Item.Properties()));
+
+    // 可疑的紫珀块
+    public static final RegistryObject<Item> SUSPICIOUS_PURPUR_BLOCK_ITEM = ITEMS.register("suspicious_purpur_block",
+            () -> new BlockItem(KEBlocks.SUSPICIOUS_PURPUR_BLOCK.get(), new Item.Properties()));
 
     // 可疑的龙蛋
     public static final RegistryObject<Item> SUSPICIOUS_DRAGON_EGG_ITEM = ITEMS.register("suspicious_dragon_egg",
@@ -68,7 +71,7 @@ public class KEItem {
 
     // 龙蛋壳
     public static final RegistryObject<Item> DRAGON_EGG_SHELL = ITEMS.register("dragon_egg_shell",
-            () -> new Item(new Item.Properties()));
+            () -> new BlockItem(KEBlocks.DRAGON_EGG_SHELL.get(), new Item.Properties()));
 
     // 龙息紫颂汤
     public static final RegistryObject<Item> DRAGON_BREATH_CHORUS_SOUP_ITEM = ITEMS.register("dragon_breath_chorus_soup",
@@ -136,7 +139,7 @@ public class KEItem {
 
     // 末地猪儿虫
     public static final RegistryObject<Item> END_CATERPILLAR_ITEM = ITEMS.register("end_caterpillar",
-            () -> new WithTooltipsItem(new Item.Properties().food(ModFoods.CATERPILLAR), "end_caterpillar"));
+            () -> new Item(new Item.Properties().food(KEFoods.END_CATERPILLAR)));
 
     // 龙息乱烩
     public static final RegistryObject<Item> DRAGON_BREATH_MIXED_STEW_ITEM = ITEMS.register("dragon_breath_mixed_stew",
@@ -164,11 +167,11 @@ public class KEItem {
 
     // 龙蛋液
     public static final RegistryObject<Item> DRAGON_EGG_LIQUID = ITEMS.register("dragon_egg_liquid",
-            () -> new Item(new Item.Properties().food(KEFoods.DRAGON_EGG_LIQUID_FOOD)));
+            () -> new Item(new Item.Properties().food(KEFoods.DRAGON_EGG_LIQUID_FOOD).rarity(Rarity.EPIC)));
 
     // 紫颂果籽
     public static final RegistryObject<Item> CHORUS_SEED = ITEMS.register("chorus_seed",
-            () -> new Item(new Item.Properties().food(KEFoods.CHORUS_SEED_FOOD)));
+            () -> new Item(new Item.Properties()));
 
     // 紫颂花瓣
     public static final RegistryObject<Item> CHORUS_PETAL = ITEMS.register("chorus_petal",
@@ -178,9 +181,9 @@ public class KEItem {
     public static final RegistryObject<Item> FRIED_DRAGON_EGG_ITEM = ITEMS.register("fried_dragon_egg",
             () -> new FoodWithEffectsItem(KEFoods.FRIED_DRAGON_EGG));
 
-    // 紫颂花茶
-    public static final RegistryObject<Item> CHORUS_FLOWER_TEA_ITEM = ITEMS.register("chorus_flower_tea",
-            () -> new BowlFoodOnlyItem(KEFoods.CHORUS_FLOWER_TEA));
+    // 紫颂花汤
+    public static final RegistryObject<Item> CHORUS_FLOWER_SOUP_ITEM = ITEMS.register("chorus_flower_soup",
+            () -> new BowlFoodOnlyItem(KEFoods.CHORUS_FLOWER_SOUP));
 
     // 紫颂花糕
     public static final RegistryObject<Item> CHORUS_FLOWER_CAKE_ITEM = ITEMS.register("chorus_flower_cake",
@@ -190,17 +193,13 @@ public class KEItem {
     public static final RegistryObject<Item> CHORUS_SEED_COOKIE_ITEM = ITEMS.register("chorus_seed_cookie",
             () -> new FoodWithEffectsItem(KEFoods.CHORUS_SEED_COOKIE));
 
-    // 龙蛋冰淇淋
-    public static final RegistryObject<Item> DRAGON_EGG_ICE_CREAM_ITEM = ITEMS.register("dragon_egg_ice_cream",
-            () -> new DragonEggShellFoodItem(KEFoods.DRAGON_EGG_ICE_CREAM));
-
     // 填馅虚空海螺
     public static final RegistryObject<Item> STUFFED_VOID_CONCH_ITEM = ITEMS.register("stuffed_void_conch",
             () -> new FoodWithEffectsItem(KEFoods.STUFFED_VOID_CONCH));
 
-    // 末地猪儿虫刺身
-    public static final RegistryObject<Item> END_CATERPILLAR_SASHIMI_ITEM = ITEMS.register("end_caterpillar_sashimi",
-            () -> new BowlFoodOnlyItem(KEFoods.END_CATERPILLAR_SASHIMI));
+    // 龙息跳跳糖
+    public static final RegistryObject<Item> DRAGON_BREATH_POPPING_CANDY_ITEM = ITEMS.register("dragon_breath_popping_candy",
+            () -> new FoodWithEffectsItem(KEFoods.DRAGON_BREATH_POPPING_CANDY));
 
     // 龙息桶
     public static final RegistryObject<Item> DRAGON_BREATH_BUCKET_ITEM = ITEMS.register("dragon_breath_bucket",
