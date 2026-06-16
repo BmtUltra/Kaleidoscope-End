@@ -15,7 +15,8 @@
     "kaleidoscope_end.FluidTypeMixin",
     "kaleidoscope_end.LivingEntityMixin",
     "kaleidoscope_end.NearestAttackableTargetGoalMixin",
-    "kaleidoscope_end.PlayerMixin"
+    "kaleidoscope_end.PlayerMixin",
+    "kaleidoscope_end.StoveBlockMixin"
   ],
   "client": [
     "kaleidoscope_end.client.EnchantmentScreenMixin",
